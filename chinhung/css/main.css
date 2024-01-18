@@ -1,0 +1,156 @@
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); font-weight:400; font-style:normal; }
+@font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff'); font-weight:700; font-style:normal; }
+
+body {
+    font-family: 'Pretendard Variable',serif; 
+    font-size: 15px; /*크기*/
+    color: #1d1d1d; /* 글자색상 */
+    font-weight: 400; /* 글자의 두께 */
+    line-height: 1.2; /*auto*/
+    word-break: keep-all; /*(중요) 단어를 묶어서 줄바꿈 */
+}
+
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1192px; /* 넓이제한 */
+    margin: 0 auto; /* 가운데설정 */
+}
+/* 태그초기화 - 태그의 기본 스타일 제거하는 목적 */
+* { /* *은 와이드 카드*/
+    padding: 0; /* 모든 태그의 여백삭제 */
+    margin: 0; 
+    box-sizing: border-box; 
+    /* padding 하고 border는 넓이를 늘리는 요소로, 넓이를 늘리지 않도록 하는 속성*/
+}
+/* 다중선택자 설정은 ,(쉼표)를 넣으면 된다 - 동일적용 보통 초기화에 많이 넣어서 씀  */
+ul, ol, li {
+    list-style: none; /* ul li앞에 동그라미 삭제 */
+}
+/* a태그는 파란색에 undeline이 기본적으로 생성되기에 text-decoration 태그로 없애야함 (none;) */
+a {
+ text-decoration: none;
+ color: inherit; /* inherit = 누군가 상속해준 스타일을 적용해 라는 의미 > 기본적으로 body에있는거*/
+}
+
+header {
+    height: 98px;
+}
+header .logo {
+    float: left;
+    margin: 30px 0 0 0;
+}
+header .logo a {
+    display: block;
+}
+header .gnb {
+    float: right;
+}
+header .gnb ul {
+    display: flex;
+}
+header .gnb ul a {
+    font-size: 20px;
+    padding: 36px 24px 35px 24px; /* header에 메뉴의 위 아래 공간은 100px 넘어가면 안된다 */ 
+    /* a가 커져야해서 padding을 줌 */
+    display: block;
+    /* a태그는 inline태그라서 padding 적용이 잘 안되므로 display:block을 줘야한다 */
+}
+/* a태그에 마우스를 오버했을 때 가상선택자-많이 들어간다 */
+header .gnb ul a:hover {
+    text-decoration: underline;
+}
+
+.visual {
+    /* 경로에서 ../는 폴더 밖으로 나가라는 명령(점은 2개써야함) 
+        backgroun에 아무리 큰 이미지를 넣어도 해당 영역이 존재하는 만큼만 보여서 따로 높이줘야함(이미지와 다르게 공간차지하지 x)*/
+        height: 800px;
+        background: url(../images/visual.png) center center no-repeat;
+        color: #fff;
+        /* 배경색 때문에 그 내부의 글자색상,위치 달라졌다면 대표되는 색을 background태그 안에 지정해준다*/
+}
+.visual h2 { 
+    font-size: 30px;
+    font-weight: 700;
+    padding: 191px 0 0 0;
+    line-height: 1.3
+}
+/* 자간을 줄였을때 태그 -> letter-spacing: -0.04em;  */
+
+.biz h2 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin: 120px 0 126px 0;
+    line-height: 0.7;
+}
+.biz h2 strong {
+    font-size: 15px;
+    font-weight: 400;
+}
+.biz ul {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.biz ul li h3 {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 20px 0 20px 0;
+}
+.biz ul li p {
+}
+.biz ul li a {
+    border: 1px solid #666; /* 박스만들어주는 태그 */
+    padding: 14px 80px 14px 80px;
+    display: inline-block;
+    /* display:block 넓이 100%라는 말 - 나를 감싸는 요소의 넓이 100%
+        그럼 a한테 display:block wnaus li와 넓이가 같아짐
+        padding에만 주려면 display:inline-block; 으로 들어가야함  */
+    margin: 25px 0 0 0;    
+}
+
+.brand {
+    height: 800PX;
+    background: URL(../images/brand_bg.png) center center no-repeat;
+    text-align: center;
+    margin: 114px 0 0 0;
+    color: #fff;
+}
+.brand h2 {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 150px 0 0 0;
+    line-height: 0.5;  
+}
+.brand h2 strong {
+    font-size: 15px;
+    }
+.brand p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 45px 0 0 0;
+}
+.brand a {
+    border: 1px solid #fff; /* 박스만들어주는 태그 */
+    /* 선을 흰색을 주고 투명도를 줬다면 raba 태그를 줘야한다 */
+    padding: 14px 80px 14px 80px;
+    display: inline-block;
+    margin: 46px 0 0 0;
+}
+
+footer {
+    background: #0d0d0d;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 50px 0 50px 0;
+}
+footer .f_nav {
+    display: flex;    
+    margin: 0 0 13px 0;
+}
+footer .f_nav li {
+    margin: 0 25px 0 0;
+    }
+
+footer .capyright {
+    color: rgba(255, 255, 255, 0.8);
+}    
