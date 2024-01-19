@@ -2,87 +2,96 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        앚기 반응형을 안함 그럼 이 코드를 입력하면 안되며
+        이 코드가 빠져야 모바일에 전체화면이 나오고 이용자는 확대해서 보면 된다.-->
     <link rel="stylesheet" href="css/main.css">
-    <title>진흥기업 240119</title>
+    <title>진흥기업</title>
 </head>
 <body>
+    <!-- id는 동일한 이름 한페이지에서 한번밖에 사용이 불가 
+    id="container"처럼 다른 이름은 되지만 같은 이름이 불가
+    class="wrapper"계속 쓰고 있지만 id 는 그렇게 사용 불가 
+주요 레이아웃에 id를 사용하는 편임-->
+    <div id="wrap"> <!--div -->
     <!-- 로고와 메뉴 등 존재하는 구간을 나타내는 태그 header -->
-    <header>
-        <!-- wrapper는 전체를 다 잡아주는 태그 -->
-        <div class="wrapper">
-            <!-- 홈페이지는 로고를 킬릭하면 메인 페이지로 이동해야한다 -->
-            <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="진흥기업 로고"></a></h1>
-            <nav class="gnb"> <!-- gnb = global navigation bar -->
-            <ul>
-                <!-- # 임시링크 - 아직 링크 걸어둘 페이지 없을때 클릭방지위해 쓰는 말 -->
-                <li><a href="#">기업소개</a></li>
-                <li><a href="#">사업분야</a></li>
-                <li><a href="#">홍보센터</a></li>
-                <li><a href="#">고객센터</a></li>
-                <li><a href="#">사이버감사실</a></li>
-            </ul>
-            </nav>
-        </div><!-- wrapper -->
-    </header>
-    <!-- 컨텐츠의 구획을 나눌때(세로) 사용하는 태크 section -->
-    <section class="visual">
-        <div class="wrapper">
-            <h2>사람과 사람을 이어주는 공간,<br>
-                사람과 자연을 조화시키는 공간을 창조하며<br>대한민국 50년 건설 명가의 자리를 지켜왔습니다.</h2>
-        </div><!-- wrapper -->
-    </section> <!-- visula -->
-    <section class="biz">
-        <div class="wrapper">
-            <h2>BUSINESS<br><strong>사업분야 소개</strong></h2>
-            <ul>
-                <li>
-                    <img src="images/biz01.png" alt="강 위에 다리 사진">
-                    <h3>토목산업</h3>
-                    <p>인간과 자연을 조 화시키고<br>공간과공간을 이어주고 있습니다.</p>
-                    <a href="#">자세히보기</a>
-                </li>
-                <li>
-                    <img src="images/biz02.png" alt="건물 사진">
-                    <h3>건축산업</h3>
-                    <p>실용성과 예술성을 조화시켜<br>생활의 가치를 한단계 높이고 있습니다.</p>
-                    <a href="#">자세히보기</a>
-                </li>
-                <li>
-                    <img src="images/biz03.png" alt="아파트 사진">
-                    <h3>주택산업</h3>
-                    <p>고객의 신뢰를 바탕으로<br>친환경 주거문화 트랜드를 제시합니다.</p>
-                    <a href="#">자세히보기</a>
-                </li>
-                <li>
-                    <img src="images/biz04.png" alt="공장 사진">
-                    <h3>플랜트사업</h3>
-                    <p>산업발전의 기틀을마련하는<br>플랜트산업을 구축해왔습니다.</p>
-                    <a href="#">자세히보기</a>
-                </li>
-            </ul>
-        </div><!-- wrapper -->
-    </section> <!-- biz -->
-    <section class="brand">
-        <div class="wrapper">
-            <!-- 대문자로 변경하는 명령어 ">transpofrom" (소문자는 lowr~ 대문자는 upp~ )  -->
-            <h2>Post-Premium Place<br><strong>바래지 않는 멋스러움과 합리적 실용성을 겸비한 당신만의 공간</strong></h2>
-            <p>해링턴은‘Settlement On Stony Groumnd (반석 위에 지은 집)’이라는<br>
-                어원을 가진 오랜 역사로 현대적 감각을 겸비하여 우리 고객의<br>
-                품격을 높이고 안락한 주거공간을 제공하기 위해 노력하는<br>
-                효성의 진흥기업의 새로운 주거 브랜드입니다.</p>
-            <a href="#">해링턴 플레이스 바로가기</a>
-        </div><!-- wrapper -->
-    </section> <!-- brand -->
-    <footer>
-        <div class="wrapper"> 
-        <!-- footer의 navgation - 풋터의 메뉴 그래서 f_nav 쓰는곳도있고 안쓰는곳도 있으나 대부분 nav 안씀 -->
-            <ul class="f_nav">
-                <li><a href="#">법적고지</a></li>
-                <li class="privacy"><a href="#">개인정보처리방침</a></li>
-            </ul>
-            <div class="copyright">ⓒ HYOSUNG. All Rights Reserved.</div> 
-        </div>   
-    </footer>
+        <header>
+            <!-- wrapper는 전체를 다 잡아주는 태그 -->
+            <div class="wrapper">
+                <!-- 홈페이지는 로고를 킬릭하면 메인 페이지로 이동해야한다 -->
+                <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="진흥기업 로고"></a></h1>
+                <nav class="gnb"> <!-- gnb = global navigation bar -->
+                <ul>
+                    <!-- # 임시링크 - 아직 링크 걸어둘 페이지 없을때 클릭방지위해 쓰는 말 -->
+                    <li><a href="#">기업소개</a></li>
+                    <li><a href="#">사업분야</a></li>
+                    <li><a href="#">홍보센터</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">사이버감사실</a></li>
+                </ul>
+                </nav>
+            </div><!-- wrapper -->
+        </header>
+        <!-- 컨텐츠의 구획을 나눌때(세로) 사용하는 태크 section -->
+        <section class="visual">
+            <div class="wrapper">
+                <h2>사람과 사람을 이어주는 공간,<br>
+                    사람과 자연을 조화시키는 공간을 창조하며<br>대한민국 50년 건설 명가의 자리를 지켜왔습니다.</h2>
+            </div><!-- wrapper -->
+        </section> <!-- visula -->
+        <section class="biz">
+            <div class="wrapper">
+                <h2>BUSINESS<br><strong>사업분야 소개</strong></h2>
+                <ul>
+                    <li>
+                        <img src="images/biz01.png" alt="강 위에 다리 사진">
+                        <h3>토목산업</h3>
+                        <p>인간과 자연을 조 화시키고<br>공간과공간을 이어주고 있습니다.</p>
+                        <a href="#">자세히보기</a>
+                    </li>
+                    <li>
+                        <img src="images/biz02.png" alt="건물 사진">
+                        <h3>건축산업</h3>
+                        <p>실용성과 예술성을 조화시켜<br>생활의 가치를 한단계 높이고 있습니다.</p>
+                        <a href="#">자세히보기</a>
+                    </li>
+                    <li>
+                        <img src="images/biz03.png" alt="아파트 사진">
+                        <h3>주택산업</h3>
+                        <p>고객의 신뢰를 바탕으로<br>친환경 주거문화 트랜드를 제시합니다.</p>
+                        <a href="#">자세히보기</a>
+                    </li>
+                    <li>
+                        <img src="images/biz04.png" alt="공장 사진">
+                        <h3>플랜트사업</h3>
+                        <p>산업발전의 기틀을마련하는<br>플랜트산업을 구축해왔습니다.</p>
+                        <a href="#">자세히보기</a>
+                    </li>
+                </ul>
+            </div><!-- wrapper -->
+        </section> <!-- biz -->
+        <section class="brand">
+            <div class="wrapper">
+                <!-- 대문자로 변경하는 명령어 ">transpofrom" (소문자는 lowr~ 대문자는 upp~ )  -->
+                <h2>Post-Premium Place<br><strong>바래지 않는 멋스러움과 합리적 실용성을 겸비한 당신만의 공간</strong></h2>
+                <p>해링턴은‘Settlement On Stony Groumnd (반석 위에 지은 집)’이라는<br>
+                    어원을 가진 오랜 역사로 현대적 감각을 겸비하여 우리 고객의<br>
+                    품격을 높이고 안락한 주거공간을 제공하기 위해 노력하는<br>
+                    효성의 진흥기업의 새로운 주거 브랜드입니다.</p>
+                <a href="#">해링턴 플레이스 바로가기</a>
+            </div><!-- wrapper -->
+        </section> <!-- brand -->
+        <footer>
+            <div class="wrapper"> 
+            <!-- footer의 navgation - 풋터의 메뉴 그래서 f_nav 쓰는곳도있고 안쓰는곳도 있으나 대부분 nav 안씀 -->
+                <ul class="f_nav">
+                    <li><a href="#">법적고지</a></li>
+                    <li class="privacy"><a href="#">개인정보처리방침</a></li>
+                </ul>
+                <div class="copyright">ⓒ HYOSUNG. All Rights Reserved.</div> 
+            </div>   
+        </footer>
+    </div> <!-- div 종료태그-->    
 </body>
 </html>
