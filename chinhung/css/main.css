@@ -2,7 +2,8 @@
 @font-face { font-family:'Pretendard'; src:url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff'); font-weight:700; font-style:normal; }
 
 body {
-    font-family: 'Pretendard Variable',serif; 
+    /* Pretendard Variable */
+    font-family: 'PT',serif; 
     font-size: 15px; /*크기*/
     color: #1d1d1d; /* 글자색상 */
     font-weight: 400; /* 글자의 두께 */
@@ -20,7 +21,6 @@ body {
     오른쪽 background가 짤리는 현상이 생김 가로스크롤바가 생성되엇을때도 홈페이지를 정상적으로 서비스 하기위해
     최소 넓이를 입력*/
 }
-
 /* 태그초기화 - 태그의 기본 스타일 제거하는 목적 */
 * { /* *은 와이드 카드*/
     padding: 0; /* 모든 태그의 여백삭제 */
