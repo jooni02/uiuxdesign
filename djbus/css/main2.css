@@ -26,7 +26,7 @@ body {
     margin: 0 auto; /* 가운데설정 */
 }
 #wrap {/* id=wrap"에 적용되는 스타일 */
-    min-width: 1920px;
+    min-width: 1280px;
     /* pc형에서 wrapper사이즈보다브라우저 넓이가 작을 때 가로스크롤바가 생성되는데
     오른쪽 background가 짤리는 현상이 생김 가로스크롤바가 생성되엇을때도 홈페이지를 정상적으로 서비스 하기위해
     최소 넓이를 입력*/
@@ -48,7 +48,7 @@ a {
  color: inherit; /* inherit = 누군가 상속해준 스타일을 적용해 라는 의미 > 기본적으로 body에있는거*/
 }
 
-header {
+.header {
     height: 100px;
 }
 header .logo {
@@ -85,37 +85,43 @@ header .gnb ul li a {
     font-size: 45px;
 }
 
-/* .biz .art와 .bzi .edu 둘다에게 동일 스타일 적용 - 다중선택자 */
-.biz .art {
-    margin: 140px 0 110px 0;
+.biz {
+    margin: 140px 0 140px 0;
 }
-.biz .art, .biz .edu {
-    display: flex; /* inner와 img가 좌우로 배치 */
+.biz .art,
+.biz .edu {
+    display: flex;
 }
 .biz .edu {
-    justify-content: flex-end; /* 내부 콘텐츠를 감싸는 영역 오른쪽에 붙이기 */
-    text-align: right;
+    justify-content: flex-end;
+    margin: 60px 0 0 0;
 }
 .biz .art .inner {
-    margin: 0 0 0 100px;
+    margin: 70px 0 0 100px;    
 }
 .biz .edu .inner {
-    margin: 0 100px 0 0 ;
+    margin: 70px 100px 0 0;
+    width: 355px;
+    text-align: right;
 }
-.biz h2 {
+.biz .art h2,
+.biz .edu h2 {
     color: #1d1d1d;
     font-size: 40px;
     font-weight: 700;
-    margin: 72px 0 12px 0;
 }
-.biz .sub_tit {
+.biz .art .sub_tit,
+.biz .edu .sub_tit {
+    color: #1d1d1d;
     font-size: 20px;
-    margin: 0 0 12px 0;
+    margin: 10px 0 10px 0;
 }
-.biz .btn_wrap {
-    margin: 12px 0 0 0;
+
+.biz .edu .btn_wrap {
+    justify-content: flex-end;
 }
-.biz .btn_wrap a {
+.biz .art .btn_wrap a,
+.biz .edu .btn_wrap a {
     border: 1px solid #999;
     padding: 9px 22px 9px 22px;
     display: inline-block;
