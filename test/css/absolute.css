@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../../djbus/fonts/Pretendard-Regular.woff2) format('woff2'), url(../../djbus/fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url(../../djbus/fonts/Pretendard-Bold.woff2) format('woff2'), url(../../djbus/fonts/Pretendard-Bold.woff) format('woff');
+}
+
+/* body가 잘못될때 html이 대신 해줄 수 있게 태그 거는방법 */
+html, body {
+    /* Pretendard Variable */
+    font-family: 'Pretendard', sans-serif; /*서체*/
+    font-size: 15px; /*크기*/
+    color: #1d1d1d; /* 글자색상 */
+    font-weight: 400; /* 글자의 두께 */
+    line-height: 1.2; /*auto*/
+    word-break: keep-all; /*(중요) 단어를 묶어서 줄바꿈 */
+    letter-spacing: -0.05em; /*자간*/
+}
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1280px; /* 넓이제한 */   
+    margin: 0 auto; /* 가운데설정 */
+}
+#wrap {/* id=wrap"에 적용되는 스타일 */
+    min-width: 1280px;
+    /* pc형에서 wrapper사이즈보다브라우저 넓이가 작을 때 가로스크롤바가 생성되는데
+    오른쪽 background가 짤리는 현상이 생김 가로스크롤바가 생성되엇을때도 홈페이지를 정상적으로 서비스 하기위해
+    최소 넓이를 입력*/
+}
+/* 태그초기화 - 태그의 기본 스타일 제거하는 목적 */
+* { /* *은 와이드 카드*/
+    padding: 0; /* 모든 태그의 여백삭제 */
+    margin: 0; 
+    box-sizing: border-box; 
+    /* padding 하고 border는 넓이를 늘리는 요소로, 넓이를 늘리지 않도록 하는 속성*/
+}
+/* 다중선택자 설정은 ,(쉼표)를 넣으면 된다 - 동일적용 보통 초기화에 많이 넣어서 씀  */
+ul, ol, li {
+    list-style: none; /* ul li앞에 동그라미 삭제 */
+}
+/* a태그는 파란색에 undeline이 기본적으로 생성되기에 text-decoration 태그로 없애야함 (none;) */
+a {
+ text-decoration: none; /* 언더라인 막는태크 */
+ color: inherit; /* inherit = 누군가 상속해준 스타일을 적용해 라는 의미 > 기본적으로 body에있는거*/
+}
+address, em {
+    font-style: normal;
+}
+/* h태그는 글자크기가 바뀌고 두께바뀜 - 브라우저가 준 속성
+    이걸 body태그에서 준 스타일대로 적용될 수 있도록
+    - 브라우저가 준 스타일을 적용시키기 않도록 */
+h1, h2, h3, h4, h5, h6, strong {
+    font-size: inherit;
+    font-weight: inherit;
+}
+.servies {
+    width: 400px;
+}
+.noitce {
+    width: 500px;
+    height: 500px;
+    background-color: #ededed;
+    position: relative;
+    /* 내부요소 tit의 absolute 정렬의 기준점 */
+}
+.noitce .tit {
+    width: 300px;
+    height: 200px;
+    border: 3px solid #ff6600;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    /* 감싸는 요소 notice가 position 값을 가지고 있어서
+    notice 기준으로 정렬 */
+}
+.noitce .sub_tit {
+    position: absolute;
+    right: 50%;
+    bottom: 100px;
+    border: 5px solid blue;
+}
+.noitce .cnt {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    border: 5px solid yellow;
+}
+
+.community {
+    margin: 100px 0 100px 0;
+}
+.community ul {
+    display: flex;
+}
+.community ul li {
+    position: relative;
+} /* after의 가상기준점 */
+.community ul li::after {
+    content: "사이";
+    color: red;
+    font-size: 11px;
+    position: absolute;
+    right: -8px;
+    top: 53px; /* %(퍼센트)는 안맞을 수 있어서 보통 px로 사용 */
+}
+.community ul li a {
+    padding: 50px; /* 사방에 여백이 동일하게 들어갈 때 한번만 씀 */
+    display: block;
+}
