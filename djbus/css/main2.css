@@ -54,17 +54,17 @@ address, em {
 .header {
     height: 100px;
 }
-header .logo {
+.header .logo {
     float: left;
     padding: 18px 0 18px 0;
 }
-header .gnb {
+.header .gnb {
     float: right;
 }
-header .gnb ul {
+.header .gnb ul {
     display: flex;
 }
-header .gnb ul li a {
+.header .gnb ul li a {
     color: #1d1d1d;
     font-size: 20px;
     padding: 36px 20px 36px 20px;
