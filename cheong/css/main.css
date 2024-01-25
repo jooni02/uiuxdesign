@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
+}
+
+html, body {
+    /* Pretendard Variable */
+    font-family: 'Pretendard', sans-serif; /*서체*/
+    font-size: 15px; /*크기*/
+    color: #3d3d3d; /* 글자색상 */
+    font-weight: 400; /* 글자의 두께 */
+    line-height: 1.4; /*auto*/
+    word-break: keep-all; /*(중요) 단어를 묶어서 줄바꿈 */
+    letter-spacing: -0.05em; /*자간*/
+}
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1280px; /* 넓이제한 */   
+    margin: 0 auto; /* 가운데설정 */
+}
+#wrap {/* id=wrap"에 적용되는 스타일 */
+    min-width: 1280px;
+    /* pc형에서 wrapper사이즈보다브라우저 넓이가 작을 때 가로스크롤바가 생성되는데
+    오른쪽 background가 짤리는 현상이 생김 가로스크롤바가 생성되엇을때도 홈페이지를 정상적으로 서비스 하기위해
+    최소 넓이를 입력*/
+}
+/* 태그초기화 - 태그의 기본 스타일 제거하는 목적 */
+* { /* *은 와이드 카드*/
+    padding: 0; /* 모든 태그의 여백삭제 */
+    margin: 0; 
+    box-sizing: border-box; 
+    /* padding 하고 border는 넓이를 늘리는 요소로, 넓이를 늘리지 않도록 하는 속성*/
+}
+/* 다중선택자 설정은 ,(쉼표)를 넣으면 된다 - 동일적용 보통 초기화에 많이 넣어서 씀  */
+ul, ol, li {
+    list-style: none; /* ul li앞에 동그라미 삭제 */
+}
+/* a태그는 파란색에 undeline이 기본적으로 생성되기에 text-decoration 태그로 없애야함 (none;) */
+a {
+ text-decoration: none; /* 언더라인 막는태크 */
+ color: inherit; /* inherit = 누군가 상속해준 스타일을 적용해 라는 의미 > 기본적으로 body에있는거*/
+}
+address, em {
+    /* address는 기본적으로 글자가 기울여져서 em을 뒤에 붙여 기울임 없애는 태그 */
+    font-style: normal;
+}
+
+/* body가 선언한 속성대로 적용될 수 있도록 초기화 함 */
+h1, h2, h3, h4, h5, h6, strong {
+    font-size: inherit;
+    font-weight: inherit;    
+}
+
+.header {
+    /* body를 기준으로 정렬
+        postion값을 주면 (예외 relative) block요소라도
+        콘텐츠가 존재하는 만큼만 넓이값이 있다
+        block요소는 원래 넓이가 100%
+        이걸 기대하고 코딩하면 안된다 = 넓이 걍 100%주라는 말
+    */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; /* header가 absolute면 넓이는 무조건 100% */
+    color: #fff;
+}
+.header .logo {
+    float: left;
+    margin-top: 35px;
+}
+.header .gnb {
+    float: right;
+}
+.header .gnb ul {
+    display: flex;
+}
+.header .gnb ul li a {
+    font-size: 22px;
+    padding: 36px 30px 27px 30px;
+    display: block;
+}
+
+.visual {
+    /* 넓이와 높이는 제한이기 때문에 신중하게 */
+    height: 800px;
+    background: url(../images/visual_bg.png) center center no-repeat;
+    border-radius: 0 0 200px 0; /* 시계방향 - 왼쪽상단 */
+    /* 이미지 모서리라운드 디자인했다면 라운드 없이 사각으로 저장하고 css에서 라운드처리 */
+}
+.visual h2 {
+    text-align: center;
+    padding: 330px 0 0 0;
+}
+.visual .photo {
+    width: 120px;
+    height: 120px;
+    background-color: #163D78;
+    color: #fff;
+    display: block;
+    border-radius: 100%;
+    /* 동그라미는 넓이와 높이를 주고 border-radius:100%로 줌 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.visual .photo i {
+    padding: 22px 0 0 0;
+    display: block;
+}
+.visual .photo span {
+    display: block;
+    /* i태그와 span태그 모두 inline태그라 줄바꿈이 안되서 
+        span태그에 block을 주면 넓이가 100%되서 줄이 바뀜 */
+}
