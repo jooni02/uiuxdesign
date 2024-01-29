@@ -19,6 +19,8 @@ html, body {
     font-weight: 400; /* 글자의 두께 */
     line-height: 1.2; /*auto*/
     word-break: keep-all; /*(중요) 단어를 묶어서 줄바꿈 */
+    /* 아이폰은 단어를 묶어서 인식하느라 길어지면 그냥 글씨를 잘라버림
+    갤럭시는 알아서 줄 바꿈해서 내려감 */
     letter-spacing: -0.05em; /*자간*/
 }
 .wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
