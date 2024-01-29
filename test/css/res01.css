@@ -124,83 +124,195 @@ button {
     1. pc와 선택자가 동일해야한다 선택자가 달라지면 xss 우선순위 변경 > 적용 x 
     2. 모바일은 pc버전 스타일을 그대로 상속 받기 때문에 "변경되는 부분만" 스타일 적용
     3. 모바일 스타일은 pc스타일 아래 선언되어야 한다*/
-    @media screen and (max-width:640px) {
-        html, body {
-            /* Pretendard Variable */
-            font-size: 13px; /*크기*/ 
-        }
-        .wrapper {
-            width: auto;
-            /* pc버전에서 준 넓이 값 해제(취소)
-            - block요소라면 넓이가 100%되는 것 */
-            margin: 0 20px;
-            /* 모바일에서는 좌우 20px 여백을 준다 */
-        }
-        #wrap {
-            min-width: 320px; /* 모바일 최소 사이즈(320px)를 준다 */
-        }
-        .notice {
-            margin-top: 65px;
-        }
-        .notice h2 {
-            font-size: 25px;
-            margin-bottom: 40px;
-        }
-        .notice ul {
-            display: block;
-            /* flex를 해제하는 방법은 block 사용 */
-        }
-        .notice ul li {
-            width: auto; 
-            /* 넓이 제한 해제는 auto 사용 */
-            margin-bottom: 20px;
-        }
-        .notice ul li a {
-            display: flex;
-            /*  왼쪽에 이미지, 오른쪽에 글자가 배치되도록 display:flex 사용 */
-            align-items: flex-start;
-            /* display:flex는 좌우 요소의 높이를 동일하게 하려는 특징이있어서
-            이미지가 오른쪽 글자에 맞춰서 늘어난다(세로) 
-            이럴경우  align-items: flex-start; 태그를 줘서 방지한다*/
-            justify-content: space-between;
-        }
-        .notice ul li a img {
-            width: 96px;
-            /* 이미지 크기를 조정하려면 반드시 img에 width/heught를 줘야함
-            감싸는 요소는 줘도 안들어가며 넓이나 높이 하나만 줘도 나머지는 알아서
-            비율에 맞게 적용된다 */
-        }
-        .notice ul li a .inner {
-            width: calc(100% - 112px);
-            /* 왼쪽에 이미지와 여백은 고정값이며
-            오른쪽에 글자는 브라우저 사이즈에 따라서 늘었다가 줄어듦
-            그러면 전체 넓이 100%에서 왼쪽이미지 넓이 + 여백을 뺀 값이
-            글자의 넓이가 된다 계산할 때 수식(- 마이너스) 양쪽으로 띄어쓰기 꼭! */
-        }
-        .notice ul li a strong {
-            font-size: 15px;
-            line-height: 1.2;
-            color: #1e1e1e;
-            margin: 0 0 3px 0;
-            /* 제목을 무조건 두줄로 제한 */
-            height: 2.4em; /* 표시되고자 하는 행간의 수만큼 곱하기 
-            (ex. 두줄이면 2배 곱하고 세줄이면 3배 곱하면 됨) 단위는 em */
-            overflow: hidden; /* 글자 단락의 높이를 지정했기에 벗어나면 글자 숨김 */
-        }
-        .notice .more {
-            /* absolute를 해제하고 원래 코딩순서대로 아래에 배치 */
-            position: relative;
-            top: auto; /* right, top 해제는 auto */
-            right: auto;
-            margin: 35px 0 0 0;
-            text-align: center;
-            /* widht가 넓은 요소(block)에서 inline요소를 가운데 정렬 
-               text-align: center */
-        }
-        .notice .more a {
-            line-height: 35px;
-            padding: 0 15px;
-            display: inline-block;
-        }
-        /* 모바일은 마우스 오버가 없다 */
-     } /* media */
+@media screen and (max-width:640px) {
+    html, body {
+        /* Pretendard Variable */
+        font-size: 13px; /*크기*/ 
+    }
+    .wrapper {
+        width: auto;
+        /* pc버전에서 준 넓이 값 해제(취소)
+        - block요소라면 넓이가 100%되는 것 */
+        margin: 0 20px;
+        /* 모바일에서는 좌우 20px 여백을 준다 */
+    }
+    #wrap {
+        min-width: 320px; /* 모바일 최소 사이즈(320px)를 준다 */
+    }
+    .notice {
+        margin-top: 65px;
+    }
+    .notice h2 {
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+    .notice ul {
+        display: block;
+        /* flex를 해제하는 방법은 block 사용 */
+    }
+    .notice ul li {
+        width: auto; 
+        /* 넓이 제한 해제는 auto 사용 */
+        margin-bottom: 20px;
+    }
+    .notice ul li a {
+        display: flex;
+        /*  왼쪽에 이미지, 오른쪽에 글자가 배치되도록 display:flex 사용 */
+        align-items: flex-start;
+        /* display:flex는 좌우 요소의 높이를 동일하게 하려는 특징이있어서
+        이미지가 오른쪽 글자에 맞춰서 늘어난다(세로) 
+        이럴경우  align-items: flex-start; 태그를 줘서 방지한다*/
+        justify-content: space-between;
+    }
+    .notice ul li a img {
+        width: 96px;
+        /* 이미지 크기를 조정하려면 반드시 img에 width/heught를 줘야함
+        감싸는 요소는 줘도 안들어가며 넓이나 높이 하나만 줘도 나머지는 알아서
+        비율에 맞게 적용된다 */
+    }
+    .notice ul li a .inner {
+        width: calc(100% - 112px);
+        /* 왼쪽에 이미지와 여백은 고정값이며
+        오른쪽에 글자는 브라우저 사이즈에 따라서 늘었다가 줄어듦
+        그러면 전체 넓이 100%에서 왼쪽이미지 넓이 + 여백을 뺀 값이
+        글자의 넓이가 된다 계산할 때 수식(- 마이너스) 양쪽으로 띄어쓰기 꼭! */
+    }
+    .notice ul li a strong {
+        font-size: 15px;
+        line-height: 1.2;
+        color: #1e1e1e;
+        margin: 0 0 3px 0;
+        /* 제목을 무조건 두줄로 제한 */
+        height: 2.4em; /* 표시되고자 하는 행간의 수만큼 곱하기 
+        (ex. 두줄이면 2배 곱하고 세줄이면 3배 곱하면 됨) 단위는 em */
+        overflow: hidden; /* 글자 단락의 높이를 지정했기에 벗어나면 글자 숨김 */
+    }
+    .notice .more {
+        /* absolute를 해제하고 원래 코딩순서대로 아래에 배치 */
+        position: relative;
+        top: auto; /* right, top 해제는 auto */
+        right: auto;
+        margin: 35px 0 0 0;
+        text-align: center;
+        /* widht가 넓은 요소(block)에서 inline요소를 가운데 정렬 
+            text-align: center */
+    }
+    .notice .more a {
+        line-height: 35px;
+        padding: 0 15px;
+        display: inline-block;
+    }
+    /* 모바일은 마우스 오버가 없다 */
+    } /* media */
+
+.news {
+    margin-top: 100px;
+}
+.news .notice_wrap {
+    position: relative;
+}
+.news h2 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #aaa;
+    line-height: 1.2;
+    margin-bottom: 50px;
+}
+.news h2 strong {
+    color: #1e1e1e;
+}
+.news ul {
+    display: flex;
+    justify-content: space-between;
+}
+.news ul li {
+    width: 299px;
+}
+/* a태그 안에 많은 요소들이 들어가면 display를 넣어주는게 좋다 */
+.news ul li a {
+    display: block;
+}
+.news ul li a strong {
+    display: block; /* 제목은 strong, 날자는 span으로 - 디자인 상 줄바꿈이 필요할 때 
+    block요소를 사용하여 한줄에 나타나지 않게 씀 */
+    color: #1e1e1e;
+    margin: 10px 0;
+}
+.news ul li a span {
+    display: block; /* 하나만 줘도 되지만 그냥 같이 넣어 줌 */
+    color: #aaa;
+}
+.news .more {
+    position: absolute;
+    top: 45px;
+    right: 0;
+}
+.news .more a {
+    border: 1px solid #999;
+    border-radius: 100px;
+    line-height: 50px;
+    padding: 0 22px;
+    display: block;
+}
+/* 마우스를 오버(마우스를 가져다가댈 때)했을 때 */
+.news .more a:hover {
+    background-color: #999;
+    color: #fff;
+}
+
+@media screen and (max-width:640px) {
+    .news {
+        margin-top: 50px;
+    }
+    .news h2 {
+        font-size: 25px;
+        font-weight: 700;
+        color: #aaa;
+        margin-bottom: 14px;
+    }
+/* 줄바꿈 해제하는 방법으로 br 태그 여,닫태그 없는 단독이라 가능한것*/
+    .news h2 br {
+        display: none;
+    }
+    .news ul {
+        flex-wrap: wrap;
+        /* 한줄에 2개씩 변경 그럼 display:flex
+            유지하고 flex-wrpa:wrpa 줄바꿈 허용  */
+    }
+    .news ul li {
+        width: calc(50% - 8px);
+        /* 한줄에 2개씩 사이엥 여백 16px 고정으로 배치
+        넓이는 %고 여백은 px이라면 계산하기 위해서 
+        calc()연상자를 사용해야한다 */
+        margin-bottom: 20px;
+    }
+    .news ul li a img {
+        width: 100%;
+        /*  감싸는 요소인 li의 넓이에 맞춰서 들어가겠다는 의미로
+        높이는 비율에 맞게 조정이 된다 */
+    }
+    .news ul li a strong {
+        font-size: 15px;
+        margin: 5px 0;
+        /* 제목은 무조건 2줄로만 출력 */
+        line-height: 1.2;
+        height: 2.4em;
+        overflow: hidden;
+    }
+    .news .more {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 35px 0 50px 0;
+        text-align: center;
+        /* diplay:flex:
+            just; */
+    }
+    .news .more a {
+        border-radius: 50px;
+        line-height: 37px;
+        padding: 0 22px;
+        display: inline-block;
+    }
+}
+        
