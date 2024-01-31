@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url(../fonts/Pretendard-Bold.woff2) format('woff2'), url(../fonts/Pretendard-Bold.woff) format('woff');
+}
+
+html, body {
+    /* Pretendard Variable */
+    font-family: 'Pretendard', sans-serif; /*서체*/
+    font-size: 15px; /*크기*/
+    color: #3d3d3d; /* 글자색상 */
+    font-weight: 400; /* 글자의 두께 */
+    line-height: 1.2; /*auto*/
+    word-break: keep-all; 
+    letter-spacing: -0.05em; /*자간*/
+}
+.wrapper { 
+    width: 1280px;  
+    margin: 0 auto;
+}
+#wrap {
+    min-width: 1280px;
+}
+* {
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+}
+ul, ol, li {
+    list-style: none;
+}
+a {
+ text-decoration: none; 
+ color: inherit;
+}
+h1, h2, h3, h4, h5, h6, strong {
+    font-size: inherit;
+    font-weight: inherit;    
+}
+
+.biz h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin: 98px 0 38px 0;
+    text-align: center;
+}
+.biz ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz ul li {
+    width: 290px;
+}
+.biz ul li a {
+    display: block;
+}
+.biz .inner strong{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 16px 0 20px 0;
+}
+.biz ul li a span {
+    display: block;
+    margin-bottom: 85px;
+}
+
+.tech {
+    background: #F4F4F4;
+    padding: 98px;
+    text-align: center;
+}
+.tech h2 {
+    font-size: 45px;
+    font-weight: 700;
+    padding: 0 0 38px 0;
+}
+.tech ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tech ul li {
+    width: 620px;
+}
+.tech li .inner {
+    background: url(../images/tech01.png) center center no-repeat;
+    height: 514px;
+    color: #fff;
+}
+.tech li .inner2 {
+    background: url(../images/tech02.png) center center no-repeat;
+    height: 514px;
+    color: #fff;
+}
+.tech ul li a {
+    display: block;
+}
+.tech .inner h3 {
+    display: block;
+    font-size: 35px;
+    font-weight: 700;
+    padding: 209px 0 24px 0;
+}
+.tech .inner2 h3 {
+    display: block;
+    font-size: 35px;
+    font-weight: 700;
+    padding: 209px 0 24px 0;
+}
