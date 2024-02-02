@@ -1,0 +1,322 @@
+/* 초기화 항목들을 넣어두는 css */
+
+/* 태그초기화 - 태그의 기본 스타일 제거하는 목적 */
+* { /* *은 와이드 카드*/
+    padding: 0; /* 모든 태그의 여백삭제 */
+    margin: 0; 
+    box-sizing: border-box; 
+    /* padding 하고 border는 넓이를 늘리는 요소로, 넓이를 늘리지 않도록 하는 속성*/
+}
+/* 다중선택자 설정은 ,(쉼표)를 넣으면 된다 - 동일적용 보통 초기화에 많이 넣어서 씀  */
+ul, ol, li {
+    list-style: none; /* ul li앞에 동그라미 삭제 */
+}
+/* a태그는 파란색에 undeline이 기본적으로 생성되기에 text-decoration 태그로 없애야함 (none;) */
+a {
+ text-decoration: none; /* 언더라인 막는태크 */
+ color: inherit; /* inherit = 누군가 상속해준 스타일을 적용해 라는 의미 > 기본적으로 body에있는거*/
+}
+address, em {
+    /* address는 기본적으로 글자가 기울여져서 em을 뒤에 붙여 기울임 없애는 태그 */
+    font-style: normal;
+}
+
+/* body가 선언한 속성대로 적용될 수 있도록 초기화 함 */
+h1, h2, h3, h4, h5, h6, strong {
+    font-size: inherit;
+    font-weight: inherit;    
+}
+/* button태그는 기본스타일이 많음 */
+button {
+    background-color: transparent; /*투명*/
+    border: 0; /* 테두리 삭제 */
+    color: inherit; /* 브라우저가 주는 값 삭제 다시 값 줘야 함*/
+    font-family: inherit; /*button은 서체도 바꿔서 다시 줘야 함; */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+html, body {
+    /* Pretendard Variable */
+    font-family: 'Noto Sans KR', sans-serif; /*서체*/
+    font-size: 15px; /*크기*/
+    color: #3d3d3d; /* 글자색상 */
+    font-weight: 400; /* 글자의 두께 */
+    line-height: 1.4; /*auto*/
+    word-break: keep-all; /*(중요) 단어를 묶어서 줄바꿈 */
+    position: relative;
+}
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1280px; /* 넓이제한 */   
+    margin: 0 auto; /* 가운데설정 */
+}
+#wrap {/* id=wrap"에 적용되는 스타일 */
+    min-width: 1280px;
+    /* pc형에서 wrapper사이즈보다브라우저 넓이가 작을 때 가로스크롤바가 생성되는데
+    오른쪽 background가 짤리는 현상이 생김 가로스크롤바가 생성되엇을때도 홈페이지를 정상적으로 서비스 하기위해
+    최소 넓이를 입력*/
+}
+
+/* 모바일 640px 이하일때 스타일  */
+@media screen and (max-width:640px){
+    html, body {
+        /* Pretendard Variable */
+        font-size: 13px; /*크기*/
+        color: #3d3d3d; /* 글자색상 */
+        font-weight: 400; /* 글자의 두께 */
+        line-height: 1.4; /*auto*/
+        word-break: keep-all; /*(중요) 단어를 묶어서 줄바꿈 */
+    }
+    .wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+        width: auto; /* 모바일에서는 넓이제한하면 안되서 auto를 준다 */   
+        margin: 0 20px; /* 모바일은 디바이스때문에 유동적이여야하나 안쪽으로 좌우 20px들어가야함 */
+    }
+    #wrap {/* id=wrap"에 적용되는 스타일 */
+        min-width: auto
+         ;
+        /* 홈페이지 최소넓이 제한하지 않음 */
+    }
+}/*media*/
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 20px;
+    color: #1d1d1d;
+}
+
+
+.tnb {
+    margin: 20px 0;
+}
+.tnb .inner {
+    display: flex ;
+    /* align-items: center; = 세로(위아래) 가운데를 맞춰주는 태그로
+        flex 태그로 감싸는 태그에게 준다*/
+    align-items: center;
+}
+
+/* 글자를 없애고 아이콘만 나오는 코딩 */
+.tnb .login1, .tnb .lang1 {
+        width: 40px;
+        height: 40px;
+        font-size: 0; /* 글자 숨기기 */
+        line-height: 0;
+}
+.tnb .login1 {
+    background: url(../images/login_b.svg) no-repeat center center;
+}
+.tnb .lang1 {
+    background: url(../images/lang_b.svg) no-repeat center center;
+}
+
+@media screen and (max-width:640px){
+    .tnb .login1, .tnb .lang1 {
+        /* 글자를 없애고 아이콘만 나오는 코딩 */
+        width: 21px;
+        height: 21px;
+        /* background-size: 17px auto; 사이즈가 같을경우 여기에 줘도되고 다르면 각각 밑에 주면됨*/
+    }
+    .tnb .login1 {
+        background-size: 16px auto;
+    }
+    .tnb .lang1 {
+        background-size: 17px auto;
+    }
+}
+
+/* 아이콘이 글자 앞에 나오는 코딩 */
+.tnb .login2, .tnb .lang2 {
+    padding-left: 30px; /* 글자 앞에 아이콘이 들어갈 자리 확보*/
+    position: relative; /* before 선택자 정렬의 기준 */
+    /* 아이콘은 위치를 자유롭게 움직여야해서 before 가상 선택자에 position: relative; 줌 */
+    margin: 0 10px;
+}
+
+.tnb .login2::before,
+.tnb .lang2::before {
+    position: absolute; /* 이 태그를 감싸고있는 a태그를 기준으로 정렬 */
+    left: 0;
+    top: -3px;
+    content: ""; /* before 쓰려면 content: "";를 반드시 줘야함 */
+    width: 25px; /* 아이콘 크기만하게 넓이랑 높이 줌*/
+    height: 25px;
+}
+.tnb .login2::before {
+    background: url(../images/login_b.svg) no-repeat center center;
+}
+.tnb .lang2::before {
+    background: url(../images/lang_b.svg) no-repeat center center;
+}
+
+@media screen and (max-width:640px){
+    .tnb .login2, .tnb .lang2 {
+        padding-left: 25px; /* 글자 앞에 아이콘이 들어갈 자리 확보*/
+    }
+    
+    .tnb .login2::before,
+    .tnb .lang2::before {
+        top: -3px;
+        width: 21px; /* 아이콘 크기만하게 넓이랑 높이 줌*/
+        height: 21px;
+    }
+    .tnb .login2::before {
+        background-size: 16px auto;
+    }
+    .tnb .lang2::before {
+        background-size: 17px auto;
+    }   
+}
+
+/* 아이콘이 글자 위에 나오는 코딩 */
+.tnb .login3, .tnb .lang3 {
+    padding-top: 30px;
+    margin: 0 10px;
+    position: relative;
+}
+.tnb .login3::before, .tnb .lang3::before {
+    position: absolute;
+    /* before가 글자에 가운데 정렬 */
+    left: calc(50% - 15px);
+    top: 0;
+    content: "";
+    width: 30px; /* 아이콘 크기 */
+    height: 30px;
+}
+.tnb .login3::before {
+    background: url(../images/login_b.svg) no-repeat center center;
+}
+.tnb .lang3::before {
+    background: url(../images/lang_b.svg) no-repeat center center;
+}
+
+@media screen and (max-width:640px) {
+    .tnb .login3, .tnb .lang3 {
+        padding-top: 0; /* 필요없으면 지우지말고 0으로 */
+    }
+    .tnb .login3::before, .tnb .lang3::before {
+        display: none;
+    }
+}
+
+.service ul {
+    margin: 20px 0;
+}
+.service .st1 {
+    display: flex;
+}
+.service .st1 li {
+    width: 16.66%; /* 100/6 = 16.66% */
+    text-align: center;
+}
+.service .st1 li a {
+    padding-top: 114px;
+    display: block;
+    position: relative;
+}
+.service .st1 li a::before {
+    position: absolute;
+    /* before를 가운데 정렬 */
+    left: calc(50% - 35px);
+    top: 0;
+    content: "";
+    width: 79px;
+    height: 114px;
+    background-size: 60px auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* background라고 스타일을 주면 repeat, position, size, image 모든 스타일 선언되어있음
+    때문에 css 충돌되는 경우가 발생되어서 
+    이럴 때는 background를 각자 속성별로 선언하면 충돌을 막을 수 있다*/
+}
+
+.service .st1 li.se1 a::before {
+    background-image: url(../images/icon1.svg);
+}
+.service .st1 li.se2 a::before {
+    background-image: url(../images/icon2.svg);
+}
+.service .st1 li.se3 a::before {
+    background-image: url(../images/icon3.svg);
+}
+.service .st1 li.se4 a::before {
+    background-image: url(../images/icon4.svg);
+}
+.service .st1 li.se5 a::before {
+    background-image: url(../images/icon5.svg);
+}
+.service .st1 li.se6 a::before {
+    background-image: url(../images/icon6.svg);
+    left: 67px;
+}
+
+
+@media screen and (max-width:640px) {
+    .service .st1 {
+        flex-wrap: wrap; /* flex는 무조건 한줄에 배치함, flex-wrap: wrap;는 두줄도 허용하겠다는 태그*/
+    }
+    .service .st1 li {
+        width: 33.33%;
+        margin-bottom: 10px;
+    }
+    .service .st1 li a {
+        padding-top: 72px;
+    }
+    .service .st1 li a::before {
+        left: calc(50% - 35px);
+        width: 58px;
+        height: 62px;
+        background-size: auto 40px; /* 넓이는 알아서 */
+    }
+}
+
+.service .st2 {
+    display: flex;
+    justify-content: space-between;
+}
+.service .st2 li a {
+    width: 190px;
+    height: 79px;
+    border: 1px solid #ccc;
+    display: flex;
+    padding-top: 20px; /* 위 여백*/
+    justify-content: center;
+}
+.service .st2 li a em {
+    padding-left: 59px;
+    display: block;
+    position: relative;
+}
+.service .st2 li a em::before {
+    position: absolute;
+    /* before를 가운데 정렬 */
+    left: 0;
+    top: -15px;
+    content: "";
+    width: 72px;
+    height: 70px;
+    background-size: auto 55px;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.service .st2 li.se1 a em::before {
+    background-image: url(../images/icon1.svg);
+}
+.service .st2 li.se2 a em::before {
+    background-image: url(../images/icon2.svg);
+}
+.service .st2 li.se3 a em::before {
+    background-image: url(../images/icon3.svg);
+}
+.service .st2 li.se4 a em::before {
+    background-image: url(../images/icon4.svg);
+}
+.service .st2 li.se5 a em::before {
+    background-image: url(../images/icon5.svg);
+}
+.service .st2 li.se6 a em::before {
+    background-image: url(../images/icon6.svg);
+}
+
+

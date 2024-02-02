@@ -48,7 +48,7 @@ html, body {
 }/*media*/
 
 .header {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: 100;
@@ -110,7 +110,22 @@ html, body {
     font-size: 0;
     line-height: 0;
 }
-
+/* header가 스크롤이 되면 jquery에서 header에 fixed라는 클래스를 추가할 예정
+그때의 스타일   */
+.header.fixed {
+    color:#1d1d1d;
+    border-bottom: 0;
+    background: #fff;
+}
+.header.fixed .logo a {
+    background: url(../images/logo_c.svg) no-repeat center center / contain;
+}
+.header.fixed .login {
+    background: url(../images/login_b.svg) no-repeat center center;
+}
+.header.fixed .lang{
+    background: url(../images/lang_b.png) no-repeat center center;
+}
 @media screen and (max-width:640px){
     .header {
         height: 50px;
@@ -143,6 +158,9 @@ html, body {
     .header .lang{
         display: none;
     }
+    .header.fixed .gnb .gnb_open {
+        background: url(../images/gnb_open.svg) no-repeat center center ;
+    }
 } /* media */
 
 
@@ -160,7 +178,7 @@ html, body {
     flex-direction: column;
     justify-content: end;
     height: 100vh; /*브라우저와 동일한 높이*/
-    padding-bottom: 138px;
+    padding-bottom: 80px;
 }  
 /* visual의 높이가 브라우저의 높이에 따라서 바뀜
     그래서 h2태그가 위에서부터의 여백이 달라지면 고정값으로 줄 수가 없음
@@ -185,10 +203,110 @@ html, body {
     .visual h2 {
         font-size: 25px;
         margin-top: 0;
-        padding-top: 150px
+        padding-bottom: 0;
     }
     .visual p {
+        display: none;
         font-size: 12px;
         margin-top: 8px; 
     }
+}
+
+.service {
+    background: #f4f4f4;
+    padding: 70px 0;
+}
+.service h2 {
+    display: none; /* 웹접근,표준 때문에 적었으나 디자인상에는 제목이 없으므로 숨김*/
+}
+.service ul {
+    display: flex;
+    justify-content: space-between;
+}
+.service ul li {
+    width: 16.66%; /* li가 6개라서 100/6=16.66 값으로 반올림 하면 안됨 */
+}
+.service ul li a {
+    padding-top: 111px; /* 아이콘이 들어갈 자리 */
+    font-size: 16px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+.service ul li a::before {
+    /* 상단은 before로 하고 옆은 after로 한다? */
+    position: absolute; /* a를 기준으로 정렬 */
+    left: calc(50% - 39px);
+    top: 0;
+    content: "";
+    width: 76px;
+    height: 111px;
+}
+
+.service ul li.service1 a::before {
+    background: url(../images/service01.svg) no-repeat center center;
+}
+.service ul li.service2 a::before {
+    background: url(../images/service02.svg) no-repeat center center;
+} 
+.service ul li.service3 a::before {
+    background: url(../images/service03.svg) no-repeat center center;
+} 
+.service ul li.service4 a::before {
+    background: url(../images/service04.svg) no-repeat center center;
+} 
+.service ul li.service5 a::before {
+    background: url(../images/service05.svg) no-repeat center center;
+} 
+.service ul li.service6 a::before {
+    background: url(../images/service06.svg) no-repeat center center;
+    left: calc(50% - 29px);
+} 
+
+@media screen and (max-width:640px){
+    .service {
+        padding: 43px 0;
+    }
+    .service ul {
+        flex-wrap: wrap;
+    }
+    .service ul li {
+        width: calc(33.33% - 11px);
+        text-align: center;
+        padding-bottom: 29px;
+    }
+    .service ul li a {
+        padding-top: 60px; /* 아이콘이 들어갈 자리 */
+        font-size: 12px;
+        word-break: normal;
+    }
+    .service ul li a::before {
+        left: calc(50% - 39px);
+        width: 76px;
+        height: 55px;     
+    }
+    
+    .service ul li.service1 a::before {
+        background-size: 39px auto;
+    }
+    .service ul li.service2 a::before {
+        background-size: 47px auto;
+    } 
+    .service ul li.service3 a::before {
+        background-size: 49px auto;
+    } 
+    .service ul li.service4 a::before {
+        background-size: 48px auto;
+    } 
+    .service ul li.service5 a::before {
+        background-size: 43px auto;
+    } 
+    .service ul li.service6 a::before {
+        left: calc(50% - 32px);
+        background-size: 62px auto; 
+    } 
+}
+
+#footer {
+    height: 500px;
 }
