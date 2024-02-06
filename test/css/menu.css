@@ -1,0 +1,221 @@
+@charset "utf-8"; /* 이 css문서는 utf-8로 인코딩 되어 있습니다. */
+@import url(drfault.css);
+/* 본고딕은 CDN방식으로 사용할 때(나한테 폰트가없고 가져올때 쓰는 방식)
+    폰트를 정의하는 font-face가 입력된 css를 import불러다가 사용하는 방식을 많이 씀
+    그러나 구글이 서비스 중단하면 사용못해서 font 파일을 저장해서 사용하는 방식을 사용한다 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+html, body {
+    font-family: 'Noto Sans KR', sans-serif; /* 서체 */
+    font-size: 15px; /* 크기 */
+    color: #3d3d3d; /* 글자색상 */
+    font-weight: 400; /* 글자의 두께 */
+    line-height: 1.4; /* auto */
+    word-break: keep-all; /* 단어를 묶어서 줄바꿈 */
+}
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1280px; /* 홈페이지 넓이 */
+    margin: 0 auto;  /* 가운데 정렬 */
+}
+#wrap { /* id="wrap"에 적용되는 스타일 */
+    min-width: 1280px;
+    /* PC형에서 wrapper사이즈보다 브라우저 넓이가 작을때
+       가로스크롤바가 생성되는데 오른쪽에 background가 
+       짤리는 현상이 생김.  
+       가로스크롤바가 생성되었을때도 홈페이지를 정상적으로 
+       서비스 하기 위해서 최소 넓이를 입력 */
+}
+
+/* 640px 이하일때 스타일 - 640이하는 모바일 초과는 탭  */
+@media screen and (max-width:640px){
+    html, body {
+        font-size: 13px;
+    }
+    .wrapper { 
+        width: auto; 
+        /* 모바일에서는 홈페이지의 넓이를 제한하면 안됨 
+           디바이스의 넓이에 맞춰서 꽉차게 나와야 하기 때문에 
+           그 안쪽으로 좌우 여백이 20px씩 들어가게 함. */
+        margin: 0 20px;  
+    }
+    #wrap { 
+        min-width: auto;  /* 홈페이지의 최소넓이 제한하지 않음 */
+    }
+}/*media*/
+
+.header {
+    position: absolute; /* body를 기준 */
+    left: 0;
+    top: 0;
+    z-index: 100; 
+    /* 다른 position 값을 가지고 있는 요소보다
+    100번째쯤 위에 올라간다는 의미 */
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.header .gnb {
+    float: right;
+}
+.header .gnb .gnb_open,
+.header .gnb .gnb_close {
+    display: none; /* pc에서는 안보임 */
+}
+/* 자식선택자
+    ul안에 ul이 또 있는 경우 꺽새(>)를 이용하여 구분하여 선택
+
+    nav ul li a{ } 이렇게 선택하면 1차메뉴의 a와 2차메뉴의 a 모두가 선택된다.
+    nav>ul>li>a{ } 1차메뉴 a를 선택하는 방법 
+    nav>ul>li>ul>li>a{ } /*2차메뉴 a를 선택하는 방법
+
+    장 : class명을 많이 주지 않아도 됨
+    단 : html구조가 변경도면 하나도 적용 x
+    */
+.header .gnb>ul {
+    display: flex;
+}
+.header .gnb>ul>li {
+    width: 146px;
+    text-align: center;
+}
+.header .gnb>ul>li>a {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 100px;
+    display: block; /* 넓이 100% */
+}
+.header .gnb>ul>li:hover>a,
+.header .gnb>ul>li:focus>a {
+    color: #1A5591;
+}
+.header .gnb>ul>li>ul {
+    margin: 16px 0 0 0;
+    display: none; /* 2차 메뉴는 마우스오버 했을때만 나타남 */
+}
+.header .gnb>ul>li>ul>li>a {
+    display: block;
+    line-height: 35px;
+    color: #1d1d1d;
+}
+.header .gnb>ul>li>ul>li>a:hover,
+.header .gnb>ul>li>ul>li>a:focus {
+    color: #1A5591;
+}
+
+/* 메뉴에 마우스를 오버했을 때 스타일 */
+.header.menu_open {
+    background-color: #fff;
+    border-bottom: 1px solid #666 ;
+    color: #1d1d1d;
+}
+.header.menu_open::before {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    height: 1px;
+    background-color: #f4f4f4;
+    content: "";
+}
+.header.menu_open::after {
+    position: absolute; /* header를 기준으로 */
+    left: 0;
+    top: 0px;
+    z-index: -1;
+    /* header 높이 아래로*/
+    width: 100%;
+    height: 360px;
+    background-color: #fff;
+    content: "";
+    /* header의 모든 요소를 덮게 됨
+    z-index : -1을 줘서 모든 요소 아래에 배치함*/
+}
+/* 숨겼던 2차 메뉴 보이게*/
+.header.menu_open .gnb>ul>li>ul {
+    display: block;
+}
+
+.visual {
+    height: 1000px;
+    background: url(../images/menu_visual_bg.png) no-repeat center center;
+}
+
+@media screen and (max-width:640px) {
+    .header {
+        height: 50px;
+    }
+    .header .gnb .gnb_open{
+        display: block;
+        width: 24px;    
+        height: 24px;
+        font-size: 0;
+        line-height: 0;
+        background: url(../images/meun.svg) no-repeat center center;
+        margin-top: 15px;
+    }
+    .header .gnb .gnb_close {
+        display: none; /* pc에서는 안보임 */
+    }
+    .header .gnb>ul {
+        display: none;
+    }
+    .header.menu_mobile .gnb>ul {
+        display: block;
+    }
+    .header.menu_mobile .gnb .gnb_close {
+        display: block;
+        width: 12px;    
+        height: 24px;
+        font-size: 0;
+        line-height: 0;
+        background: url(../images/menu_coles.svg) no-repeat center center;
+        margin-top: 15px;
+        position: relative;
+        z-index: 102;
+    }
+    .header.menu_mobile .gnb .gnb_open {
+        display: none
+    }
+    .header .gnb>ul {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        color: #1d1d1d;
+        padding: 76px 20px 0 20px;
+    }
+    .header .gnb>ul>li {
+        width: auto;
+        text-align: left;
+    }
+    .header .gnb>ul>li>a {/* 1차메뉴 스타일 */
+        font-size: 20px;
+        line-height: 45px;
+        position: relative;
+    }
+    .header .gnb>ul>li>a::after {
+        position: absolute;
+        right: 0;
+        top: 18px;
+        width: 10px;
+        height: 10px;
+        background: url(../images/menu_g_cloes.svg) no-repeat center center;
+        content: "";
+    }
+    .header .gnb>ul>li>ul {
+        margin: 5px 0 5px 0;
+        display: none; /* 2차메뉴는 기본 숨겨진 상태이고
+        1차메뉴를 클릭했을 때 나타남*/
+    }
+    .header .gnb>ul>li>ul>li>a { /* 2차 메뉴 */
+        display: block;
+        line-height: 35px;
+        font-size: 17px;
+    }
+    .visual {
+        height: 360px;
+    }
+}/* media */
