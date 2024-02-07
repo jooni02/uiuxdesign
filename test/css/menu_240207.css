@@ -214,6 +214,7 @@ html, body {
     .header .gnb ul.depth1 > li {
         width: auto;
         text-align: left;
+        border-bottom: 1px solid rgba(237, 237, 237, 0.5);
     }
     .header .gnb ul.depth1 > li:first-child {
         border-top: 1px solid rgba(237, 237, 237, 0.5);

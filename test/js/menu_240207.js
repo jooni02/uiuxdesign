@@ -81,7 +81,7 @@ $('.header .gnb .gnb_open').on('click', function(){
 })
 $('.header .gnb .gnb_cloes').on('click', function(){
     $('.header').removeClass('menu_open')
-    //스크롤금지 해제
+    //스크롤 금지 해제
     $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
 })
 
