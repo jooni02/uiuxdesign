@@ -367,7 +367,7 @@ html, body {
     top: 50%;
     z-index: 2;
     text-align: left;
-    transform: translate(-50%, -50%);
+    transform: translate(-150%, 60%);
     
 }  
 /* visual의 높이가 브라우저의 높이에 따라서 바뀜
