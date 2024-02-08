@@ -11,33 +11,59 @@
 </head>
 <body>
     <div id="wrap">
-        <!-- 스크롤이 내렸을 때 jquery에서 header한테 fixed라는 클래스를 줄 예정 -->
-        <header class="header ">
+        <header class="header">
             <div class="wrapper">
-                <!-- 로고 기본은 흰색
-                    header가 고정되어있을 때는 칼라로 변경으로 이미지 두개 필요
-                    상황에따라 이미지 변경시 backgroud로 처리하며 
-                    웬표준/접근성 위배방지를 위해 h1/a태그는 빈 태그로 두면 안됨.
-                    글자있는 이미지가 background일때 안에있는 텍스트 html에 써줘야함-->
                 <h1 class="logo"><a href="index.html">삼성꿈장학재단</a></h1>
-                <div class="inner">
-                    <nav class="gnb">
-                        <!-- 버튼이 흰/검 배경처리하고 대체 텍스트를 써줘야함
-                            a태그는 누르면 다른 페이지로 이동
-                            button태그는 누르면 기능이 작동(페이지 이동x)-->
-                        <button class="gnb_open">메뉴열기</button>
+                <nav class="gnb">
+                    <button class="gnb_open">메뉴열기</button>
+                    <div class="gnb_wrap">
                         <ul>
-                            <li><a href="#n">사업소개</a></li>
-                            <li><a href="#n">장학신청</a></li>
-                            <li><a href="#n">정보마당</a></li>
-                            <li><a href="#n">재단소개</a></li>
+                            <li class="depth1">
+                                <li>
+                                    <a href="#n"><span>사업소개</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n">멘토링 꿈장학사업</a></li>
+                                        <li><a href="#n">리더육성 장학사업</a></li>
+                                        <li><a href="#n">배움터 교육지원사업</a></li>
+                                        <li><a href="#n">글로벌 장학사업</a></li>
+                                        <li><a href="#n">특별사업</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>장학신청</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n">멘토링 꿈장학사업</a></li>
+                                        <li><a href="#n">리더육성 장학사업</a></li>
+                                        <li><a href="#n">배움터 교육지원사업</a></li>
+                                        <li><a href="#n">글로벌 장학사업</a></li>
+                                        <li><a href="#n">특별사업</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>정보마당</span></a>
+                                    <ul class="depth2"><li>
+                                        <li><a href="#n">재단소식</a></li>
+                                        <li><a href="#n">정보마당</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>재단소개</span></a>
+                                    <ul class="depth2">
+                                    <ul class="depth2">
+                                        <li><a href="#n">재단소개</a></li>
+                                        <li><a href="#n">함께하는사람들</a></li>
+                                        <li><a href="#n">찾아오시는 길</a></li>
+                                    </ul>
+                                    </ul>
+                                </li>
+                            </li>
                         </ul>
-                    </nav>
-                    <a href="#n" class="login">로그인</a>
-                    <a href="#n" class="lang">영문홈페이지 이동</a>
-                </div><!--inner-->
-            </div><!--wrapper-->
+                    </div>
+                    <button class="gnb_close">메뉴닫기</button>
+                </nav>
+            </div>
         </header>
+        <!-- 스크롤이 내렸을 때 jquery에서 header한테 fixed라는 클래스를 줄 예정 -->
         <div id="container">
             <section class="visual">
                 <div class="wrapper">

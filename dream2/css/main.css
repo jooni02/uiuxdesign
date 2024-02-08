@@ -1,0 +1,49 @@
+@charset "utf-8"; /* 이 css문서는 utf-8로 인코딩 되어 있습니다. */
+@import url(drfault.css);
+/* 본고딕은 CDN방식으로 사용할 때(나한테 폰트가없고 가져올때 쓰는 방식)
+    폰트를 정의하는 font-face가 입력된 css를 import불러다가 사용하는 방식을 많이 씀
+    그러나 구글이 서비스 중단하면 사용못해서 font 파일을 저장해서 사용하는 방식을 사용한다 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+html, body {
+    /* Pretendard Variable */
+    font-family: 'Noto Sans KR', sans-serif; /*서체*/
+    font-size: 15px; /*크기*/
+    color: #3d3d3d; /* 글자색상 */
+    font-weight: 400; /* 글자의 두께 */
+    line-height: 1.4; /*auto*/
+    word-break: keep-all; /*(중요) 단어를 묶어서 줄바꿈 */
+    position: relative;
+    letter-spacing: -0.05em; /*자간*/
+}
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1280px; /* 넓이제한 */   
+    margin: 0 auto; /* 가운데설정 */
+}
+#wrap {/* id=wrap"에 적용되는 스타일 */
+    min-width: 1280px;
+    /* pc형에서 wrapper사이즈보다브라우저 넓이가 작을 때 가로스크롤바가 생성되는데
+    오른쪽 background가 짤리는 현상이 생김 가로스크롤바가 생성되엇을때도 홈페이지를 정상적으로 서비스 하기위해
+    최소 넓이를 입력*/
+}
+
+/* 모바일 640px 이하일때 스타일  */
+@media screen and (max-width:640px){
+    html, body {
+        /* Pretendard Variable */
+        font-size: 13px; /*크기*/
+        color: #3d3d3d; /* 글자색상 */
+        font-weight: 400; /* 글자의 두께 */
+        line-height: 1.4; /*auto*/
+        word-break: keep-all; /*(중요) 단어를 묶어서 줄바꿈 */
+    }
+    .wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+        width: auto; /* 모바일에서는 넓이제한하면 안되서 auto를 준다 */   
+        margin: 0 20px; /* 모바일은 디바이스때문에 유동적이여야하나 안쪽으로 좌우 20px들어가야함 */
+    }
+    #wrap {/* id=wrap"에 적용되는 스타일 */
+        min-width: auto
+         ;
+        /* 홈페이지 최소넓이 제한하지 않음 */
+    }
+}
