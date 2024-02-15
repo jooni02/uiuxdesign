@@ -23,6 +23,44 @@ $(document).ready(function(){ /* html 로딩 시 단 한번만 실행함 */
     },
 
     });
-    swiper.autoplay.stop();  /* 일시정지 기능 */
-    swiper.autoplay.start();  /* 재생 기능 */
+    /*
+        .visual .swiper .stop
+        정지버픈을 누르면 팝업 정지 - 재생버튼이 보이면서 정지버튼이 숨겨짐
+
+        .visual .swiper .play
+        재생버튼
+    */
+    $('.visual .swiper .stop').on('click', function(){
+        swiper.autoplay.stop();  /* 일시정지 기능 */
+        $(".visual .swiper .play").show(); //보임
+        $(".visual .swiper .stop").hide(); //숨김
+    })
+    $('.visual .swiper .play').on('click', function(){
+        swiper.autoplay.start();  /* 재생 기능 */
+        $(".visual .swiper .play").hide();
+        $(".visual .swiper .stop").show();
+    })
+
+    /* 브라우저를 스크롤하면 header에 fiexd 클래스를 추가할 예정
+    단, 스크롤이 조금이라도 내려가면 fixed를 추가하지만 다시 상단으로 이동하면 fixed 클래스를 삭제
+    -- 스크롤 값을 아는게 필요함
+    */
+
+    let scrolling // 브라우저가 스크롤 된 값을 저장
+    
+    function scroll_chk(){ // 함수의 선언
+        scrolling = $(window).scrollTop() //브라우저가 스크롤 된 값을 scrolling에 저장
+        console.log(scrolling)
+        if(scrolling > 0){ //스크롤을 내렸다는 의미
+            $('.header').addClass('fiexd')
+        }else{ // 스크롤이 맨 위에 있는 경우(안내렷을 때)
+            $('.header').removeClass('fiexd')
+        }
+    }
+    scroll_chk() //함수의 실행 -- 브라우저가 로딩 되었을 때 단 1번 실행
+
+    $(window).scroll(function(){
+        scroll_chk() //함수의 실행 -- 스크롤 할 때 마다
+    })
+
 });//$(document).ready
