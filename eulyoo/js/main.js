@@ -1,4 +1,21 @@
 $(document).ready(function(){ /* html 로딩 시 단 한번만 실행함 */
+
+    let device_staus
+    let window_w
+    function device_chk(){
+        window_w = $(window).width()
+        if(window_w > 640){ //pc 라는 말
+            devicce_staus = 'pc'
+        }else{
+            device_staus = 'mobile'
+        }
+        console.log(device_staus)
+    }
+    device_chk()
+    $(window).resize(function(){
+        device_chk() //브라우저가 리사이즈 될 때마다 1번씩
+    })
+
     //visual 팝업을 작동시키는 라이브러리
     const swiper = new Swiper('.swiper', { /* 팝업을 감싼는 요소의 class명 */
 
@@ -75,4 +92,43 @@ $(document).ready(function(){ /* html 로딩 시 단 한번만 실행함 */
         $(this).addClass('active')
     })
 
+    /* pc버전에서 메뉴에 마우스를 오버하면 header에 menu_over 클래스 추가 
+    tab버튼으로 메뉴 이동이 가능해야 함 */
+    $('.header .gnb').on('mouseenter focusin',function(){
+        $('.header').addClass('menu_over')
+    })
+    $('.header').on('mouseleave',function(){
+        $('.header').removeClass('menu_over')
+    })
+    /* 메뉴 다음 버튼이 포커스가 되면 메뉴를 아웃 시킴 */
+    $('.header .tnb .login').on('focusin',function(){
+        $('.header').addClass('menu_over')
+    })
+
+    /* 모바일 메뉴
+        .header .gnb .gnb_open, 를 클릭하면 메뉴가 열림
+            -- header에 meun_open 클래스 추가
+        .header .gnb .gnb_close를 클릭하면 메뉴가 닫힘
+            -- header에 menu_open 클래스 삭제
+        1차 메뉴를 클릭하면 하위메뉴 열리는데
+                해당 li에 sub_open 클래스를 추가
+                이미 열린 메뉴를 닷 ㅣ클릭하면 닫힘
+                1차 메뉴 클릭(href)를 무력화 - 안눌리게 ... 이동 안하게
+        */
+    $('.header .gnb .gnb_open').on('click',function(){
+        $('.header').addClass('menu_open')
+    })
+    $('.nheader .gnb .gnb_close').on('chick',function(){
+        $('.header').removeClass('menu_open')
+    })
+    $('.header .gnb ul.depth1 > li > a').on('click',function(e){
+        e.preventDefault();//href 링크를 없앰
+        $(this).parent().toggleClass('sub_open')
+    })
+    $('.header .gnb ul.depth1 > li > a').on('click',function(e){
+        if(device_staus = 'mobile'){ // 모바일 일때만 실행
+            e.preventDefault();//href 링크를 없앰
+            $(this).parent().toggleClass('sub_open')
+        }
+    })
 });//$(document).ready
