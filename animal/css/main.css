@@ -1,0 +1,193 @@
+@charset "utf-8"; /* 이css문서는 UTF-8방식으로 인코딩 되어 있습니다. */
+@import url(default.css);
+/* 영문웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* 한글웹폰트 */
+@font-face {
+    font-family:'S-CoreDream';
+    src:url('../fonts/SCoreDreamRegular.woff') format('woff'); /* window용 */
+    font-weight:400; 
+    font-style:normal; 
+}
+@font-face {
+    font-family:'S-CoreDream';
+    src:url('../fonts/SCoreDreamRegular.woff2') format('woff2'); /* 맥용 */
+    font-weight:400; 
+    font-style:normal; 
+}
+@font-face {
+    font-family:'S-CoreDream';
+    src:url('../fonts/SCoreDreamExtraBold.woff') format('woff'); 
+    font-weight:700;
+    font-style:normal; 
+}
+@font-face {
+    font-family:'S-CoreDream';
+    src:url('../fonts/SCoreDreamExtraBold.woff2') format('woff2'); 
+    font-weight:700;
+    font-style:normal; 
+}
+
+
+*::selection {
+    background-color: #1d1d1d;
+    color: #fff;
+}
+*::-moz-selection { /* 호환성을 위한 코드 */
+    background-color: #1d1d1d;
+    color: #fff;
+}
+/*
+    영문, 숫자는 영문 폰트를 사용하고 한글만 한국어 폰트를 사용하고 싶을때
+    (단 영문 폰트로 선택한 폰트는 한국어가 지원되는 폰트면 안됨)
+    둘다 폰트파일을 불러오고 (import, font-face)
+    body에서 폰트를 정의할때 맨먼저 무조건 영문폰트를 먼저 선언
+    영어,숫자만 영문폰트가 적용되고 한글을 지원되지 않기때문에 
+    다음에 선언된 한글폰트가 적용됨
+    font-family에 여러폰트를 쓰는 것은 
+    앞에 폰트가 지원안되면 다음폰트, 그게 또 안되면 다음폰트 ....무한반복
+*/
+
+html, body {
+    font-family: 'Montserrat', 'S-CoreDream', sans-serif; /* 서체 serif 명조 sans-serif 고딕 */
+    font-size: 15px; /* 크기 */
+    color: #1d1d1d; /* 글자색상 */
+    font-weight: 400; /* 글자의 두께 */
+    line-height: 1.25; /* auto */
+    word-break: keep-all; /* 단어를 묶어서 줄바꿈 */
+    word-wrap: break-word; /* 만약 단어가 엄청 길면 분리해서 줄바꿈 */
+}
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1280px; /* 홈페이지 넓이 */
+    margin: 0 auto;  /* 가운데 정렬 */
+}
+#wrap { /* id="wrap"에 적용되는 스타일 */
+    width: 100%;
+    overflow: hidden;
+}
+
+/* wrapper의 사이즈 1280 + 40px (좌우여백) = 1320 */
+@media screen and (max-width:1320px){
+    .wrapper { 
+        width: auto; 
+        /* 모바일에서는 홈페이지의 넓이를 제한하면 안됨 
+           디바이스의 넓이에 맞춰서 꽉차게 나와야 하기 때문에 
+           그 안쪽으로 좌우 여백이 20px씩 들어가게 함. */
+        margin: 0 20px;  
+    }
+}/*media*/
+@media screen and (max-width:640px){
+    html, body {
+        font-size: 13px;
+    }
+}
+
+.skipnav {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    z-index: 1000000000000;
+    width: 100%;
+}
+.skipnav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    background-color: #FF1414;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+/* 속성선택자
+a태그중에서 href="#gnb"인 a태그의 스타일 */
+.skipnav a[href="#gnb"] {
+    background-color: #FF9314;
+}
+.skipnav a:focus {
+    top: 100px;
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+.header .logo {
+    margin: 33px 0 0 60px;
+    font-size: 0;
+    line-height: 0; /* 반응형때문에 a 에 사이즈와 행간 값을 주는게 좋다 */
+}
+.header .logo a {
+    width: 191px;
+    height: 32px;
+    display: block;
+    background: url(../images/logo.svg) no-repeat center center;
+}
+.header .gnb .gnb_open,
+.header .gnb .gnb_close {
+    display: none;
+}
+.header .depth1 {
+    display: flex;
+}
+.header .depth1 > li {
+    position: relative; /* depth2 정렬의 기준 */
+}
+.header .depth1 > li > a {
+    padding: 0 30px; /* 메뉴 사이에 여백 */ 
+    line-height: 100px; /* 메뉴의 위아래 가운데 */
+    display: block;
+    font-size: 22px;
+    position: relative; /* after의 기준*/
+}
+/* has선택자 
+    <li>
+        <a></a>
+        <ul class="depth2"></ul>
+    </li>
+    <li>
+        <a></a>
+    </li>
+    1차 메뉴중에서 2차 메뉴를 가지고 있는 li가 있고
+    2차 메뉴가 없는 li가 있음
+
+    이ㄸ ㅐ 2차 메뉴를 가지고 있는 li만 선택해서
+    a 태그에 스타일을 줄 예정
+    li:has(.depth2)라고 선억하면 
+    li의 하위 요소중에서 depth2라는 클래스명을 갖은
+    li에만 스타일이 적용된다.
+    ------ 단 주의사항 2023년 새로 생김
+            즉 브라우저가 업데이트가 안된 곳에서는 적용이 안된다
+*/
+.header .depth1 > li:has(.depth2) > a::after {
+    position: absolute;
+    right:10px;
+    top: calc(50% - 6px);
+    width: 13px;
+    height: 7px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.99 7.755'%3E%3Cpath id='expand_more_FILL0_wght300_GRAD-25_opsz20' d='M274.623-589.706a.884.884,0,0,1-.378-.081,1.021,1.021,0,0,1-.309-.223l-6.024-6.024a.758.758,0,0,1-.269-.567.875.875,0,0,1,.3-.58.812.812,0,0,1,.568-.28.826.826,0,0,1,.571.276l5.548,5.588,5.588-5.588a.747.747,0,0,1,.558-.254.883.883,0,0,1,.581.29.833.833,0,0,1,.28.574.818.818,0,0,1-.285.572l-6.024,5.993a1.325,1.325,0,0,1-.325.223A.862.862,0,0,1,274.623-589.706Z' transform='translate(-267.643 597.461)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; /* 잘리지않고 꽉 차게 */
+    content: "";
+}
+.header .depth2 {
+    position: absolute;
+    left: 50%;
+    top: 113px;
+    padding: 20px 25px;
+}
+
+.visual {
+    background: url(../images/visual01.png) no-repeat center center;
+    height: 600px;
+}
