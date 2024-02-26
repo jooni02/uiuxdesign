@@ -740,6 +740,8 @@ sub_over 클래스 추가 예정 */
 }
 .msg span {
     white-space: nowrap; /* 줄 바꿈 금지 */
+    text-align: center;
+    display: block;
 }
 .msg p i {
     display: inline-block;
