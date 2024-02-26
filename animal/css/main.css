@@ -308,15 +308,6 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
     .header .gnb ul.depth1 > li:has(.depth2) > a::after {
         right: -4px;
     }
-    .header .tnb {
-        margin-right: 20px;
-    }
-    .header .tnb {
-        margin-right: 20px;
-    }
-    .header .tnb .search {
-        margin-right: 20px;
-    }
 }/*1320 media*/
 
 @media screen and (max-width:1204px) {
@@ -342,10 +333,10 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
         right: 0;
         top: 0;
         width: 60px;
-        height: 100px;
+        height: 90px;
         font-size: 0;
         line-height: 0;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 13'%3E%3Cg id='그룹_112' data-name='그룹 112' transform='translate(-315.5 -19)'%3E%3Cline id='선_14' data-name='선 14' x2='28' transform='translate(315.5 20.5)' fill='none' stroke='%23fff' stroke-width='3'/%3E%3Cline id='선_15' data-name='선 15' x2='28' transform='translate(315.5 30.5)' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E%0A");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='31.039' height='20.693' viewBox='0 0 31.039 20.693'%3E%3Cpath id='menu_FILL0_wght400_GRAD0_opsz24' d='M121.724-699.307a1.669,1.669,0,0,1-1.229-.5,1.669,1.669,0,0,1-.5-1.229,1.668,1.668,0,0,1,.5-1.229,1.669,1.669,0,0,1,1.229-.5h27.59a1.669,1.669,0,0,1,1.229.5,1.668,1.668,0,0,1,.5,1.229,1.669,1.669,0,0,1-.5,1.229,1.669,1.669,0,0,1-1.229.5Zm0-8.622a1.669,1.669,0,0,1-1.229-.5,1.669,1.669,0,0,1-.5-1.229,1.668,1.668,0,0,1,.5-1.229,1.668,1.668,0,0,1,1.229-.5h27.59a1.668,1.668,0,0,1,1.229.5,1.668,1.668,0,0,1,.5,1.229,1.669,1.669,0,0,1-.5,1.229,1.669,1.669,0,0,1-1.229.5Zm0-8.622a1.668,1.668,0,0,1-1.229-.5,1.668,1.668,0,0,1-.5-1.229,1.669,1.669,0,0,1,.5-1.229,1.669,1.669,0,0,1,1.229-.5h27.59a1.669,1.669,0,0,1,1.229.5,1.669,1.669,0,0,1,.5,1.229,1.668,1.668,0,0,1-.5,1.229,1.668,1.668,0,0,1-1.229.5Z' transform='translate(-120 720)' fill='%23fff'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
         background-size: 28px auto;
         background-position: center center;
@@ -1055,7 +1046,7 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
     .adopt .ctrl_btn button.stop {
         width: 35px;
         height: 35px;
-        background-color: 0;
+        background-color: transparent;
     }
     .adopt .move {
         font-size: 100px;
@@ -1182,6 +1173,7 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
     padding: 0 24px 0 0;
     position: relative; /* after 정렬의 기준 */
     text-align: right;
+    margin-bottom: 20px;
 }
 .footer .family_site ul li a::after {
     position: absolute;
