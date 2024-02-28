@@ -587,7 +587,20 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
         border-radius: 100%;
     }
 }/*media */
-
+.lost .slogan {
+    position: absolute;
+    left: 91px;
+    bottom: 6px;
+    z-index: 10;
+    animation:slogan_rotate; 
+    animation-duration:10s; 
+    animation-timing-function:linear; 
+    animation-iteration-count:infinite;
+}
+@keyframes slogan_rotate {
+    0% { transform:rotate(0) }
+    100% { transform:rotate(-360deg) }
+}
 .lost {
     background-color: #85AADF;
     color: #fff;
