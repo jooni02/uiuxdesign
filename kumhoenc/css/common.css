@@ -1,6 +1,6 @@
 @charset "utf-8"; /* 이css문서는 UTF-8방식으로 인코딩 되어 있습니다. */
 /* 영문웹폰트 */
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 /* 한글웹폰트 */
 @font-face {
     font-family:'Pretendard';
@@ -45,7 +45,7 @@
     앞에 폰트가 지원안되면 다음폰트, 그게 또 안되면 다음폰트 ....무한반복
 */
 html, body {
-    font-family: 'Rajdhani', 'Pretendard', sans-serif; /* 서체 serif 명조 sans-serif 고딕 */
+    font-family: 'Outfit', 'Pretendard', sans-serif; /* 서체 serif 명조 sans-serif 고딕 */
     font-size: 15px; /* 크기 */
     color: #101010; /* 글자색상 */
     font-weight: 300; /* 글자의 두께 */
@@ -99,7 +99,7 @@ html, body {
 /* 속성선택자
 a태그중에서 href="#gnb"인 a태그의 스타일 */
 .skipnav a[href="#gnb"] {
-    background-color: #FF9314;
+    background-color: #010101;
 }
 .skipnav a:focus {
     top: 100px;
@@ -109,5 +109,4 @@ a태그중에서 href="#gnb"인 a태그의 스타일 */
     작성자 : 박지현
     작성일 : 2024.02.28
     설  성 : 홈페이지 전체에 공통으로 적용되는 스타일을 저장
-            (header와 footer 스타일을 저장)
 */
