@@ -128,6 +128,7 @@
         content: "";
     }
     .header .gnb ul.depth1>li.on>a { 
+        border-bottom: 3px solid #DB000F;
         color: #DB000F;
     }
     .header.menu_over .gnb ul.depth2 {
