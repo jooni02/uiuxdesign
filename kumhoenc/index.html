@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
+     <!-- swiper 라이브러리 삽입 -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="js/main.js"></script>
     <title>금호건설</title>
 </head>
 <body>
@@ -106,13 +110,70 @@
         </header>
         <div class="container" id="container">
             <section class="visual">
-                <div></div>
+                <h2>팝업</h2>
+                <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
+                    <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
+                        <li class="swiper-slide">
+                            <img src="imges/main/visual01.png" alt="">
+                            <div class="visual_txt">
+                                <strong>ART OF CONNECTING<br> SPACE TO SPACE</strong>
+                                <span>공간과 공간을 연결하는 기술</span>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="imges/main/visual02.png" alt="">
+                            <div class="visual_txt">
+                                <strong>ART OF CONNECTING<br> SPACE TO SPACE</strong>
+                                <span>공간과 공간을 연결하는 기술</span>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="imges/main/visual03.png" alt="">
+                            <div class="visual_txt">
+                                <strong>ART OF CONNECTING<br> SPACE TO SPACE<br></strong>
+                                <span>공간과 공간을 연결하는 기술</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="btn_ctrl">
+                        <button class="prev">이전팝업보기</button>
+                        <button class="next">다음팝업보기</button>
+                        <button class="stop">일시정지</button>
+                        <button class="play">재생</button>
+                    </div>
+                </div>
             </section>
             <section class="biz"></section>
             <section class="news"></section>
             <section class="service"></section>
         </div>
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <div class="wrapper">
+                <!-- 그룹사 바로가기를 클릭하면 family_site에 on클래스를 추가
+                    open버튼이 사라지고 close버튼이 나타남 ul list나타남-->
+                <div class="f_site">
+                    <button class="open" title="열기">그룹사 바로가기</button>
+                    <ul>
+                        <li><a href="https://www.kumhobuslines.co.kr/fr/main/" target="_blank" title="새창">금호고속</a></li>
+                        <li><a href="https://www.usquare.co.kr/kor/index.do" target="_blank" title="새창">금호터미널</a></li>
+                        <li><a href="http://www.kumhoarts.com/" target="_blank" title="새창">금호문화재단</a></li>
+                        <li><a href="https://flyasiana.com/C/KR/KO/index" target="_blank" title="새창">아시아나항공</a></li>
+                        <li><a href="https://www.asianaidt.com/kor/" target="_blank" title="새창">아시아나DT</a></li>
+                    </ul>
+                    <button class="close" title="닫기">그룹사 바로가기</button>
+                </div>
+                <div class="f_nav">
+                    <ul>
+                        <li><a href="#n">제보실</a></li>
+                        <li><a href="#n">고객센터</a></li>
+                        <li><a href="#n">OB사랑방</a></li>
+                        <li><a href="#n">Contact us</a></li>
+                        <li><a href="#n"><span>개인정보처리방침</span></a></li>
+                    </ul>
+                </div><!--f_nav-->
+                <div class="copyright">copyright(c) KUMHO E&C ALL RIGHTS RESERVED</div>
+            </div><!--wrapper-->
+        </footer>
     </div>
 </body>
 </html>

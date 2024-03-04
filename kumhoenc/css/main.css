@@ -11,8 +11,78 @@
 */
 
 
+.visual h2 {
+    display: none;
+}
+.visual .swiper { height:900px } /* 팝업의 높이가 됨 */
+.visual .swiper-slide img { display:block; width:100%; height:100%; object-fit:cover; } /* 팝업 안에 이미지를 넣었다면 이미지를 꽉차게 나타나게 하기 위해서 해당 스타일을 넣어줌 object-fit 상세설명 */
+.visual .visual_txt {
+  position: absolute;
+  left: calc(50% - 640px);
+  top: 435px; 
+  color: #fff; 
+}
+.visual .visual_txt strong {
+    display: block;
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 10px 0;
+}
+.visual .visual_txt span {
+    display: block;
+    font-size: 30px;
+}
+.visual .btn_ctrl {
+    position: absolute;
+    left: calc(50% - 640px);
+    top: 385px;
+    z-index: 10;
+    display: flex; /* button 사이 여백 삭제*/
+}
+.visual .btn_ctrl button {
+    width: 30px;
+    height: 30px;
+    border-width: 1px 1px 1px 0; /* 표 같은 박스 만들 때 ㄴ 만들고 ㄱ 만들어서 합쳐야함*/
+    border-style: solid;
+    border-color: #fff;
+    font-size: 0;
+    line-height: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.visual .btn_ctrl button:first-child {
+    /* 첫번째 버튼에만 왼쪽선을 추가 */
+    border-left-width: 1px;
+}
+.visual .btn_ctrl button.prev {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.956' height='18.022' viewBox='0 0 9.956 18.022'%3E%3Cpath id='chevron_left_FILL0_wght300_GRAD-25_opsz20' d='M368.248-683.589l7.207,7.207a1.02,1.02,0,0,1,.339.7,1.03,1.03,0,0,1-.339.734,1.05,1.05,0,0,1-.718.37,1.025,1.025,0,0,1-.746-.372l-7.753-7.753a1.541,1.541,0,0,1-.287-.415,1.126,1.126,0,0,1-.1-.483,1.132,1.132,0,0,1,.1-.483,1.419,1.419,0,0,1,.287-.406l7.753-7.754a1.041,1.041,0,0,1,.738-.355,1.021,1.021,0,0,1,.727.363,1.056,1.056,0,0,1,.347.725,1.014,1.014,0,0,1-.347.712Z' transform='translate(-365.847 692.596)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+.visual .btn_ctrl button.next {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.956' height='18.002' viewBox='0 0 9.956 18.002'%3E%3Cpath id='chevron_right_FILL0_wght300_GRAD-25_opsz20' d='M366.889-683.779l-7.207-7.207a1.023,1.023,0,0,1-.339-.7,1.028,1.028,0,0,1,.339-.734,1.051,1.051,0,0,1,.719-.371,1.058,1.058,0,0,1,.754.364l7.753,7.753a1.936,1.936,0,0,1,.282.423,1.1,1.1,0,0,1,.109.483,1.1,1.1,0,0,1-.109.484,1.455,1.455,0,0,1-.284.4l-7.75,7.75a.954.954,0,0,1-.726.343,1.1,1.1,0,0,1-.705-.383,1.057,1.057,0,0,1-.347-.725,1.014,1.014,0,0,1,.348-.712Z' transform='translate(-359.343 692.794)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+.visual .btn_ctrl button.stop {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.588' height='15.62' viewBox='0 0 12.588 15.62'%3E%3Cpath id='play_arrow_FILL0_wght300_GRAD-25_opsz20' d='M361.655-659.259v-13.173a1.124,1.124,0,0,1,.372-.9,1.282,1.282,0,0,1,.865-.32,1.307,1.307,0,0,1,.327.043,1.306,1.306,0,0,1,.333.139l10.1,6.635a1.565,1.565,0,0,1,.431.448,1.023,1.023,0,0,1,.16.551,1.019,1.019,0,0,1-.16.551,1.336,1.336,0,0,1-.431.427l-10.1,6.64a1.127,1.127,0,0,1-.339.145,1.454,1.454,0,0,1-.328.04,1.271,1.271,0,0,1-.862-.32A1.141,1.141,0,0,1,361.655-659.259ZM363.63-665.882Zm-.04,5.3,8.161-5.258-8.161-5.259Z' transform='translate(-361.655 673.651)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+.visual .btn_ctrl button.play {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.497' height='16.496' viewBox='0 0 16.497 16.496'%3E%3Cpath id='pause_FILL0_wght300_GRAD-25_opsz20' d='M230.1-725.041a1.456,1.456,0,0,1-1.065-.447,1.456,1.456,0,0,1-.447-1.065v-13.471a1.455,1.455,0,0,1,.447-1.065,1.454,1.454,0,0,1,1.065-.447h3.343a1.454,1.454,0,0,1,1.065.447,1.456,1.456,0,0,1,.448,1.065v13.471a1.457,1.457,0,0,1-.448,1.065,1.456,1.456,0,0,1-1.065.447Zm-10.128,0a1.456,1.456,0,0,1-1.065-.447,1.456,1.456,0,0,1-.448-1.065v-13.471a1.455,1.455,0,0,1,.448-1.065,1.454,1.454,0,0,1,1.065-.447h3.343a1.454,1.454,0,0,1,1.065.447,1.455,1.455,0,0,1,.448,1.065v13.471a1.456,1.456,0,0,1-.448,1.065,1.456,1.456,0,0,1-1.065.447Zm10.128-1.513h3.343v-13.471H230.1Zm-10.128,0h3.343v-13.471h-3.343Zm0-13.471v0Zm10.128,0v0Z' transform='translate(-218.463 741.537)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    display: none;
+}
 
-.visual {
-    background: url(../imges/common/visual01.png) no-repeat center center / cover;
-    height: 900px;
+@media screen and (max-width:1320px) {
+    .visual .visual_txt {
+        position: absolute;
+        left: 35px;
+        top: 0;
+        top: 150px; 
+    }
+    .visual .visual_txt strong {
+        font-size: 25px;
+    }
+    .visual .visual_txt span {
+        font-size: 16px;
+    }
+    .visual .swiper { 
+        height:530px
+    }
 }

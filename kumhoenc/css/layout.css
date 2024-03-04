@@ -234,7 +234,7 @@
         display: block;
     }
     .header.fixed .gnb .gnb_open {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23.452' height='19.544' viewBox='0 0 23.452 19.544'%3E%3Cpath id='menu_FILL0_wght300_GRAD-25_opsz20' d='M172.995-656.186a.8.8,0,0,1-.648-.351,1.345,1.345,0,0,1-.269-.844,1.372,1.372,0,0,1,.269-.844.791.791,0,0,1,.648-.361h21.626a.791.791,0,0,1,.64.351,1.331,1.331,0,0,1,.269.834,1.387,1.387,0,0,1-.269.853.785.785,0,0,1-.64.361Zm0-8.572a.8.8,0,0,1-.648-.351,1.344,1.344,0,0,1-.269-.844,1.372,1.372,0,0,1,.269-.844.79.79,0,0,1,.648-.361h21.626a.79.79,0,0,1,.64.351,1.33,1.33,0,0,1,.269.834,1.387,1.387,0,0,1-.269.854.785.785,0,0,1-.64.361Zm0-8.572a.8.8,0,0,1-.648-.351,1.345,1.345,0,0,1-.269-.844,1.372,1.372,0,0,1,.269-.844.79.79,0,0,1,.648-.361h21.626a.79.79,0,0,1,.64.351,1.331,1.331,0,0,1,.269.834,1.387,1.387,0,0,1-.269.854.785.785,0,0,1-.64.361Z' transform='translate(-172.078 675.73)' fill='%23101010'/%3E%3C/svg%3E%0A");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23.452' height='19.544' viewBox='0 0 23.452 19.544'%3E%3Cpath id='menu_FILL0_wght300_GRAD-25_opsz20' d='M172.995-656.186a.8.8,0,0,1-.648-.351,1.345,1.345,0,0,1-.269-.844,1.372,1.372,0,0,1,.269-.844.791.791,0,0,1,.648-.361h21.626a.791.791,0,0,1,.64.351,1.331,1.331,0,0,1,.269.834,1.387,1.387,0,0,1-.269.853.785.785,0,0,1-.64.361Zm0-8.572a.8.8,0,0,1-.648-.351,1.344,1.344,0,0,1-.269-.844,1.372,1.372,0,0,1,.269-.844.79.79,0,0,1,.648-.361h21.626a.79.79,0,0,1,.64.351,1.33,1.33,0,0,1,.269.834,1.387,1.387,0,0,1-.269.854.785.785,0,0,1-.64.361Zm0-8.572a.8.8,0,0,1-.648-.351,1.345,1.345,0,0,1-.269-.844,1.372,1.372,0,0,1,.269-.844.79.79,0,0,1,.648-.361h21.626a.79.79,0,0,1,.64.351,1.331,1.331,0,0,1,.269.834,1.387,1.387,0,0,1-.269.854.785.785,0,0,1-.64.361Z' transform='translate(-172.078 675.73)' fill='%23fff'/%3E%3C/svg%3E%0A");
     }
     .header .gnb .gnb_open,
     .header .gnb .gnb_close {
@@ -245,7 +245,7 @@
         height: 100%; /* header 높이만큼 */
         font-size: 0;
         line-height: 0;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23.452' height='19.544' viewBox='0 0 23.452 19.544'%3E%3Cpath id='menu_FILL0_wght300_GRAD-25_opsz20' d='M172.995-656.186a.8.8,0,0,1-.648-.351,1.345,1.345,0,0,1-.269-.844,1.372,1.372,0,0,1,.269-.844.791.791,0,0,1,.648-.361h21.626a.791.791,0,0,1,.64.351,1.331,1.331,0,0,1,.269.834,1.387,1.387,0,0,1-.269.853.785.785,0,0,1-.64.361Zm0-8.572a.8.8,0,0,1-.648-.351,1.344,1.344,0,0,1-.269-.844,1.372,1.372,0,0,1,.269-.844.79.79,0,0,1,.648-.361h21.626a.79.79,0,0,1,.64.351,1.33,1.33,0,0,1,.269.834,1.387,1.387,0,0,1-.269.854.785.785,0,0,1-.64.361Zm0-8.572a.8.8,0,0,1-.648-.351,1.345,1.345,0,0,1-.269-.844,1.372,1.372,0,0,1,.269-.844.79.79,0,0,1,.648-.361h21.626a.79.79,0,0,1,.64.351,1.331,1.331,0,0,1,.269.834,1.387,1.387,0,0,1-.269.854.785.785,0,0,1-.64.361Z' transform='translate(-172.078 675.73)' fill='%23fff'/%3E%3C/svg%3E%0A");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23.452' height='19.544' viewBox='0 0 23.452 19.544'%3E%3Cpath id='menu_FILL0_wght300_GRAD-25_opsz20' d='M172.995-656.186a.8.8,0,0,1-.648-.351,1.345,1.345,0,0,1-.269-.844,1.372,1.372,0,0,1,.269-.844.791.791,0,0,1,.648-.361h21.626a.791.791,0,0,1,.64.351,1.331,1.331,0,0,1,.269.834,1.387,1.387,0,0,1-.269.853.785.785,0,0,1-.64.361Zm0-8.572a.8.8,0,0,1-.648-.351,1.344,1.344,0,0,1-.269-.844,1.372,1.372,0,0,1,.269-.844.79.79,0,0,1,.648-.361h21.626a.79.79,0,0,1,.64.351,1.33,1.33,0,0,1,.269.834,1.387,1.387,0,0,1-.269.854.785.785,0,0,1-.64.361Zm0-8.572a.8.8,0,0,1-.648-.351,1.345,1.345,0,0,1-.269-.844,1.372,1.372,0,0,1,.269-.844.79.79,0,0,1,.648-.361h21.626a.79.79,0,0,1,.64.351,1.331,1.331,0,0,1,.269.834,1.387,1.387,0,0,1-.269.854.785.785,0,0,1-.64.361Z' transform='translate(-172.078 675.73)' fill='%23101010'/%3E%3C/svg%3E%0A");
         background-position: center center;
         background-repeat: no-repeat;
         background-size: 30px auto;
@@ -383,3 +383,131 @@
 @media screen and (max-width:500px){
 
 }/*500 @media*/
+
+.footer {
+    background-color: #101010;
+    color: #fff;
+    padding: 100px 0 110px 0;
+}
+.footer .wrapper { /* wrapper로 정렬기준 잡아도 ㅇ*/
+    position: relative;
+}
+.footer .f_site {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.footer .f_site ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 32px;
+    z-index: 100;
+    width: 100%;
+    background-color: #666;
+    border-radius: 10px;
+    padding: 20px;
+}
+.footer .f_site ul li a {
+    display: block;
+    line-height: 30px;
+}
+.footer .f_site ul li a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+}
+.footer .f_site .open,
+.footer .f_site .close {
+    padding: 8px 60px 8px 20px;
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    position: relative;
+    font-size: 16px;
+}
+.footer .f_site .close {
+    display: none;
+}
+.footer .f_site .open::after,
+.footer .f_site .close::after {
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    width: 12px;
+    height: 7px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.footer .f_site .open::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.769' height='6.935' viewBox='0 0 12.769 6.935'%3E%3Cpath id='arrow_drop_up_FILL0_wght300_GRAD-25_opsz20' d='M339.7-543.449a.664.664,0,0,1-.51-.207.7.7,0,0,1-.193-.492q0-.023.235-.482l5.408-5.435a1.1,1.1,0,0,1,.348-.228,1,1,0,0,1,.394-.091,1,1,0,0,1,.394.091,1.1,1.1,0,0,1,.348.228l5.419,5.435a.774.774,0,0,1,.168.243.675.675,0,0,1,.056.266.662.662,0,0,1-.19.471.659.659,0,0,1-.5.2Z' transform='translate(-339.001 550.384)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+.footer .f_site .close::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='8.136' viewBox='0 0 15 8.136'%3E%3Cpath id='arrow_drop_down_FILL0_wght300_GRAD-25_opsz20' d='M345.629-555.8l-6.358-6.388a.9.9,0,0,1-.2-.284.764.764,0,0,1-.068-.312.777.777,0,0,1,.223-.553.774.774,0,0,1,.589-.235h13.362a.78.78,0,0,1,.6.243.816.816,0,0,1,.227.575q0,.019-.266.568l-6.363,6.385a1.228,1.228,0,0,1-.408.263,1.224,1.224,0,0,1-.463.1,1.224,1.224,0,0,1-.463-.1A1.228,1.228,0,0,1,345.629-555.8Z' transform='translate(-339.001 563.576)' fill='%23fff'/%3E%3C/svg%3E%0A");
+}
+.footer .f_site.on .open {
+    display: none;
+}
+.footer .f_site.on .close {
+    display: block;
+}
+.footer .f_site.on ul {
+    display: block;
+}
+.footer .f_nav ul {
+    display: flex;
+    flex-wrap: wrap; /* 줄바꿈 허용 */
+}
+.footer .f_nav ul li {
+    margin-right: 45px;
+    position: relative;
+}
+.footer .f_nav ul li::after {
+    position: absolute;
+    right: -22px;
+    top: 2px;
+    width: 1px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    content: "";
+}
+.footer .f_nav ul li:last-child:after {
+    display: none;
+}
+.footer .f_nav ul li a span {
+    font-weight: 800;
+}
+.footer .copyright {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+@media screen and (max-width:1024px) {
+    .footer {
+        padding: 47px 0 50px 0;
+    }
+    .footer .f_site {
+        position: relative;
+        right: auto;
+        top: auto;
+        /* display: flex;
+        justify-content: space-between; */
+    }
+    .footer .f_site .open,
+    .footer .f_site .close {
+        width: 100%;
+        padding: 8px 60px 8px 20px;
+        border: 0;
+        background-color: #2d2d2d;
+        border-radius: 5px;
+        text-align: left;
+    }
+    .footer .f_nav ul {
+        margin: 40px 0 25px 0;
+    }
+    .footer .f_nav ul a{
+        font-size: 16px;
+    }
+}
