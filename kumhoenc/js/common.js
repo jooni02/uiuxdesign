@@ -43,43 +43,34 @@ $(document).ready(function(){
         window_w = $(window).width()
         if(window_w > 1024){ //pc버전
             device_status = 'pc'
-        }else{
+        }else{ //모바일
             device_status = 'mobile'
         }
         console.log(device_status)
     }
     device_chk() //문서가 로딩되고 1번 실행
     $(window).resize(function(){
-        device_chk() // 문서가 리사이즈될때마다 1번씩 실행
+        device_chk() //문서가 리사이즈될때마다 1번씩 실행
     })
+
     $('.header .gnb ul.depth1 > li').on('mouseenter focusin', function(){
-        if(device_status == 'pc' ){
+        if(device_status == 'pc'){
             $('.header').addClass('menu_over')
             $('.header .gnb ul.depth1 > li').removeClass('on')
             $(this).addClass('on')
         }
     })
     $('.header').on('mouseleave', function(){
-        if(device_status == 'pc' ){
-            $('.header').addClass('menu_over')
+        if(device_status == 'pc'){
+            $('.header').removeClass('menu_over')
             $('.header .gnb ul.depth1 > li').removeClass('on')
-            $(this).addClass('on')
         }
-    })
-    $('.header').on('mouseleave', function(){
-        if(device_status == 'pc' ){
-            $('.header').addClass('menu_over')
-            $('.header .gnb ul.depth1 > li').removeClass('on')
-            $(this).addClass('on')
-        }
-    })
-    $('.header').on('mouseleave ', function(){
-        $('.header').removeClass('menu_over')
-        $('.header .gnb ul.depth1 > li').removeClass('on')
     })
     $('.header .tnb .lang').on('focusin', function(){
-        $('.header').removeClass('menu_over')
-        $('.header .gnb ul.depth1 > li').removeClass('on')
+        if(device_status == 'pc'){
+            $('.header').removeClass('menu_over')
+            $('.header .gnb ul.depth1 > li').removeClass('on')
+        }
     })
 
     /*****************************************************
@@ -89,20 +80,22 @@ $(document).ready(function(){
         .header .gnb .gnb_open,
         .header .gnb .gnb_close
      ****************************************************/
-        $('.header .gnb ul.depth1 > li > a').on('click', function(e){
-            if(device_status == 'mobile'){
-            e.preventDefault(); /* a태그의 href를 작동 시키지 않음 */
-            $(this).parent().addClass('on')
-            }
-        });
-        $('.header .gnb .gnb_open').on('click', function(){
-            $('.header').addClass('menu_open')
-            $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
-        })
-        $('.header .gnb .gnb_close').on('click', function(){
-            $('.header').removeClass('menu_open')
-            $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
-        })
+    $(".header .gnb ul.depth1 > li > a").on("click", function(e){
+        if(device_status == 'mobile'){
+            e.preventDefault();		/* a 태그의 href를 작동 시키지 않음 */
+            $(this).parent().toggleClass('on')
+        }
+    });
+
+    $('.header .gnb .gnb_open').on('click', function(){
+        $('.header').addClass('menu_open')
+        $("html, body").css({overflow : "hidden", height : $(window).height()}).bind("scroll touchmove mousewheel", function(e){e.preventDefault();e.stopPropagation();return false;},function(){passive:false});
+    })
+    $('.header .gnb .gnb_close').on('click', function(){
+        $('.header').removeClass('menu_open')
+        $("html, body").css({overflow : "visible", height : "auto"}).unbind('scroll touchmove mousewheel');
+    })
+    
     /*****************************************************
         footer에 그룹사 바로가기 열기/닫기 
         .footer .f_site .open 클릭하면 f_site에 on 클래스 추가

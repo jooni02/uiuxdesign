@@ -456,7 +456,7 @@
 
 .service {
     background: url(../imges/main/service.png) no-repeat center center / cover;
-    padding: 120px 0 160px 0;
+    padding: 150px 0 160px 0;
     color: #fff;
     margin-top: 100px;
 }
@@ -544,21 +544,33 @@
     
 }
 @media screen and (max-width:768px){
+    .service {
+        background: url(../imges/main/service_m_bg.png) no-repeat center center / cover;
+        padding: 120px 0 160px 0;
+        color: #fff;
+        margin-top: 100px;
+    }
     .service .tit {
         margin: 47px 0 20px 0;
     }
     .service p br {
         display: none;
     }
+    .service .list ul li {
+        width: calc(33.33% - 10px);
+    }
     .service .list ul li a {
         height: auto;
-        padding: 48px 0;
+        padding: 71px 0 13px 0;
     }
     .service .list ul li a::before {
         left: calc(50% - 30px);
-        top: 20px;
+        top: 10px;
     }
-    .service .list ul li a strong,
+    .service .list ul li a strong {
+        font-size: 16px;
+        text-align: center;
+    }
     .service .list ul li a span {
         display: none;
     }
