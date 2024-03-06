@@ -161,6 +161,7 @@
 .header.fiexd {
     color: #010101;
     background-color: #fff;
+    border-bottom: 1px solid #f4f4f4
 }
 .header.fiexd .log a {
     background: url(../imges/common/log_b.svg) no-repeat center center / contain;
@@ -562,7 +563,7 @@
 }
 .lnb ul {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center
 }
 .lnb ul li a {
     display: block;
@@ -596,6 +597,10 @@
         left: 0;
         top: 400px;
         width: 100%;
+    }
+    .lnb ul {
+        display: flex;
+        justify-content: flex-start;
     }
     .lnb ul li a {
         line-height: 40px;   

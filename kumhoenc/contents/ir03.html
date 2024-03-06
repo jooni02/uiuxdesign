@@ -8,7 +8,7 @@
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/contents.js"></script>
-    <title> 건축사업 > 사업분야 >  금호건설</title> <!-- 현페이지 > 루트 > 사이트 -->
+    <title> 재무정보 > ir >  금호건설</title> <!-- 현페이지 > 루트 > 사이트 -->
 </head>
 <body>
     <div class="skipnav"> <!--접근성에 중요-->
@@ -38,12 +38,12 @@
                             <a href="about.html"><span>회사소개</span></a>
                             <ul class="depth2">
                                 <!-- 2차메뉴에 마우스를 오버하거나 on class가 추가된 스타일 동일하게 적용 (모바일때문에)-->
-                                <li><a href="/about.html"><span>기업정보</span></a></li>
-                                <li><a href="/greeting.html"><span>CEO인사말</span></a></li>
-                                <li><a href="/history.html"><span>연혁</span></a></li>
-                                <li><a href="/org.html"><span>조직도</span></a></li>
-                                <li><a href="/labInfo.html"><span>기술혁신</span></a></li>
-                                <li><a href="/location.html"><span>찾아오시는길</span></a></li>
+                                <li><a href="about.html"><span>기업정보</span></a></li>
+                                <li><a href="greeting.html"><span>CEO인사말</span></a></li>
+                                <li><a href="history.html"><span>연혁</span></a></li>
+                                <li><a href="org.html"><span>조직도</span></a></li>
+                                <li><a href="labInfo.html"><span>기술혁신</span></a></li>
+                                <li><a href="location.html"><span>찾아오시는길</span></a></li>
                             </ul>
                         </li>
                         <li>
@@ -59,7 +59,7 @@
                         <li>
                             <a href="biz01.html"><span>사업분야</span></a>
                             <ul class="depth2">
-                                <li class="on" data-menu="on"><a href="/biz01.html"><span>건축사업</span></a></li>
+                                <li><a href="/biz01.html"><span>건축사업</span></a></li>
                                 <li><a href="/biz02.html"><span>토목사업</span></a></li>
                                 <li><a href="/biz03.html"><span>주택사업</span></a></li>
                                 <li><a href="/biz04.html"><span>플랜트/환경사업</span></a></li>
@@ -71,7 +71,7 @@
                             <ul class="depth2">
                                 <li><a href="/ir01.html"><span>기업지배구조</span></a></li>
                                 <li><a href="/ir02.html"><span>경영정보</span></a></li>
-                                <li><a href="/ir03.html"><span>재무정보</span></a></li>
+                                <li class="on" data-menu="on"><a href="/ir03.html"><span>재무정보</span></a></li>
                                 <li><a href="/ir04.html"><span>주가정보</span></a></li>
                                 <li><a href="/ir05.html"><span>IR Contact</span></a></li>
                             </ul>
@@ -101,10 +101,10 @@
         <div class="container" id="container">
             <!-- 1차메뉴별로 회사소개 sub1, esg sub2
                  클래스를 추가해서 배경이미지 교체-->
-            <div class="sub_visual sub1">
+            <div class="sub_visual sub3">
                 <div class=" wrapper">
                     <div class="sub_tit">
-                        <h1>CEO 인사말</h1>
+                        <h1>재무정보</h1>
                         <p>아름다운 기업이 되어 아름다운 세상을 만들겠습니다</p>
                     </div>
                 </div>
@@ -112,15 +112,95 @@
             <nav class="lnb"><!-- local navigation bar -->
                 <ul>
                     <!-- 현재 선택된 메뉴에 on클래스 추가 -->
-                    <li class="on" data-menu="on"><a href="/biz01.html"><span>건축사업</span></a></li>
-                    <li><a href="/biz02.html"><span>토목사업</span></a></li>
-                    <li><a href="/biz03.html"><span>주택사업</span></a></li>
-                    <li><a href="/biz04.html"><span>플랜트/환경사업</span></a></li>
-                    <li><a href="/biz05.html"><span>사업실적검색</span></a></li>
+                    <li><a href="/ir01.html"><span>기업지배구조</span></a></li>
+                    <li><a href="/ir02.html"><span>경영정보</span></a></li>
+                    <li class="on" data-menu="on"><a href="/ir03.html"><span>재무정보</span></a></li>
+                    <li><a href="/ir04.html"><span>주가정보</span></a></li>
+                    <li><a href="/ir05.html"><span>IR Contact</span></a></li>
                 </ul>
             </nav>
             <div class="contents" id="contents">
-
+                <div class="cts_ir03">
+                    <div class="wrapper">
+                        <h2>요약손익계산서</h2>
+                        <p>미래를 향해 정진하는 기업,<br>지금까지의 금호건설의 손익계산서 입니다</p>
+                        <div class="table_wrap">
+                            <table>
+                            <caption>금호건설의 2018년부터 2022년 까지의 요약손익계산서로 매출액, 영업이익, 순금융수익(원가), 법인세비용차감전계속영업이익(손실), 중단영업이익, 당기순이익(손실)</caption>
+                            <!-- 테이블은 내용에 맞게 칸의 넓이가 자동으로 셋팅됨 , 하지만 직접 조절할 때 -->
+                            <colgroup>
+                                <col> <!-- 하나의 넓이를 안주면 나머지 다-->
+                                <col width="14%">
+                                <col width="14%">
+                                <col width="14%">
+                                <col width="14%">
+                                <col width="14%">
+                                <col width="14%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">구분</th>
+                                    <th scope="col">2022년</th>
+                                    <th scope="col">2021년</th>
+                                    <th scope="col">2020년</th>
+                                    <th scope="col">2019년</th>
+                                    <th scope="col">2018년</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">매출액</th>
+                                    <td>2,048,507 2,048,507</td>
+                                    <td>2,065,076</td>
+                                    <td>1,829,579</td>
+                                    <td>1,597,734</td>
+                                    <td>1,376,712</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">영업이익</th>
+                                    <td>55,947</td>
+                                    <td>111,592</td>
+                                    <td>81,217</td>
+                                    <td>55,477</td>
+                                    <td>42,256</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">순금융수익(원가)</th>
+                                    <td>842</td>
+                                    <td>-10,596</td>
+                                    <td>-16,802</td>
+                                    <td>-9,802</td>
+                                    <td>-7,609</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">법인세비용차감전계속영업이익(손실)</th>
+                                    <td>56,601</td>
+                                    <td>107,644</td>
+                                    <td>24,062</td>
+                                    <td>12,095</td>
+                                    <td>15,256</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">중단영업이익</th>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">당기순이익(손실)</th>
+                                    <td>20,752</td>
+                                    <td>148,125</td>
+                                    <td>26,424</td>
+                                    <td>11,717</td>
+                                    <td>-471</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div> <!-- container -->
         <footer class="footer">
