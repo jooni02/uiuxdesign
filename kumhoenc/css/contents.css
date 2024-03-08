@@ -10,7 +10,7 @@
 
 /* ceo 인사말 - 회사소개 아래 */
 .cts_greeting {
-    margin: 340px 0 318px 0;
+    margin: 280px 0 318px 0;
     position: relative;
 }
 .cts_greeting .tit {
@@ -53,8 +53,11 @@
 }
 @media screen and (max-width:1024px) {
     .cts_greeting {
-        margin: 340px 0 318px 0;
+        margin: 140px 0 318px 0;
         position: relative;
+    }
+    .cts_greeting .tit {
+        font-size: 28px;
     }
     .cts_greeting .tit br.m_no {
         display: none;
