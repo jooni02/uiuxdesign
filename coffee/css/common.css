@@ -1,5 +1,6 @@
 @charset "utf-8"; /* 이css문서는 UTF-8방식으로 인코딩 되어 있습니다. */
-
+/* 영문폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 /* 한글웹폰트 */
 @font-face {
     font-family: 'Pretendard';
@@ -12,12 +13,6 @@
     font-weight: 800;
     font-display: swap;
     src: local('Pretendard SemiBold'), url(../fonts/Pretendard-SemiBold.woff2) format('woff2'), url(../fonts/Pretendard-SemiBold.woff) format('woff');
-}
-@font-face {
-    font-family: 'Noto Serif';
-    src: url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
-    font-weight: normal;
-    font-style: normal;
 }
 /* 드레그 하면 보이는 색 */
 *::selection {
@@ -48,7 +43,8 @@ html, body {
     word-wrap: break-word; /* 단어가 너무 길면 분리해서 줄바꿈 */
 }
 .f_Noto_Serif {
-    font-family: 'Noto Serif', serif;
+    font-family: "Noto Serif", serif;
+    /* SemiBold 600 */
 }
 .wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
     width: 1280px; /* 홈페이지 넓이 */

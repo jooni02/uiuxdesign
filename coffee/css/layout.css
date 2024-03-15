@@ -183,6 +183,7 @@ header .gnb .depth2 >li > a {
         left: 20px;
         top: 20px;
         transform: translate(0, 0);
+    
     }
     header.fixed .gnb .depth1 {
         justify-content: flex-end;
@@ -206,7 +207,7 @@ header .gnb .depth2 >li > a {
         bottom: -42px;
     }
 }
-@media screen and (max-width:1204px) {
+@media screen and (max-width:1024px){
     header {
         height: 100px;
     }
@@ -220,12 +221,30 @@ header .gnb .depth2 >li > a {
     header .tnb2 {
         display: none;
     }
-    header .tnb2  {
+    header .tnb2 {
         position: absolute;
         left: 20px;
-        top: 50% ;
+        top: 50%;
         z-index: 10;
         transform: translate(0, -50%);
+        margin: 0;
+    }
+    header .tnb2 ul li {
+        margin: 0;
+        border-width: 1px 1px 1px 0;
+        border-color: rgba(255,255,255,0.5);
+        border-style: solid;
+    }
+    header .tnb2 ul li:first-child {
+        border-left-width: 1px;
+    }
+    header .tnb2 ul li::after {
+        display: none;
+    }
+    header .tnb2 ul li a {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
     }
     header .logo {
         left: 20px;
@@ -238,38 +257,43 @@ header .gnb .depth2 >li > a {
     }
     header .gnb .gnb_wrap {
         display: none;
-        position: absolute;
+        position: absolute; /* header 기준으로 */
         left: 0;
         top: 0;
         width: 100%;
         height: 100vh;
-        background-color: #B7121B;
+        background-color: #e80a4d;
         color: #fff;
     }
     header .gnb .depth1 {
         margin-top: 100px;
         height: calc(100vh - 100px);
-        overflow-x: hidden; /* 좌우 스크롤은 금지 */
-        overflow-y: auto; /* 위아래 */
-        flex-direction: column;
+        overflow-x: hidden; /* 좌우는 스크롤 금지 */
+        overflow-y: auto; /* 위아래는 스크롤 */
+        flex-direction: column; 
+        /* display:flex를 유지하면서 아래로 정렬되도록 */
     }
     header .gnb .depth1 > li {
         width: auto;
     }
-    header .gnb .depth1 > li >a {
+    header .gnb .depth1 > li > a {
         font-weight: 300;
-    }
-    header .gnb .depth2 {
-        padding: 5px 0 0 0;
-    }
-    header .gnb .on .depth2 {
-        display: block;
-        padding: 10px 0 20px 0;
-        margin: 0 20px;
-    }
-    header .gnb .on .depth2 > li > a {
-        font-size: 1.25rem;
+        font-size: 1.923rem;
         line-height: 3.846rem;
+    }
+    header .gnb .depth1 > li.on > a {
+        font-weight: 900;
+    }
+    /* header .gnb .on .depth2 {
+        display: block;
+        border-top: 1px solid #f485a6;
+        border-bottom: 1px solid #f485a6;
+        padding: 10px 0;
+        margin: 0 20px;
+    } */
+    header .gnb .depth2 > li > a {
+        font-size: 1.154rem;
+        line-height: 1.923rem;
     }
     header .gnb .gnb_open {
         display: block;
@@ -279,32 +303,31 @@ header .gnb .depth2 >li > a {
         position: absolute;
         right: 0;
         top: 0;
-        width: 100%;
-        height: 15px;
+        width: 100px;
+        height: 100px;
+        font-size: 0;
+        line-height: 0;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: 40px;
     }
     header .gnb .gnb_open {
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='20' height='2.10526' fill='%23101010'/%3E%3Crect x='5.2627' y='6.31567' width='14.7368' height='2.10526' fill='%23101010'/%3E%3C/svg%3E%0A");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='27px' height='10px'%3E%3Cpath fill-rule='evenodd' fill='rgb(9, 6, 6)' d='M3.1000,9.1000 L3.1000,7.1000 L26.1000,7.1000 L26.1000,9.1000 L3.1000,9.1000 ZM-0.000,-0.000 L26.1000,-0.000 L26.1000,1.1000 L-0.000,1.1000 L-0.000,-0.000 Z'/%3E%3C/svg%3E");
     }
     header .gnb .gnb_close {
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.98025 11.6503L1.9783 19.6336C1.71703 19.8942 1.45333 20.0158 1.18719 19.9984C0.921082 19.9808 0.654359 19.8387 0.387024 19.572C0.129375 19.3053 0.00297278 19.0368 0.00781627 18.7665C0.0126598 18.4961 0.143906 18.2325 0.401555 17.9754L8.3418 10.0156L0.354378 2.00878C0.108807 1.76381 -0.00913556 1.50314 0.000551428 1.22676C0.0102384 0.950415 0.143906 0.678885 0.401555 0.412172C0.659203 0.145459 0.925926 0.00818069 1.20172 0.000336193C1.47752 -0.00750831 1.7521 0.121926 2.02548 0.388639L9.98025 8.38099L17.9913 0.388639C18.2465 0.134006 18.515 0.00758529 18.7969 0.00937384C19.0787 0.0111938 19.3563 0.145459 19.6297 0.412172C19.8813 0.678885 20.0047 0.947405 19.9999 1.21773C19.995 1.48805 19.8638 1.75173 19.6061 2.00878L11.6187 10.0156L19.6061 18.0225C19.8517 18.2674 19.9775 18.5203 19.9835 18.781C19.9896 19.0416 19.8638 19.3053 19.6061 19.572C19.3485 19.8387 19.0818 19.976 18.806 19.9839C18.5302 19.9917 18.2586 19.8593 17.9913 19.5865L9.98025 11.6503Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='21px' height='22px'%3E%3Cpath fill-rule='evenodd' fill='rgb(255, 255, 255)' d='M20.565,19.870 L19.151,21.284 L10.312,12.445 L1.475,21.286 L0.061,19.872 L8.898,11.031 L0.059,2.192 L1.473,0.778 L10.312,9.617 L19.149,0.776 L20.563,2.190 L11.726,11.031 L20.565,19.870 Z'/%3E%3C/svg%3E");
     }
-    /* 메뉴 열렸을 때 */
-    header .head_top .tnb2 {
-        border-bottom: 1px solid #fff;
+}
+@media screen and (max-width:768px){
+    header {
+        height: 50px;
     }
-    header .gnb .gnb_wrap {
-        display: block;
+    header .logo {
+        top: 20px;
     }
-    header .gnb .gnb_open {
-        display: none;
-    }
-    header .gnb .gnb_close{
-        display: block;
-        font-size: 0;
-        line-height: 0;
+    header .logo a {
+        width: 60px;
+        height: 40px;
     }
     header .gnb .gnb_open,
     header .gnb .gnb_close {
@@ -318,23 +341,5 @@ header .gnb .depth2 >li > a {
     }
     header .tnb2 ul li a {
         padding: 5px 10px;
-    }
-}
-@media screen and (max-width:768px){
-    header {
-        height: 50px;
-    }
-    header .logo {
-        top: 11px;
-    }
-    header .logo a {
-        width: 50px;
-        height: 30px;
-    }
-    header .gnb .gnb_open,
-    header .gnb .gnb_close {
-        width: 60px;
-        height: 50px;
-        background-size: 27px;
     }
 }

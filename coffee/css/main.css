@@ -56,13 +56,111 @@
         display: block;
     }
     .container {
-        margin-top: 100px;
+        margin-top: 80px;
     }
 }
-.produt {
-    height: 1000px;
+.product {
+    margin: 140px 0 160px 0;
 }
-.brand {
-    height: 1000px;
-    background-color: #ededed;
+.product h2 {
+    font-family: 'Noto Serif', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 20px 0 ;
+}
+.product h2 strong {
+    color: #B7121B;
+}
+.product .list ul li a {
+    display: block;
+    position: relative; /* before 정렬의 기준 */
+    text-align: center;
+    padding: 0 0 55px 0;
+}
+.product .list ul li a::before {
+    position: absolute;
+    left: 5px;
+    bottom: 7px;
+    z-index: -1;
+    width: calc(100% - 12px);
+    height: 240px;
+    background-color: #f1f1f1;
+    border-radius: 40px;
+    /*box-shadow: 2px 2px 5px rgba(0,0,0,0.05);*/
+    content: "";
+    transition: 0.5s;
+}
+.product .list ul li a .photo {
+    display: block;
+}
+.product .list ul li a .photo img {
+    width: 50%;
+    max-width: 80%;
+}
+.product .list ul li a .tit {
+    display: block;
+    font-size: 18px;
+    transition: 0.5s;
+}
+.product .list ul li a .name {
+    display: block;
+    font-size: 15px;
+    color: #B7121B;
+    margin: 3px 0 25px 0;
+    transition: 0.5s;
+}
+.product .list ul li a .info {
+    display: block;
+    font-size: 14px;
+}
+.product .list ul li a .info span + span {
+    /* <span class="info">
+            <span></span> ----------- 해당없음
+            <span></span> ----------- 적용됨
+            <span></span> ----------- 적용됨
+        </span> */
+    margin: 0 0 0 10px;
+    position: relative;
+}
+@media screen and (max-width:1320px) {
+    .product .list ul li.swiper-slide-active a .tit {
+        font-size: 20px;
+    }
+}
+@media screen and (min-width:1025px) {
+    /* 왼쪽 요소 - active */
+    .product .list ul li.swiper-slide-active a {
+        color: #fff;
+    }
+    .product .list ul li.swiper-slide-active a::before {
+        height: 270px;
+        background: linear-gradient(-7deg, #644635, #B59A8B);
+        box-shadow: 2px 3px 5px rgba(0,0,0,0.1);
+    }
+    .product .list ul li.swiper-slide-active a .tit {
+        font-size: 22px;
+        font-weight: 800;
+    }
+    .product .list ul li.swiper-slide-active a .name {
+        font-size: 18px;
+        font-weight: 800;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width:1024px) {
+
+}
+
+@media screen and (max-width:768px) {
+    .product {
+        margin: 80px 0 100px 0;
+    }
+    .product h2 {
+        margin: 0 0 10px 0 ;
+    }
+    .product .list ul li a .photo img {
+        width: 50%;
+    }
 }
