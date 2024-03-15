@@ -47,7 +47,7 @@ html, body {
     /* SemiBold 600 */
 }
 .wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
-    width: 1280px; /* 홈페이지 넓이 */
+    width: 1640px; /* 홈페이지 넓이 */
     margin: 0 auto;  /* 가운데 정렬 */
 }
 #wrap { /* id="wrap"에 적용되는 스타일 */
@@ -59,25 +59,22 @@ html, body {
 @media screen and (max-width:1640px){
     .wrapper { 
         width: auto; 
-        /* 모바일에서는 홈페이지의 넓이를 제한하면 안됨 
-           디바이스의 넓이에 맞춰서 꽉차게 나와야 하기 때문에 
-           그 안쪽으로 좌우 여백이 20px씩 들어가게 함. */
         margin: 0 20px;
     }
 }/*media*/
 @media screen and (max-width:1320px) {
     html, body {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 @media screen and (max-width:1024px){
     html, body {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 @media screen and (max-width:768px){
     html, body {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 .skipnav {
