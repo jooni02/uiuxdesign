@@ -31,5 +31,23 @@ $(document).ready(function(){
 		},
 	    },
     });
+		const social_swiper = new Swiper('.social .swiper', { /* 팝업을 감싼는 요소의 class명 */
+		slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+		spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+		breakpoints: {
+			768: {    /* 930 */
+			slidesPerView: 2,
+			spaceBetween: 16,
+		},
+		1024: {   /* 1024px 이상일때 적용 */
+			slidesPerView: 3,
+			spaceBetween: 17,
+		},
+		1280: {    /* 1280px 이상일때 적용 */
+			slidesPerView: 4,
+			spaceBetween: 20,
+		},
+		},
+	});
 
 })//$(document).ready

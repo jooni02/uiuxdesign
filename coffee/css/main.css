@@ -180,6 +180,18 @@
     overflow: hidden;
     border-radius: 390px 0 0 0;
 }
+.brand .brand_logo {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+}
+.brand .brand_logo a {
+    display: block;
+    position: absolute;
+    right: calc(50% - 306px);
+    top: 0;
+    z-index: 10;
+}
 .brand .photo img {
     display: block;
     width: 100%;
@@ -286,3 +298,68 @@
         margin-bottom: 20px;
     }
 }
+
+.social {
+    margin: 140px 0 160px 0;
+}
+.social h2 {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+.social .sns ul {
+    font-size: 20px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+}
+.social .sns ul li {
+    margin: 0 10px;
+}
+.social .sns ul li a {
+    display: block;
+    color: #B7121B;
+    position: relative;
+}
+.social .sns ul li a::before {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: #B7121B;
+    opacity: 0.5;
+    content: "";
+}
+.social .list {
+    margin: 50px 0 0 0;
+}
+.social .list ul li a {
+    display: block;
+}
+.social .list ul li a .photo {
+    position: relative;
+}
+.social .list ul li a .photo img {
+    width: 100%;
+}
+.social .list ul li a .cate {
+    position: absolute;
+    left: 3px;
+    bottom: -30px;
+    width: 30px;
+    height: 26px;
+}
+.social .list ul li a strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 4px 0px 6px 49px;
+}
+
+.footer {
+    height: 1000px;
+}
+
