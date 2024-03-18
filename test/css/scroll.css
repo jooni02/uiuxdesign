@@ -1,0 +1,187 @@
+@import url(../../coffee/css/default.css);
+@import url(../css/common.css);
+
+
+
+.sec01 .inner {
+    margin: 130px 0 40px 0;
+}
+.sec01 .tit {
+    position: relative;
+}
+.sec01 .tit span {
+    display: block;
+    font-size: 60px;
+    font-weight: 800;
+}
+.sec01 .tit .txt_black {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden; 
+    white-space: nowrap; /* 줄바꿈 금지*/
+    color: #101010;
+    /* 애니메이션 적용 */
+    animation-name: sec01_ani;
+    animation-duration: 2s; /* 동작 시간*/
+    animation-iteration-count: 1; /* 반복 횟수 */
+    animation-fill-mode: forwards /* 애니메이션 종료 후 상태 (forwards - 100% 유지) */
+}
+@keyframes sec01_ani { /* 애니메이션을 효과를 미리 설정함 */
+	0% { width: 0 }  /* 애니메이션을 시작할때의 속성 */
+	100% { width: 100%; } /* 애니메이션이 종료될때의 속성 */
+}
+.sec01 .tit .txt_gray {
+    color: #ededed;
+}
+.sec01 .photo {
+    height: 380px;
+} 
+.sec01 .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sec02 {
+    text-align: center;
+}
+.sec02 .tit {
+    margin: 160px 0 20px 0;
+}
+.sec02 .tit strong {
+    font-size: 20px;
+}
+.sec02 .tit h2 {
+    font-size: 70px;
+    font-weight: 800;
+}
+.sec02 .photo {
+    width: 400px;
+    height: 300px;
+    margin: 0 auto; /* 좌우에 가운데 */
+    border-radius: 30px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.sec02 .photo.active {
+    border-radius: 0;
+}
+.sec02 .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sec03 {
+    margin: 280px 0 280px 0;
+    font-size: 60px;
+    color: #101010;
+    text-align: center;
+}
+.sec03 .line {
+    overflow: hidden;
+}
+.sec03 .line span {
+    display: block;
+    transform: translate(0, 1.2em);
+}
+.sec03.active .line span {
+    /* 애니메이션 작용 */
+    animation-name: sec03_ani;
+    animation-duration: 1.5s; /* 동작 시간*/
+    animation-iteration-count: 1; /* 반복 횟수 */
+    animation-fill-mode: forwards /* 애니메이션 종료 후 상태 (forwards - 100% 유지) */
+}
+.sec03.active .line:nth-child(2) span {
+    animation-delay:0.1s;
+}
+.sec03.active .line:nth-child(3) span {
+    animation-delay:0.3s;
+}
+.sec03.active .line:nth-child(4) span {
+    animation-delay:0.5s;
+}
+@keyframes sec03_ani { 
+	0% { transform: translate(0, 1.2em) }
+	100% { transform: translate(0, 0) }
+}
+.sec04 {
+    margin: 280px 0 280px 0;
+    font-size: 60px;
+    color: #101010;
+    text-align: center;
+}
+@media screen and (max-width:1024px) {
+    .sec01 .tit span {
+        font-size: 50px;
+    }
+}
+@media screen and (max-width:768px) {
+    .sec01 .inner {
+        margin: 90px 0 40px 0;
+    }
+    .sec01 .tit span {
+        font-size: 25px;
+    }
+    .sec01 .tit span br {
+        display: block;
+    }
+    .sec01 .photo {
+        height: 280px;
+    }
+    .sec02 .tit {
+        margin: 100px 0 10px 0;
+    }
+    .sec02 .tit strong {
+        font-size: 13px;
+    }
+    .sec02 .tit h2 {
+        font-size: 45px;
+    }
+    .sec02 .photo {
+        width: 300px;
+        height: 200px;
+        border-radius: 20px;
+    }
+}
+
+body {
+    transition: 0.5s;
+}
+body.black {
+    background-color: #101010;
+    color: #fff;
+}
+body.black .sec03 {
+    color: #fff;
+}
+body.black .sec04 {
+    color: #fff;
+}
+.sec05 {
+    margin: 200px 0 160px 0;
+}
+.sec05 .wrapper {
+    position: relative;
+}
+.sec05 .photo {
+    margin-left: 275px;
+    width: 100%;
+    height: 380px;
+}
+.sec05 .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sec05 .tit {
+    position: absolute;
+    left: 20px;
+    font-size: 150px;
+    line-height: 1em;
+    transition: 1.5s;
+}
+.sec06 {
+    height: 1000px;
+}
