@@ -81,4 +81,7 @@ $(document).ready(function(){
             $('header').removeClass('menu_over')
         }
     })
+    //top 버튼 눌러서 상단으로 이동
+    $()
+
 })//$(document).ready
