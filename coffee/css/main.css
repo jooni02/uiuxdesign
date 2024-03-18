@@ -368,7 +368,7 @@
 }
 @media screen and (max-width:768px) {
     .social {
-        margin: 90px 0 80px 0;
+        margin: 90px 0 100px 0;
     }
     .social h2 {
         font-size: 30px;
@@ -379,6 +379,9 @@
     }
 }
 @media screen and (max-width:500px) {
+    .social {
+        margin: 70px 0 80px 0;
+    }
     .social h2 {
         font-size: 25px;
         margin: 0 0 20px 0;
@@ -387,13 +390,17 @@
         font-size: 15px;
     }
 }
+aside {
+    position: relative;
+}
 aside button {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 0px;
+    top: -80px;
     width: 56px;
     height: 56px;
     background-color: #101010;
+    border-radius: 100px;
     color: #fff;
     text-align: center;
     line-height: 43px;
@@ -539,7 +546,7 @@ footer .copyright {
         display: flex;
         justify-content: flex-start;
         margin: 0;
-        padding: 40px 0 0 0; 
+        padding: 40px 0 0 10px; 
     }
 }
 @media screen and (max-width:768px) {

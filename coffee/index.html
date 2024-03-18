@@ -9,9 +9,16 @@
      <!-- swiper 라이브러리 삽입 -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <!-- AOS를 작동시키기 위한 css와 js파일 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/common.js"></script>
-    <title>paulbassett</title>
+    <title>Paul Bassett</title>
 </head>
 <body>
     <div id="wrap" class="main">
@@ -128,7 +135,7 @@
             </section>
             <section class="product">
                 <div class="wrapper">
-                    <h2>MD’S <strong>PICK</strong></h2>
+                    <h2 data-aos="fade-up">MD’S <strong>PICK</strong></h2>
                     <div class="list">
                         <div class="swiper">
                             <ul class="swiper-wrapper"> 
@@ -188,8 +195,8 @@
                     </div>
                     <div class="photo"><img src="imges/common/brand.png" alt="커피 사진"></div>
                     <div class="inner">
-                        <h2>QUALITY NEVER COMPROMISED</h2>
-                        <h3>폴 바셋은 품질과 타협하지 않습니다.</h3>
+                        <h2 data-aos="fade-right" data-aos-delay="350">QUALITY NEVER COMPROMISED</h2>
+                        <h3 data-aos="fade-right" data-aos-delay="400">폴 바셋은 품질과 타협하지 않습니다.</h3>
                         <p>폴 바셋은 ‘품질과 타협하지 않는다’는 브랜드 원칙 아래 최고의 제품과 서비스를 선보이기 위해 노력하고 있습니다.<br>
                         한 잔의 완벽한 커피를 만들기 위해 생두 선정부터 운송, 보관, 로스팅, 유통, 생산에 이르기까지 전 과정을 철히 관리하며,<br>
                         매장의 모든 바리스타가 신선하고 좋은 품질의 원두로 좋은 커피 경험을 제공하기 위해 노력하고 있습니다</p>
@@ -287,11 +294,7 @@
                 </div>
             </section>
         </div>
-        <aside>
-            <div class="top">
-                <button>TOP</button>
-            </div>
-        </aside>
+        <aside><button>TOP</button></aside>
         <footer>
             <div class="wrapper">
                 <div class="inner_right">
