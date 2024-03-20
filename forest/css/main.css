@@ -1,0 +1,96 @@
+@import url(default.css);
+@import url(common.css);
+@import url(layout.css);
+
+
+/*
+    파일명 : main.css
+    작성자 : 박지현
+    작성일 : 2024.03.20
+    설  성 : 메인페이지에만 들어가는 스타일을 저장 (header, footer 빼고 전부 다)
+*/
+
+.visual {
+    background-color: #5CB532;
+    color: #fff;
+}
+.tree {
+    background-color: #FF6419;
+    color: #fff;
+}
+.biz {
+    background-color: #A1D5E0;
+    color: #fff;
+}   
+.news {
+    background-color: #B4FA64;
+    color: #fff;
+}
+.fooer {
+    height: 1000px;
+    background-color: #35763C;
+    color: #fff;
+}
+
+/*************************************************************
+    page에서 자동생성한 pagenavtion
+    #fp-nav.fp-left 동일한 선택자 두개가 존재할 때
+    꼭 내꺼를 먼저 적요오디게 하기 위해서
+    앞에 body를 추가함
+    body라는 상위요소부터 선택자를 입력한 스타일이 먼저 적용
+ **************************************************************/
+
+body #fp-nav.fp-left {
+    left: 48px;
+}
+body #fp-nav ul li, .fp-slidesNav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 42px;
+    position: relative;
+}
+body #fp-nav ul li .fp-tooltip {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    font-family: inherit;
+    opacity: 1;
+    width: auto;
+}
+body #fp-nav ul li:hover.fp-tooltip,
+body #fp-nav.fp-show-active a.active + .fp-tooltip {
+    width: auto;
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+}
+body #fp-nav ul li a span, .fp-slidesNav ul li a span {
+    height: 5px;
+    width: 5px;
+    background: rgba(255, 255, 255, 0.5);
+}
+body #fp-nav ul li a.active span {
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+    margin: -3px 0 0 -4px;
+}
+
+body #fp-nav ul li:last-child {
+    display: none;
+}
+
+/* 검은색일때*/
+body #fp-nav[data-color='black'] ul li .fp-tooltip {
+    color: rgba(0, 0, 0, 0.5);;
+}
+body #fp-nav[data-color='black'] ul li:hover.fp-tooltip,
+body #fp-nav[data-color='black'].fp-show-active a.active + .fp-tooltip {
+    color: #101010;
+}
+body #fp-nav[data-color='black'] ul li a span, .fp-slidesNav ul li a span {
+    background: rgba(0, 0, 0, 0.5);
+}
+body #fp-nav[data-color='black'] ul li a.active span {
+    background-color: #101010;
+}
