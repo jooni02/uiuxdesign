@@ -34,11 +34,12 @@
     앞에 폰트가 지원안되면 다음폰트, 그게 또 안되면 다음폰트 ....무한반복
 */
 html, body {
-    font-family: 'Pretendard', 'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', 'Apple SD Gothic Neo', '애플 SD 산돌고딕 Neo'sans-serif; /* 서체 serif 명조 sans-serif 고딕 */
+    font-family: 'Pretendard', 'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', 'Apple SD Gothic Neo', '애플 SD 산돌고딕 Neo', sans-serif; /* 서체 serif 명조 sans-serif 고딕 */
     font-size: 18px; /* 크기 */
     color: #101010; /* 글자색상 */
     font-weight: 300; /* 글자의 두께 */
-    line-height: 1.25; /* auto */
+    line-height: 1.2; /* auto */
+    letter-spacing : -0.01em; /* 글자자간*/
     word-break: keep-all; /* 단어를 묶어서 줄바꿈 */
     word-wrap: break-word; /* 단어가 너무 길면 분리해서 줄바꿈 */
 }
