@@ -275,13 +275,11 @@ aside.quick ul li.insta a::before {
 .tree .wrapper {
     display: flex;
     justify-content: space-around;
+    flex-direction: row-reverse;
+    margin-top: 40px;
 }
 .tree .inner_left {
     width: 520px;
-    left: 20%;
-    top: 50%;
-    position: absolute;
-    transform: translate(0, -50%);
 }
 .tree .num{
     color: #5CB532;
@@ -308,16 +306,16 @@ aside.quick ul li.insta a::before {
 }
 .tree .innter_right {
     width: 400px;
-    position: absolute;
-    left: 60%;
-    top: 50%;
-    transform: translate(0, -50%);
+    text-align: center;
+}
+.tree .innter_right img {
+    width: 400px;
+    height: 390px;
 }
 
 @media screen and (max-width:1320px) {
     .tree .inner_left {
-        width: 430px;
-        left: 15%;
+        width: 500px;
     }
     .tree .num strong {
         font-size: 120px;
@@ -332,28 +330,45 @@ aside.quick ul li.insta a::before {
         font-size: 16px;
     }
     .tree .innter_right {
-        width: 400px;
-        position: absolute;
-        left: 60%;
-        top: 50%;
-        transform: translate(0, -50%);
+        width: 300px;
     }
     .tree .innter_right img {
-        
+        width: 280px;
+        height: 275px;
     }
 
 } /* 1320 */
 @media screen and (max-width:1024px) {
+    .tree .wrapper {
+        display: block;
+    }
+    .tree .num strong {
+        font-size: 80px;
+    }
     .tree .inner_left {
-        left: 0;
-        width: 100%;
+        width: auto;
         text-align: center;
+    }
+    .tree .innter_right {
+        width: auto;
     }
 
 }
 @media screen and (max-width:768px) {
-
+    .tree .inner_left {
+        width: auto;
+    }
+    .tree .innter_right {
+        width: auto;
+        text-align: center;
+    }
 } /* 768 */
+@media screen and (max-width:500px) {
+    .tree .innter_right img {
+        width: 227px;
+        height: 223px;
+    }
+}
 
 
 .biz {
