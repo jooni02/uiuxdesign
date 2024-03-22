@@ -124,3 +124,109 @@ header.black .gnb .gnb_open {
 @media screen and (max-width:768px) {
 
 }
+
+footer .f_top {
+    background-color: #5CB532;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 800;
+}
+footer .f_top .wrapper {
+    display: flex;
+}
+footer .f_top .mail {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .f_top .donation {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .f_top h2 {
+    font-weight: 800;
+}
+footer .f_top p {
+    font-size: 14px;
+    font-weight: 300;
+}
+footer .f_top a {
+    margin-left: 50px;
+    width: 160px;
+    height: 42px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #002A07;
+}
+footer .f_top a span {
+    display: inline-block;
+    padding-left: 45ps;
+}
+footer .f_sub {
+    background-color: #002606;
+    color: #fff;
+    padding: 40px 0 50px 0;
+}
+footer .f_sub .f_logo { 
+    float: left;
+}
+footer .f_sub .sns { 
+    float: right;
+}
+footer .f_cnt .f_nav {
+    margin: 0 296px 0 227px;
+}
+
+
+@media screen and (max-width:1320px) {
+    footer .f_top h2 strong {
+        font-weight: 300;
+    }
+    footer .f_sub .f_logo { 
+        float: none;
+    }
+    footer .f_sub .sns { 
+        float: none;
+    }
+    footer .f_cnt .f_nav {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    footer {
+        height: auto !important;
+        min-height:  auto !important;
+    }
+    footer .f_top {
+        padding: 10px 0;
+        font-size: 16px;
+        font-weight: 800;
+    }
+    footer .f_top .wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    footer .f_top .mail {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 20px ;
+    }
+    footer .f_top .donation {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 20px ;
+    }
+}
+

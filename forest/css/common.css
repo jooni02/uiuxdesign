@@ -58,6 +58,10 @@ html, body {
 
 /* wrapper의 사이즈 1280 + 40px (좌우여백) = 1320 */
 @media screen and (max-width:1320px) {
+    .wrapper { 
+        width: auto; 
+        margin: 0 20px;
+    }
     html, body {
         width: auto; 
         font-size: 20px;

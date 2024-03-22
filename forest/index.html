@@ -11,11 +11,11 @@
     <!-- swiper-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-
+    <script src="js/counting.js"></script><!-- 숫자가 넘치는 효과 -->
     <link rel="stylesheet" href="css/main.css">
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/counting.js"></script>
+
     <title>생명의숲</title>
 </head>
 <body>
@@ -43,6 +43,7 @@
         </header>
         <div id="fullpage">
             <section class="section visual">
+                <div><!-- main.js에서 scrollOverflow: false, 값 떄문에 감싸는 용으로 씀 -->
                 <div class="swiper">
                     <ul class="swiper-wrapper"> 
                         <li class="swiper-slide">
@@ -88,6 +89,7 @@
                     </ul>
                     <div class="paging"></div>
                 </div><!--swiper-->
+                </div><!-- main.js에서 scrollOverflow: false, 값 떄문에 감싸는 용으로 씀 -->
             </section><!--visual-->
             <section class="section tree">
                 <div class="wrapper">
@@ -95,7 +97,8 @@
                     <div class="inner_left">
                         <h2>2023 심은나무</h2>
                         <div class="num">
-                            <strong class="counter" data-start="0" data-end="89272">89,272<span>그루</span></strong>
+                            <strong class="counter" data-start="0" data-end="89272">0</strong>
+                            <span>그루</span>
                         </div>
                         <p>2023년 생명의 숲은 기후위기시대 나무를 잘 심고 잘 가꾸며 건강한 숲 지속가능한 사회를 만들어 갑니다.</p>
                     </div>
@@ -123,12 +126,120 @@
                 </div>
             </section><!--biz-->
             <section class="section news">
-                
+                <div class="wrapper">
+                    <h2>생명의숲 활동이야기</h2>
+                    <div class="list">
+                        <div class="swiper">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <strong class="subjet">자세히 보니 더 아름다운 우리학교 숲, 서울농학교 그린리더 활동 이야기</strong>
+                                        <span class="date">2024.01.31</span>
+                                        <span class="memo">생명의숲은 모두가 누리는 5분 거리의 숲을 꿈꾸며 다양한 활동들을 진행하고 있는데요.그 중에서도 취약계층의 녹지 접근성을 높이며 녹지불평등을 해소하기 위한 사회복지숲 운동을 오랫동안 이어오고 있습니다.</span>
+                                        <span class="more">자세히보기</span>
+                                        <span class="photo">
+                                            <img src="imges/main/new01.jpg" alt="사진">
+                                            <span class="cate">사회복지 숲</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <strong class="subjet">공존숲, 사회문제 해결을 위한 숲이 되다</strong>
+                                        <span class="date">2023.12.25</span>
+                                        <span class="memo">생명의숲은 중부지방산림청, 유한킴벌리와 함께 대전 동구 추동에 ‘대전 공존숲’ 사업을 함께 하고 있습니다.  2014년부터 대상지 찾기부터 시작한 활동은 올해로 10년차를 맞이하고 있습니다.</span>
+                                        <span class="more">자세히보기</span>
+                                        <span class="photo">
+                                            <img src="imges/main/new02.jpg" alt="사진">
+                                            <span class="cate">공존숲</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <strong class="subjet">남산 곤돌라 계획을 보며, 당신에게 남산은 어떤 숲인가요?</strong>
+                                        <span class="date">2023.12.25</span>
+                                        <span class="memo">남산은 조선시대 수도가 한양, 즉 서울이 되면서 역사에 등장하게 된 ‘숲’입니다. 남산이라는 이름은 도읍지 한양의 남쪽에 있다해서 조선시대부터 ‘남산’으로 불렸다고 합니다. </span>
+                                        <span class="more">자세히보기</span>
+                                        <span class="photo">
+                                            <img src="imges/main/new03.jpg" alt="사진">
+                                            <span class="cate">정책활동</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <strong class="subjet">[산불대응] 그 숲은 어떻게 됐을까?</strong>
+                                        <span class="date">2023.12.25</span>
+                                        <span class="memo">2022년 3월 4일 경북 울진에서 발생한 산불은 강원 삼척까지 확산하였으며, 3월 5일 강원 강릉 옥계에서 발생한 산불은 동해까지 확산하여 서울 면적의 약40%의 숲이 불에 탔습니다.</span>
+                                        <span class="more">자세히보기</span>
+                                        <span class="photo">
+                                            <img src="imges/main/new04.jpg" alt="사진">
+                                            <span class="cate">캠페인 이야기</span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--list-->
+                    <div class="all_view"><a href="#n">전체보기</a></div>
+                </div>
             </section><!--news-->
             <footer class="section fp-auto-height">
-                footer<br>
-                footer<br>
-                footer<br>
+                <div class="f_top">
+                    <div class="wrapper">
+                        <div class="mail">
+                            <div class="tit">
+                                <h2><strong>생명의숲</strong>뉴스레터</h2>
+                                <p>더 나은 내일을 기대하며,  오늘 우리는 나무를 심어갑니다</p>
+                            </div>
+                            <a href="#n"><span><stron class="m_skip">구독하기</stron></span></a>
+                        </div>
+                        <div class="donation">
+                            <div class="tit">
+                                <h2>생명의숲<strong>정기후원</strong></h2>
+                                <p>생명의숲은 시민, 회원의 힘으로 움직입니다.</p>
+                            </div>
+                            <a href="#n"><span><stron class="d_skip">정기후원하기</stron></span></a>
+                        </div>
+                    </div><!--wrapper-->
+                </div><!--f_top-->
+                <div class="f_sub">
+                    <div class="wrapper">
+                        <div class="f_logo"><img src="imges/common/logo_w.svg" alt="생명의숲"></div>
+                        <div class="sns">
+                            <ul>
+                                <li><a href=""><span>블로그</span></a></li>
+                                <li><a href=""><span>페이스북</span></a></li>
+                                <li><a href=""><span>카카오채널</span></a></li>
+                                <li><a href=""><span>인스타그램</span></a></li>
+                                <li><a href=""><span>유튜브</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="f_cnt">
+                            <div class="f_nav">
+                                <ul>
+                                    <li><a href="#n">개인정보처리방침</a></li>
+                                    <li><a href="#n">저작권보호 및 정책</a></li>
+                                    <li><a href="#n">생명의숲 FAQ</a></li>
+                                    <li><a href="#n">이메일수집거부</a></li>
+                                    <li><a href="#n">문의하기</a></li>
+                                </ul>
+                            </div>
+                            <div class="f_info">
+                                <strong>사단법인 생명의숲</strong><br>
+                                <span>03978 서울특별시 마포구 성미산로11길 5 숲센터 5층</span><br>
+                                <span>사업자등록번호 : 102-82-09642</span>
+                                <span>대표자 : 허상만</span><br>
+                                <span>Tel : 02-735-3232</span>
+                                <span>Fax : 02-735-3238</span>
+                                <span>Email : admin@forest.or.kr</span><br>
+                                <span>개인정보책임자 사무처장 최승희</span>
+                            </div>
+                            <div class="copyright">Copyright ⓒ Forest for life All. rights reserved.</div>
+                        </div>
+                    </div><!--wrapper-->
+                </div><!--f_sub-->
             </footer>
         </div><!--fullpage-->
         <aside class="quick">
