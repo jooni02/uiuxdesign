@@ -4,43 +4,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="js/main.js"></script>
     <title>포천시 문화관광</title>
 </head>
 <body>
     <div id="wrap">
-        <div class="tnb">
-            <div class="layout">
-                <ul class="left_tnb">
-                    <li><a href="https://www.pocheon.go.kr/www/index.do">포천시</a></li>
-                    <li><a href="index.html">문화관광</a></li>
-                    <li><a href="https://council.pocheon.go.kr/kr/main.do">포천시</a></li>
-                    <li><a href="#n">포천시</a></li>
-                </ul>
-                <ul class="wather">
-                    <il>3/25(월)</il>
-                    <li><span>날씨</span></li>
-                    <li>16˚</li>
-                    <li>미세먼지 좋음</li>
-                    <li><span>표정</span></li>
-                    <li><a href="#n"><span>포천사이트 전체보기</span></a></li>
-                </ul>
-            </div>
-        </div>
         <header>
-            <h1 class="logo">포천문화관광</h1>
-            <nav class="gnb">
-                <ul class="depth1">
-                    <li><a href="#n">포천관광명소</a></li>
-                        <ul class="depth2">
-                            <li><a href="#n"></a></li>
-                        </ul>
-                    <li><a href="#n">추천여행</a></li>
-                    <li><a href="#n">축제/체험</a></li>
-                    <li><a href="#n">숙박/음식/쇼핑</a></li>
-                    <li><a href="#n">여행가이드</a></li>
-                </ul>
-            </nav>
+            <div class="header_top">
+                <div class="wrapper">
+                    <div class="tnb01">
+                        <span><a href="https://www.pocheon.go.kr/www/index.do">포천시</a></span>
+                        <span><a href="index.html">문화관광</a></span>
+                        <span><a href="https://council.pocheon.go.kr/kr/main.do">포천시의회</a></span>
+                        <span><a href="#n">관광홍보자료</a></span>
+                    </div>
+                    <div class="tnb02">
+                        <span>3/25(월)</span>
+                        <span class="icon1">날씨</span>
+                        <span>16˚</span>
+                        <span>미세먼지 좋음</span>
+                        <span class="icon2">표정</span>
+                        <span><a href="#n"><strong>포천사이트 전체보기</strong></a></span>
+                    </div>
+                </div>
+            </div><!--header_top-->
+            <div class="header_sub">
+                <div class="wrapper">
+                    <h1 class="logo"><a href="index.html">포천문화관광</a></h1>
+                    <nav class="gnb">
+                        <button class="gnb_open">메뉴열기</button>
+                        <div class="gnb_wrap">
+                            <ul class="depth1">
+                                <li>
+                                    <a href="#n">포천관광명소</a>
+                                    <ul class="depth2">
+                                        <li><a href="#n">유네스코지정</a></li>
+                                        <li><a href="#n">한탄강 지질명소</a></li>
+                                        <li><a href="#n">산ㆍ계곡휴양</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n">추천여행</a>
+                                    <ul class="depth2">
+                                        <li><a href="#n">테마여행</a></li>
+                                        <li><a href="#n">야간여행</a></li>
+                                        <li><a href="#n">치유의 숲</a></li>
+                                        <li><a href="#n">문화여행</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n">축제/체험</a>
+                                    <ul class="depth2">
+                                        <li><a href="#n">축제ㆍ여행제</a></li>
+                                        <li><a href="#n">체험마을</a></li>
+                                        <li><a href="#n">목공체험장</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n">숙박/음식/쇼핑</a>
+                                    <ul class="depth2">
+                                        <li><a href="#n">펜션ㆍ민박</a></li>
+                                        <li><a href="#n">호스텔</a></li>
+                                        <li><a href="#n">일반숙박</a></li>
+                                        <li><a href="#n">캠핑장</a></li>
+                                        <li><a href="#n">맛집탐방</a></li>
+                                        <li><a href="#n">특산품</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n">여행가이드</a>
+                                    <ul class="depth2">
+                                        <li><a href="#n">관광안내소</a></li>
+                                        <li><a href="#n">책자신청</a></li>
+                                        <li><a href="#n">새소식</a></li>
+                                        <li><a href="#n">문화관광해설사</a></li>
+                                        <li><a href="#n">포천관광정보센터</a></li>
+                                        <li><a href="#n">여행지도</a></li>
+                                        <li><a href="#n">관광브랜드</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        <button class="gnb_close">메뉴닫기</button>
+                        </div>
+                    </nav>
+                    <div class="tnb03">
+                        <a href="#n" class="search">검색</a>
+                        <a href="#n" class="lang">언어</a>
+                    </div>
+                </div><!-- wrapper -->
+            </div><!--header_sub-->
         </header>
+        <div class="container">
+            <section class="visual">
+                <h2>팝업</h2>
+                <div class="swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <img src="imges/main/visual01.png">
+                            <div class="visual_txt">
+                                <strong>아름다운 푸른관광도시<br>
+                                    “경기도 포천”</strong>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="imges/main/visual02.png">
+                            <div class="visual_txt">
+                                <strong>마음이 움직이는여행<br>
+                                    “포천”</strong>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="imges/main/visual03.png">
+                            <div class="visual_txt">
+                                <strong>도시여행<br>
+                                    “포천”</strong>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <section class="info">
+                <div class="wrapper">
+                    <div class="info_icon">
+                        <ul>
+                            <li class="info1"><a href="#n">관광지도</a></li>
+                            <li class="info2"><a href="#n">관광안내소</a></li>
+                            <li class="info3"><a href="#n">체험신청</a></li>
+                            <li class="info4"><a href="#n">맛집</a></li>
+                            <li class="info5"><a href="#n">숙박/캠핑</a></li>
+                            <li class="info6"><a href="#n">교통안내</a></li>
+                        </ul>
+                    </div><!--info_cion-->
+                </div>
+            </section>
+            <section class="Attrac">
+                <div class="bg">
+                    <div class="wrapper">
+                        <div class="Attrac_tit">
+                            <span>유네스코지정</span>
+                            <h2>포천 관광명소</h2>
+                        </div>
+                        <div class="inner">
+                            <div class="swiper">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <div class="Attrac_sub_tit">
+                                            <span>유네스코지정 관광명소</span>
+                                            <h3>포천아트밸리</h3>
+                                            <span>포천아트밸리, 예술로 살아나다</span>
+                                            <p>아트밸리는 용도 폐기되었던 곳에 새 생명을 불어넣어 탄생한 업 사이클링 공간이다. 자연과 인간의 아름다운 조화가 문화와 예술을 꽃피우고있다.</p>
+                                        </div>
+                                        <div class="photo">
+                                            <span><a href="#n"><img src="imges/main/Attrac01.png" alt="포천아트밸리 사진"></a></span>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="Attrac_sub_tit">
+                                            <span>유네스코지정 관광명소</span>
+                                            <h3>비둘기낭폭포</h3>
+                                            <span>숨은 아름다움을 찾아서</span>
+                                            <p>비둘기낭 폭포, 주상절리, 교동가마소 내륙에서 만나는 현무암 지대 포천에는 우리나라에서 유일한 현무암 협곡을 가지고 있는 한탄강이 흐르고 있다.</p>
+                                        </div>
+                                        <div class="photo">
+                                            <span><a href="#n"><img src="imges/main/Attrac02.png" alt="비둘기낭폭포 사진"></a></span>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="Attrac_sub_tit">
+                                            <span>유네스코지정 관광명소</span>
+                                            <h3>산정호수</h3>
+                                            <span>초록우물에 마을을 비추며</span>
+                                            <p>산 위에 뜻밖의 넓은 호수가 펼쳐져 있어 여행의 설렘을 더해주는 산정호수. 주위의 수려한 산들이 호수에 비친 풍경은 신비로움을 자아낸다.</p>
+                                        </div>
+                                        <div class="photo">
+                                            <span><a href="#n"><img src="imges/main/Attrac03.png" alt="산정호수 사진"></a></span>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="Attrac_sub_tit">
+                                            <span>유네스코지정 관광명소</span>
+                                            <h3>허브아일랜드</h3>
+                                            <span>365일 꽃이 지지 않는  비밀의 정원에서</span>
+                                            <p>내륙지역인 포천에서 만나는 향기로운 섬, 허브아일랜드. 이곳에서는 사계절 언제나 싱그러운 허브향이 가득하고 꽃들의 향연이 펼쳐진다.</p>
+                                        </div>
+                                        <div class="photo">
+                                            <span><a href="#n"><img src="imges/main/Attrac04.png" alt="허브아일랜드 사진"></a></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div><!--swiper-->
+                    </div><!--wrapper-->
+                </div><!--bg-->
+            </section>
+            <section class="Theme"></section>
+            <section class="news"></section>
+        </div>
         
         <footer></footer>
     </div><!--wrap-->

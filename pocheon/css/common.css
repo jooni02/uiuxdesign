@@ -1,16 +1,16 @@
 @charset "utf-8";
 /* 한글웹폰트 */
 @font-face {
-	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 700;
-	src: local('Gmarket Sans Bold'), url(../fonts/GmarketSansBold.woff2) format('woff2'), url(../fonts/GmarketSansBold.woff) format('woff');
-}
-@font-face {
 	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 500;
 	src: local('Gmarket Sans Medium'), url(../fonts/GmarketSansMedium.woff2) format('woff2'), url(../fonts/GmarketSansMedium.wof) format('woff1');
 }
 @font-face {
 	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 300;
 	src: local('Gmarket Sans Light'), url(../fonts/GmarketSansLight.woff2) format('woff2'), url(../fonts/GmarketSansLight.woff) format('woff');
+}
+@font-face {
+    font-family: 'Makgeolli'; font-style: normal; font-weight: 300;
+    src: local('Makgeolli'), url(../fonts/Makgeolli.woff2) format('woff2'), url(../fonts/Makgeolli.woff) format('woff');
 }
 
 *::selection {
