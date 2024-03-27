@@ -31,6 +31,7 @@
     font-size: 90px;
     font-family: 'Makgeolli';
     text-align: center;
+    text-shadow: 2px 2px 2px 8px rgba(0,0,0,0.1);
 }
 .info  {
     padding: 70px 0 90px 0;
@@ -102,4 +103,12 @@
 }
 .Attrac .Attrac_sub_tit {
     float: left;
+}
+
+.news {
+    padding: 40px 0 0 0;
+}
+.news .news_box {
+    background: url(../imges/main/news_bg.png) no-repeat center center / cover;
+    height: 800px;
 }
