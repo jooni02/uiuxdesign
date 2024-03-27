@@ -1,0 +1,105 @@
+@import url(default.css);
+@import url(common.css);
+@import url(layout.css);
+
+/* (header, footer 빼고 전부 다) */
+
+@media screen and (max-width:1600px){
+}
+@media screen and (max-width:1024px){
+}
+
+.visual h2 {
+    display: none;
+}
+.visual .swiper {
+    height:900px
+}
+.visual .swiper-slide img {
+    display:block; 
+    width:100%; 
+    height:100%; 
+    object-fit:cover;
+}
+.visual ul li .visual_txt strong {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: #fff;
+    font-size: 90px;
+    font-family: 'Makgeolli';
+    text-align: center;
+}
+.info  {
+    padding: 70px 0 90px 0;
+}
+.info .info_icon ul {
+    display: flex;
+    justify-content: center
+}
+.info .info_icon ul li {
+    margin: 0 50px;
+    width: 92px;
+}
+.info .info_icon ul li a {
+    display: block;
+    padding-top: 100px;
+    position: relative;
+    font-weight: 500;
+    text-align: center;
+}
+.info .info_icon ul li a::after {
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    transform: translate(-50%, -50%);
+    width: 92px;
+    height: 92px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+}
+.info .info_icon ul li.info1 a::after {
+    background-image: url(../imges/main/info01.svg);
+}
+.info .info_icon ul li.info2 a::after {
+    background-image: url(../imges/main/info02.svg);
+}
+.info .info_icon ul li.info3 a::after {
+    background-image: url(../imges/main/info03.svg);
+}
+.info .info_icon ul li.info4 a::after {
+    background-image: url(../imges/main/info04.svg);
+}
+.info .info_icon ul li.info5 a::after {
+    background-image: url(../imges/main/info05.svg);
+}
+.info .info_icon ul li.info6 a::after {
+    background-image: url(../imges/main/info06.svg);
+}
+
+.Attrac {
+    padding: 40px 0 190px 0;
+}
+.Attrac .bg {
+    height: 900px;
+    background-color: #F8FCFF;
+}
+.Attrac .bg .Attrac_tit {
+    padding: 110px 0 0 0;
+    text-align: center;
+}
+.Attrac .bg .Attrac_tit span {
+    font-size: 28px;
+}
+.Attrac .bg .Attrac_tit h2 {
+    font-size: 50px;
+    font-weight: 500;
+}
+.Attrac .Attrac_sub_tit {
+    float: left;
+}
