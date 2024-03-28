@@ -216,5 +216,10 @@
     display: flex;
 }
 .Attrac .paging  > span {
-
+    width: 10%;
+    display: block;
+    height: 2px;
+    background-color: #ededed;
+    position: relative;
+    border
 }
