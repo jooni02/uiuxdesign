@@ -10,6 +10,10 @@ $(document).ready(function(){
 
 	loop: true,
 
+	navigation: {
+		nextEl: '.visual .next',
+		prevEl: '.visual .prev',
+	},
 	pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
 		el: '.swiper-pagination', /* 해당 요소의 class명 */
 		clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
@@ -58,6 +62,16 @@ $(document).ready(function(){
 		spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
 		loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
 
+		768: {    /* 768px 이상일때 적용 */
+		slidesPerView: 2,
+		spaceBetween: 28,
+		},
+		1024: {   /* 1024px 이상일때 적용 */
+			slidesPerView: 2,
+			spaceBetween: 30,
+		},
+
+
 		navigation: {
 			nextEl: '.Attrac .Attrac_btn .next',
 			prevEl: '.Attrac .Attrac_btn .prev',
@@ -80,5 +94,54 @@ $(document).ready(function(){
 
 	});
 
-
+	const theme_swiper = new Swiper('.theme .swiper', { /* 팝업을 감싼는 요소의 class명 */
+		slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+		spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+		breakpoints: {
+			640: {    /* 640px 이상일때 적용 */
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			768: {    /* 768px 이상일때 적용 */
+				slidesPerView: 4,
+				spaceBetween: 30,
+			},
+			1024: {   /* 1024px 이상일때 적용 */
+				slidesPerView: 5,
+				spaceBetween: 40,
+			},
+			1280: {    /* 1280px 이상일때 적용 */
+				slidesPerView: 5,
+				spaceBetween: 40,
+			},
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+	
+	const news_swiper = new Swiper('.news .swiper', { /* 팝업을 감싼는 요소의 class명 */
+		slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+		spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+		breakpoints: {
+			1024: {   /* 1024px 이상일때 적용 */
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+			1280: {    /* 1280px 이상일때 적용 */
+				slidesPerView: 6,
+				spaceBetween: 28,
+			},
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
+			el: '.swiper-pagination', /* 해당 요소의 class명 */
+			clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
+			type: 'fraction',  /* type fraction을 주면 paging이 숫자로 표시됨 */
+		},
+	});
 }) ////document.ready

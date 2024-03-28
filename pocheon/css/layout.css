@@ -257,3 +257,8 @@ header .header_sub .tnb03 a.lang {
         display: none;
     }
 }
+
+footer {
+    height: 350px;
+    background-color: #000233;
+}
