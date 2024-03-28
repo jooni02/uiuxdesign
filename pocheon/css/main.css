@@ -38,7 +38,7 @@
         font-size: 75px;
     }
 }
-@media screen and (max-width:768) {
+@media screen and (max-width:768px) {
     .visual .swiper {
         height: 500px;
     }
@@ -144,6 +144,9 @@
     padding: 40px 0 190px 0;
     background-color: #F8FCFF;
 }
+.Attrac .wrapper {
+    position: relative;
+}
 .Attrac .Attrac_tit {
     padding: 110px 0 114px 0;
     text-align: center;
@@ -210,16 +213,52 @@
 .Attrac .paging {
     position: absolute;
     left: calc(50% - 422px);
-    bottom: 70px;
+    bottom: 85px !important;
     z-index: 11;
     width: 320px;
     display: flex;
 }
 .Attrac .paging  > span {
-    width: 10%;
+    width: 80px;
     display: block;
     height: 2px;
-    background-color: #ededed;
+    background-color: #999;
     position: relative;
-    border
+    border-radius: 0;
+    margin: 0 !important;
+}
+.Attrac .paging  > span > span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #101010;
+}
+.Attrac .Attrac_btn {
+    display: flex;
+    position: relative;
+}
+.Attrac .Attrac_btn .prev,
+.Attrac .Attrac_btn .next{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.2);
+    font-size: 0;
+    line-height: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 10px auto;
+}
+.Attrac .Attrac_btn .prev {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.41235 9.24569L9.65136 16.6439C9.87286 16.8703 9.98634 17.1111 9.99179 17.3665C9.99726 17.6218 9.88379 17.8727 9.65136 18.1192C9.41896 18.3656 9.17838 18.4925 8.92961 18.4997C8.68085 18.507 8.4311 18.3797 8.18038 18.1178L0.392811 10.159C0.270598 10.028 0.174583 9.88602 0.104767 9.73294C0.0349224 9.57983 0 9.41451 0 9.23699C0 9.05946 0.0349224 8.89415 0.104767 8.74104C0.174583 8.58795 0.270598 8.44896 0.392811 8.32406L8.18038 0.365153C8.42021 0.120076 8.66723 -0.00163599 8.92144 1.66037e-05C9.17566 0.00169819 9.41896 0.125758 9.65136 0.372198C9.88379 0.618638 10 0.866747 10 1.11652C10 1.3663 9.88379 1.60993 9.65136 1.84744L2.41235 9.24569Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.Attrac .Attrac_btn .next {
+    position: absolute;
+    left: 50px;
+    bottom: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.66155 9.26448L0.423154 1.85868C0.201312 1.63171 0.087667 1.3904 0.0822203 1.13475C0.0767451 0.879126 0.190219 0.62796 0.422642 0.381249C0.655037 0.134539 0.895617 0.0075556 1.14438 0.000299412C1.39314 -0.00695678 1.64561 0.117676 1.90178 0.374197L9.68927 8.34184C9.80601 8.47849 9.90066 8.62344 9.97323 8.77669C10.0458 8.92997 10.082 9.09547 10.082 9.27319C10.082 9.45091 10.0457 9.61668 9.97293 9.77051C9.90016 9.92432 9.80517 10.0612 9.68795 10.1811L1.9031 18.1451C1.65694 18.3969 1.41385 18.5147 1.17383 18.4985C0.933801 18.4823 0.69759 18.3509 0.465195 18.1042C0.232772 17.8575 0.116561 17.6091 0.116561 17.359C0.116561 17.109 0.232943 16.8649 0.465707 16.6267L7.66155 9.26448Z' fill='white'/%3E%3C/svg%3E%0A");
 }

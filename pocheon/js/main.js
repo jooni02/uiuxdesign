@@ -59,8 +59,8 @@ $(document).ready(function(){
 		loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
 
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.Attrac .Attrac_btn .next',
+			prevEl: '.Attrac .Attrac_btn .prev',
 		},
         pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
             el: '.Attrac .paging', /* 해당 요소의 class명 */
@@ -69,6 +69,7 @@ $(document).ready(function(){
                 return '<span class="page' + (index + 1) + ' '+className+'"><span></span></span>';
             },
         },
+		
 		// autoplay: {  /* 팝업 자동 실행 */
 		// 	delay: 3000,
 		// 	disableOnInteraction: true,
