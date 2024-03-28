@@ -144,7 +144,7 @@ header .header_sub .tnb03 a {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    margin: 40px 0 0 20px;
+    margin: 37px 0 0 20px;
 }
 header .header_sub .tnb03 a.search {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.7834 14.3911L20 18.6076L18.6076 20L14.3911 15.7834C12.875 16.9964 10.9522 17.722 8.86102 17.722C3.96973 17.722 0 13.7523 0 8.86102C0 3.96973 3.96973 0 8.86102 0C13.7523 0 17.722 3.96973 17.722 8.86102C17.722 10.9522 16.9964 12.875 15.7834 14.3911ZM13.8081 13.6605C15.012 12.4198 15.7529 10.7273 15.7529 8.86102C15.7529 5.05324 12.6688 1.96911 8.86102 1.96911C5.05324 1.96911 1.96911 5.05324 1.96911 8.86102C1.96911 12.6688 5.05324 15.7529 8.86102 15.7529C10.7273 15.7529 12.4198 15.012 13.6605 13.8081L13.8081 13.6605Z' fill='white'/%3E%3C/svg%3E%0A");
@@ -182,6 +182,75 @@ header .header_sub .tnb03 a.lang {
     }
 }
 
-@media screen and (max-width:1320px) {
-
+@media screen and (max-width:1320px){
+    header .header_sub .logo a {
+        width: 180px;
+        height: 30px;
+    }
+    header .header_sub .gnb ul.depth1>li {
+        width: 140px;
+    }
+    header .header_sub .gnb ul.depth1>li>a {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width:1024px) {
+    header {
+        height: 120px;
+    }
+    header .header_top .tnb02 span a strong {
+        display: none;
+    }
+    header .header_sub .logo {
+        margin: 25px 0 0 0;
+    }
+    header .header_sub .gnb .gnb_open {
+        display: block;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='23.9999' height='1.45454' fill='white'/%3E%3Crect x='5.09131' y='5.81812' width='18.909' height='1.45454' fill='white'/%3E%3Crect y='11.6362' width='23.9999' height='1.45454' fill='white'/%3E%3C/svg%3E%0A");
+    }
+    header .header_sub .gnb .gnb_open,
+    header .header_sub .gnb .gnb_close {
+        position: absolute; /* header 기준 */
+        right: 0;
+        top: 55px;
+        width: 60px;
+        height: 50px;
+        font-size: 0;
+        line-height: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 24px auto;
+    }
+    header .header_sub .gnb ul.depth1 {
+        display: none;
+    }
+    header .header_sub .tnb03 a {
+        margin: 30px 0 0 20px;
+    }
+}
+@media screen and (max-width:768px) {
+    header {
+        height: 80px;
+    }
+    header .header_top {
+        display: none;
+    }
+    header .header_sub .logo {
+        margin: 28px 0 0 0;
+    }
+    header .header_sub .logo a {
+        width: 176px;
+        height: 26px;
+    }
+    header .header_sub .gnb .gnb_open,
+    header .header_sub .gnb .gnb_close {
+        right: 0;
+        top: 15px;
+    }
+    header .header_sub .tnb03 a {
+        margin: 30px 0 0 20px;
+    }
+    header .header_sub .tnb03 a.lang {
+        display: none;
+    }
 }

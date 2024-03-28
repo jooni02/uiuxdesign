@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    const swiper = new Swiper('.swiper', { /* 팝업을 감싼는 요소의 class명 */
+    const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싼는 요소의 class명 */
 
     effect: "fade", /* 부드럽게 */ 
 
@@ -13,7 +13,6 @@ $(document).ready(function(){
 	pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
 		el: '.swiper-pagination', /* 해당 요소의 class명 */
 		clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
-		type: 'fraction',  /* type fraction을 주면 paging이 숫자로 표시됨 */
 		renderBullet: function (index, className) {   /* paging에 특정 코드 넣기 */
 		    return '<span class="' + className + '">' + (index + 1) + "</span>";
 		},
@@ -53,5 +52,33 @@ $(document).ready(function(){
 	$('.header .tnb03 .login').on('focusin',function(){
 		$('.header').removeClass('on')
 	})
+
+	const Attrac_swiper = new Swiper('.Attrac .swiper', { /* 팝업을 감싼는 요소의 class명 */
+		slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+		spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
+		autoHeight: true,
+		loop: true,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+        pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
+            el: '.Attrac .paging', /* 해당 요소의 class명 */
+            clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
+            renderBullet: function (index, className) {   /* paging에 특정 코드 넣기 */
+                return '<span class="page' + (index + 1) + ' '+className+'"><span></span></span>';
+            },
+        },
+		// autoplay: {  /* 팝업 자동 실행 */
+		// 	delay: 3000,
+		// 	disableOnInteraction: true,
+		// },
+		onSlideChangeEnd:function(e){
+			Attrac_swiper.update(true);
+		}
+
+	});
+
 
 }) ////document.ready
