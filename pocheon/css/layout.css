@@ -103,7 +103,7 @@ header .header_sub .logo a {
     height: 36px;
     font-size: 0;
     line-height: 0;
-    background: url(../imges/common/logo_w.png) no-repeat center center / contain;
+    background: url(../imges/common/logo_w.png) no-repeat left center / contain;
 }
 header .header_sub .gnb .gnb_open,
 header .header_sub .gnb .gnb_close {
@@ -144,7 +144,7 @@ header .header_sub .tnb03 a {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    margin: 37px 0 0 20px;
+    margin: 37px 0 0 10px;
 }
 header .header_sub .tnb03 a.search {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.7834 14.3911L20 18.6076L18.6076 20L14.3911 15.7834C12.875 16.9964 10.9522 17.722 8.86102 17.722C3.96973 17.722 0 13.7523 0 8.86102C0 3.96973 3.96973 0 8.86102 0C13.7523 0 17.722 3.96973 17.722 8.86102C17.722 10.9522 16.9964 12.875 15.7834 14.3911ZM13.8081 13.6605C15.012 12.4198 15.7529 10.7273 15.7529 8.86102C15.7529 5.05324 12.6688 1.96911 8.86102 1.96911C5.05324 1.96911 1.96911 5.05324 1.96911 8.86102C1.96911 12.6688 5.05324 15.7529 8.86102 15.7529C10.7273 15.7529 12.4198 15.012 13.6605 13.8081L13.8081 13.6605Z' fill='white'/%3E%3C/svg%3E%0A");
@@ -227,6 +227,9 @@ header .header_sub .tnb03 a.lang {
     header .header_sub .tnb03 a {
         margin: 30px 0 0 20px;
     }
+    header .header_sub .tnb03 a.lang {
+        margin-right: 40px;
+    }
 }
 @media screen and (max-width:768px) {
     header {
@@ -248,7 +251,7 @@ header .header_sub .tnb03 a.lang {
         top: 15px;
     }
     header .header_sub .tnb03 a {
-        margin: 30px 0 0 20px;
+        margin-right: 40px;
     }
     header .header_sub .tnb03 a.lang {
         display: none;
