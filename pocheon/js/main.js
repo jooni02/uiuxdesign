@@ -54,6 +54,7 @@ $(document).ready(function(){
 		$('.header').removeClass('on')
 	})
 
+	/* Attrac */
 	const Attrac_swiper = new Swiper('.Attrac .swiper', { /* 팝업을 감싼는 요소의 class명 */
 		slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
 		spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
@@ -82,7 +83,7 @@ $(document).ready(function(){
         },
 		on: {
 			slideChange: function(){
-				$('.Attrac .paging_num').html('<strong>'+this.realIndex + 1 +'</strong> / '+ this.loopedSlides);
+				$('.Attrac .paging_num').html('<strong>'+ (this.realIndex + 1) +'</strong> / '+ this.loopedSlides);
 			}
 		},
 		
@@ -99,50 +100,56 @@ $(document).ready(function(){
 		Attrac_swiper.slideReset();
 	})
 
+	/* theme */
+	$('.theme .tag button').on('mouseenter', function(){
+        $('.theme .tag button').removeClass('on')
+        $(this).addClass('on')
+    })
+
+
 	const theme_swiper = new Swiper('.theme .swiper', { /* 팝업을 감싼는 요소의 class명 */
 		slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
 		spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
 		breakpoints: {
 			500: {    /* 768px 이상일때 적용 */
-			slidesPerView: 3,
-			spaceBetween: 20,
+				slidesPerView: 3,
+				spaceBetween: 16,
 			},
 			768: {    /* 768px 이상일때 적용 */
 				slidesPerView: 4,
-				spaceBetween: 20,
+				spaceBetween: 16,
 			},
 			1024: {   /* 1024px 이상일때 적용 */
 				slidesPerView: 5,
-				spaceBetween: 24,
+				spaceBetween: 18,
 			},
 		},
+
+		loop: true,
+
+
 		navigation: {
-			nextEl: '.theme .swiper-button-next',
-			prevEl: '.theme .swiper-button-prev',
+			nextEl: '.theme .theme_btn .next',
+			prevEl: '.theme .theme_btn .prev',
 		},
 	});
-	
+
+	/* news */
 	const news_swiper = new Swiper('.news .swiper', { /* 팝업을 감싼는 요소의 class명 */
-		slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
-		spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+		slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
+		spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
 		breakpoints: {
-			1024: {   /* 1024px 이상일때 적용 */
-				slidesPerView: 4,
-				spaceBetween: 20,
+			768: {  /* 640px 이상이 되면 적용 */
+				slidesPerView: 
+				spaceBetween: 16, 
 			},
-			1280: {    /* 1280px 이상일때 적용 */
-				slidesPerView: 6,
-				spaceBetween: 28,
+			1024: {  /* 1024px 이상이 되면 적용 */
+				spaceBetween: 40,
 			},
 		},
 		navigation: {
-			nextEl: '.news .swiper-button-next',
-			prevEl: '.news .swiper-button-prev',
-		},
-		pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
-			el: '.news .swiper-pagination', /* 해당 요소의 class명 */
-			clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
-			type: 'fraction',  /* type fraction을 주면 paging이 숫자로 표시됨 */
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
 		},
 	});
 }) ////document.ready
