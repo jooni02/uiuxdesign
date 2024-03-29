@@ -218,16 +218,11 @@
 .Attrac .swiper ul li {
     width: 440px;
 }
-.Attrac .swiper ul li.swiper-slide-active {
-    width: 1062px;
-}
 .Attrac .swiper ul li .Attrac_sub_tit {
     width: 400px;
     display: none;
 }
-.Attrac .swiper ul li.swiper-slide-active .Attrac_sub_tit{
-    display: block;
-}
+
 .Attrac .swiper ul li .Attrac_sub_tit span {
     font-size: 15px;
     color: #2E84B1;
@@ -268,11 +263,6 @@
     transform: translate(-50%, -50%);
     font-size: 18px;
     color:rgba(255,255,255,0.8);
-}
-.Attrac .swiper ul li.swiper-slide-active .photo {
-    width: 517px;
-    height: 388px;
-    opacity: 1;
 }
 .Attrac .more a {
     display: none; /* 모바일에서 */
@@ -341,6 +331,20 @@
     bottom: 30px;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.66155 9.26448L0.423154 1.85868C0.201312 1.63171 0.087667 1.3904 0.0822203 1.13475C0.0767451 0.879126 0.190219 0.62796 0.422642 0.381249C0.655037 0.134539 0.895617 0.0075556 1.14438 0.000299412C1.39314 -0.00695678 1.64561 0.117676 1.90178 0.374197L9.68927 8.34184C9.80601 8.47849 9.90066 8.62344 9.97323 8.77669C10.0458 8.92997 10.082 9.09547 10.082 9.27319C10.082 9.45091 10.0457 9.61668 9.97293 9.77051C9.90016 9.92432 9.80517 10.0612 9.68795 10.1811L1.9031 18.1451C1.65694 18.3969 1.41385 18.5147 1.17383 18.4985C0.933801 18.4823 0.69759 18.3509 0.465195 18.1042C0.232772 17.8575 0.116561 17.6091 0.116561 17.359C0.116561 17.109 0.232943 16.8649 0.465707 16.6267L7.66155 9.26448Z' fill='white'/%3E%3C/svg%3E%0A");
 }
+@media screen and (min-width:1025px) {
+    .Attrac .swiper ul li.swiper-slide-active {
+        width: 1062px;
+    }
+    .Attrac .swiper ul li.swiper-slide-active .Attrac_sub_tit{
+        display: block;
+    }
+    .Attrac .swiper ul li.swiper-slide-active .photo {
+        width: 517px;
+        height: 388px;
+        opacity: 1;
+    }
+
+}
 
 @media screen and (max-width:1024px)  {
     .Attrac .Attrac_tit {
@@ -358,20 +362,8 @@
         justify-content: space-between;
         width: auto;
     }
-    .Attrac .swiper ul li.swiper-slide-active {
-        width: auto;
-    }
-    .Attrac .swiper ul li.swiper-slide-active .Attrac_sub_tit{
-        display: none;
-    }
     .Attrac .swiper ul li .photo {
-        width: 340px;
-        height: 230px;
         opacity: 1;
-    }
-    .Attrac .swiper ul li.swiper-slide-active .photo {
-        width: 417px;
-        height: 288px;
     }
     .Attrac .more {
         margin: 40px 0 0 0;
@@ -418,10 +410,6 @@
         display: none;
     }
     .Attrac .swiper ul li .photo {
-        width: 264px;
-        height: 197px;
-    }
-    .Attrac .swiper ul li.swiper-slide-active .photo {
         width: 264px;
         height: 197px;
     }
@@ -596,32 +584,143 @@
     background: url(../imges/main/news_bg.png) no-repeat center center / cover;
     height: 800px;
 }
-.news .news_tit{ 
-    color: #fff;
+.news .wrapper {
+    position: relative;
+}
+.news .swiper {
+    margin: 0 50px;
+}
+.news .news_tit {
+    padding: 120px 0 80px 0;
     text-align: center;
-    padding: 110px 0 80px 0;
+    color: #fff;
 }
 .news .news_tit span {
-    display: block;
     font-size: 28px;
-    margin: 0 0 5px 0;
 }
 .news .news_tit h2 {
     font-size: 50px;
     font-weight: 500;
     letter-spacing: -0.04em;
 }
-.news .content {
-    width: 299px;
+.news .swiper ul li {
+    display: block;
+    width: 100%;
     height: 299px;
+    background-color: #fff;
     border-radius: 20px;
+    padding: 40px 30px;
+}
+.news .swiper ul li a span {
+    font-size: 16px;
+    font-weight: 500;
+}
+.news .swiper ul li a span.day01 {
+    color: #2E84B1;
+}
+.news .swiper ul li a span.day02 {
+    color: #258B01;
+}
+.news .swiper ul li a h3 {
+    font-size: 20px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 40px 0 10px 0;
+}
+.news .swiper ul li p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #999;
+    margin: 0 0 50px 0;
+}
+.news .swiper ul li a span.date {
+    color: #999;
+}
+.news .more01 {
+    font-size: 0;
+    line-height: 0;
+}
+.news .more01 a {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    width: 16px;
+    height: 16px;
+    z-index: 1;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.17098 8.82902H0.829022C0.594143 8.82902 0.397253 8.75103 0.238352 8.59505C0.0794504 8.43907 0 8.24331 0 8.00778C0 7.77222 0.0794504 7.57387 0.238352 7.41273C0.397253 7.25156 0.594143 7.17098 0.829022 7.17098H7.17098V0.829022C7.17098 0.594143 7.24997 0.397254 7.40797 0.238353C7.56594 0.0794516 7.7617 0 7.99524 0C8.22879 0 8.42613 0.0794516 8.58727 0.238353C8.74844 0.397254 8.82902 0.594143 8.82902 0.829022V7.17098H15.171C15.4059 7.17098 15.6027 7.25003 15.7616 7.40812C15.9205 7.56624 16 7.76216 16 7.99588C16 8.23383 15.9205 8.43217 15.7616 8.5909C15.6027 8.74965 15.4059 8.82902 15.171 8.82902H8.82902V15.171C8.82902 15.4101 8.75002 15.6081 8.59203 15.7648C8.43406 15.9216 8.2383 16 8.00476 16C7.77121 16 7.57387 15.9216 7.41273 15.7648C7.25156 15.6081 7.17098 15.4101 7.17098 15.171V8.82902Z' fill='%23999999'/%3E%3C/svg%3E%0A");
+}
+.news .more02 {
+    margin: 40px 0 0 0;
+    text-align: center;
+}
+.news .more02 a {
+    display: inline-block;
+    width: 134px;
+    border-radius: 30px;
+    border: 1px solid rgba(237,237,237,1);
+    padding: 16px 45px 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+}
+.news .more02 a::after {
+    position: absolute;
+    right:25px;
+    top: 19px;
+    width: 13px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.89985 5.73163H0.501083C0.362986 5.73163 0.244951 5.68368 0.146979 5.58777C0.0489929 5.49188 0 5.37544 0 5.23844C0 5.10143 0.0489861 4.98284 0.146958 4.88269C0.244944 4.78254 0.362986 4.73246 0.501083 4.73246H8.89985L5.05488 0.887481C4.95472 0.787328 4.9009 0.669543 4.89342 0.534127C4.88594 0.39871 4.93642 0.273467 5.04485 0.158398C5.15062 0.0469812 5.27054 -0.00565802 5.40462 0.000480867C5.53871 0.00663364 5.65864 0.061356 5.76442 0.164648L10.3842 4.79063C10.4469 4.85617 10.4961 4.9257 10.5316 4.99921C10.5671 5.07274 10.5849 5.15213 10.5849 5.23738C10.5849 5.32261 10.5671 5.40199 10.5316 5.47552C10.4961 5.54904 10.4497 5.61438 10.3926 5.67154L5.7684 10.2957C5.65302 10.4111 5.5335 10.4667 5.40983 10.4624C5.28617 10.4581 5.17145 10.3989 5.06569 10.2849C4.95726 10.1725 4.90304 10.0511 4.90304 9.92088C4.90304 9.79063 4.95726 9.6736 5.06569 9.56979L8.89985 5.73163Z' fill='white'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+/* 마우스 오버 */
+.news .more02 a:hover {
+    border: 1px solid #101010;
+    color: #101010;
     background-color: #fff;
 }
-.news .content ul li.swiper-slide .wiper-slide-active {
-    width: auto;
+.news .more02 a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.77102 4.91282H0.572078C0.453709 4.91282 0.352536 4.87172 0.26856 4.78952C0.184572 4.70733 0.142578 4.60752 0.142578 4.49009C0.142578 4.37265 0.184566 4.27101 0.268542 4.18516C0.352531 4.09932 0.453709 4.05639 0.572078 4.05639H7.77102L4.47533 0.760698C4.38948 0.674852 4.34335 0.573894 4.33694 0.457823C4.33053 0.341751 4.3738 0.234401 4.46674 0.13577C4.55739 0.0402696 4.66018 -0.00484973 4.77511 0.000412172C4.89004 0.00568598 4.99284 0.0525908 5.08351 0.141127L9.04329 4.10625C9.09709 4.16243 9.13921 4.22203 9.16967 4.28504C9.20012 4.34806 9.21535 4.41611 9.21535 4.48918C9.21535 4.56224 9.20012 4.63028 9.16967 4.69331C9.13921 4.75632 9.09949 4.81232 9.05051 4.86132L5.08692 8.82491C4.98802 8.92381 4.88558 8.97142 4.77958 8.96777C4.67358 8.9641 4.57525 8.91338 4.4846 8.81559C4.39165 8.71925 4.34519 8.61525 4.34519 8.50361C4.34519 8.39197 4.39165 8.29166 4.4846 8.20268L7.77102 4.91282Z' fill='%23101010'/%3E%3C/svg%3E%0A");
 }
-.news .content ul li a {
-    display: block;
-    position: relative; /* before 정렬의 기준 */
-    padding: 0 0 55px 0;
+.news .news_btn .prev,
+.news .news_btn .next {
+    position: absolute;
+    bottom: 220px;    
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    background-color: #999;
+    border-radius: 100%;
+    font-size: 0;
+    line-height: 0;
+    opacity: 0.8;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 10px auto;
+}
+.news .news_btn .prev {
+    left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.41235 9.24569L9.65136 16.6439C9.87286 16.8703 9.98634 17.1111 9.99179 17.3665C9.99726 17.6218 9.88379 17.8727 9.65136 18.1192C9.41896 18.3656 9.17838 18.4925 8.92961 18.4997C8.68085 18.507 8.4311 18.3797 8.18038 18.1178L0.392811 10.159C0.270598 10.028 0.174583 9.88602 0.104767 9.73294C0.0349224 9.57983 0 9.41451 0 9.23699C0 9.05946 0.0349224 8.89415 0.104767 8.74104C0.174583 8.58795 0.270598 8.44896 0.392811 8.32406L8.18038 0.365153C8.42021 0.120076 8.66723 -0.00163599 8.92144 1.66037e-05C9.17566 0.00169819 9.41896 0.125758 9.65136 0.372198C9.88379 0.618638 10 0.866747 10 1.11652C10 1.3663 9.88379 1.60993 9.65136 1.84744L2.41235 9.24569Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+.news .news_btn .next  {
+    right: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 11 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.66155 9.26448L0.423154 1.85868C0.201312 1.63171 0.087667 1.3904 0.0822203 1.13475C0.0767451 0.879126 0.190219 0.62796 0.422642 0.381249C0.655037 0.134539 0.895617 0.0075556 1.14438 0.000299412C1.39314 -0.00695678 1.64561 0.117676 1.90178 0.374197L9.68927 8.34184C9.80601 8.47849 9.90066 8.62344 9.97323 8.77669C10.0458 8.92997 10.082 9.09547 10.082 9.27319C10.082 9.45091 10.0457 9.61668 9.97293 9.77051C9.90016 9.92432 9.80517 10.0612 9.68795 10.1811L1.9031 18.1451C1.65694 18.3969 1.41385 18.5147 1.17383 18.4985C0.933801 18.4823 0.69759 18.3509 0.465195 18.1042C0.232772 17.8575 0.116561 17.6091 0.116561 17.359C0.116561 17.109 0.232943 16.8649 0.465707 16.6267L7.66155 9.26448Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+@media screen and (max-width:1024px) {
+    .news .swiper {
+        margin: 0;
+    }
+    .news .news_btn {
+        display: none;
+    }
+    
 }

@@ -139,17 +139,26 @@ $(document).ready(function(){
 		slidesPerView: "auto", /* li의 넓이 비율로 안함 - css에서 준 넓이대로 함 */
 		spaceBetween: 16, /* li와 li사이 - 제일 작은 여백 */
 		breakpoints: {
+			500: {  /* 640px 이상이 되면 적용 */
+			slidesPerView: 2,
+			spaceBetween: 16, 
+		},
 			768: {  /* 640px 이상이 되면 적용 */
-				slidesPerView: 
-				spaceBetween: 16, 
+				slidesPerView: 3,
+				spaceBetween: 18, 
 			},
 			1024: {  /* 1024px 이상이 되면 적용 */
-				spaceBetween: 40,
+				slidesPerView: 3,
+				spaceBetween: 20,
 			},
+			1280: {  /* 1024px 이상이 되면 적용 */
+			slidesPerView: 4,
+			spaceBetween: 22,
+		},
 		},
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.news .news_btn .next',
+			prevEl: '.news .news_btn .prev',
 		},
 	});
 }) ////document.ready
