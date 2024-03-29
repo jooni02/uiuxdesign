@@ -1,26 +1,23 @@
 $(document).ready(function(){
     const visual_swiper = new Swiper('.visual .swiper', { /* 팝업을 감싼는 요소의 class명 */
 
-    effect: "fade", /* 부드럽게 */ 
+		effect: "fade", /* 부드럽게 */ 
 
-	autoplay: {  /* 팝업 자동 실행 */
-		delay: 5000,
-		disableOnInteraction: true,
-	},
-
-	loop: true,
-
-	navigation: {
-		nextEl: '.visual .next',
-		prevEl: '.visual .prev',
-	},
-	pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
-		el: '.swiper-pagination', /* 해당 요소의 class명 */
-		clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
-		renderBullet: function (index, className) {   /* paging에 특정 코드 넣기 */
-		    return '<span class="' + className + '">' + (index + 1) + "</span>";
+		autoplay: {  /* 팝업 자동 실행 */
+			delay: 5000,
+			disableOnInteraction: true,
 		},
-	},
+
+		loop: true,
+
+		navigation: {
+			nextEl: '.visual .next',
+			prevEl: '.visual .prev',
+		},
+		pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
+			el: '.visual .pagination', /* 해당 요소의 class명 */
+			clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
+		},
 	});
 
 
@@ -83,41 +80,45 @@ $(document).ready(function(){
                 return '<span class="page' + (index + 1) + ' '+className+'"><span></span></span>';
             },
         },
+		on: {
+			slideChange: function(){
+				$('.Attrac .paging_num').html('<strong>'+this.realIndex + 1 +'</strong> / '+ this.loopedSlides);
+			}
+		},
 		
 		// autoplay: {  /* 팝업 자동 실행 */
 		// 	delay: 3000,
 		// 	disableOnInteraction: true,
 		// },
-		onSlideChangeEnd:function(e){
-			Attrac_swiper.update(true);
-		}
-
+		// onSlideChangeEnd:function(e){
+		// 	Attrac_swiper.update(true);
+		// }
 	});
+
+	Attrac_swiper.on('slideChangeTransitionEnd', function(){
+		Attrac_swiper.slideReset();
+	})
 
 	const theme_swiper = new Swiper('.theme .swiper', { /* 팝업을 감싼는 요소의 class명 */
 		slidesPerView: 2, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
 		spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
 		breakpoints: {
-			640: {    /* 640px 이상일때 적용 */
-				slidesPerView: 3,
-				spaceBetween: 20,
+			500: {    /* 768px 이상일때 적용 */
+			slidesPerView: 3,
+			spaceBetween: 20,
 			},
 			768: {    /* 768px 이상일때 적용 */
 				slidesPerView: 4,
-				spaceBetween: 30,
+				spaceBetween: 20,
 			},
 			1024: {   /* 1024px 이상일때 적용 */
 				slidesPerView: 5,
-				spaceBetween: 40,
-			},
-			1280: {    /* 1280px 이상일때 적용 */
-				slidesPerView: 5,
-				spaceBetween: 40,
+				spaceBetween: 24,
 			},
 		},
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.theme .swiper-button-next',
+			prevEl: '.theme .swiper-button-prev',
 		},
 	});
 	
@@ -135,11 +136,11 @@ $(document).ready(function(){
 			},
 		},
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.news .swiper-button-next',
+			prevEl: '.news .swiper-button-prev',
 		},
 		pagination: {  /* 몇개의 팝업이 있는지 보여주는 동그라미 */
-			el: '.swiper-pagination', /* 해당 요소의 class명 */
+			el: '.news .swiper-pagination', /* 해당 요소의 class명 */
 			clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
 			type: 'fraction',  /* type fraction을 주면 paging이 숫자로 표시됨 */
 		},

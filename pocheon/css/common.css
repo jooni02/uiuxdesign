@@ -48,7 +48,7 @@ html, body {
     }
     html, body {
         width: auto; 
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 @media screen and (max-width:1024px){

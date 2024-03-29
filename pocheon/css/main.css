@@ -35,6 +35,23 @@
     text-align: center;
     line-height: 1.0;
 }
+.visual .pagination {
+    position: absolute;
+    left: 50% !important; 
+    bottom: 140px !important;
+    width: auto !important;
+    transform: translate(-50%, 0);
+    z-index: 10;
+}
+.visual .pagination span {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255,255,255,0.5);
+    opacity: 1;
+}
+.visual .pagination span.swiper-pagination-bullet-active {
+    background-color: #fff;
+}
 .visual .swiper .prev,
 .visual .swiper .next {
     position: absolute;
@@ -47,6 +64,7 @@
     background-size: contain;
     font-size: 0;
     line-height: 0;
+    opacity: 0.5;
 }
 .visual .swiper .prev {
     left: calc(50% - 33%);
@@ -67,6 +85,17 @@
     }
     .visual ul li .visual_txt strong {
         font-size: 55px;
+    }
+    .visual .swiper .prev,
+    .visual .swiper .next {
+        display: none;
+    }
+    .visual .pagination {
+        bottom: 70px !important;
+    }
+    .visual .pagination span {
+        width: 8px;
+        height: 8px;
     }
 }
 
@@ -233,6 +262,9 @@
     height: 388px;
     opacity: 1;
 }
+.Attrac .more a {
+    display: none; /* 모바일에서 */
+}
 .Attrac .paging {
     position: absolute;
     left: calc(50% - 422px);
@@ -255,6 +287,18 @@
     left: 0;
     top: 0;
     color: #101010;
+}
+.Attrac .paging_num {
+    position: absolute;
+    left: 330px;
+    bottom: 73px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #999;
+}
+.Attrac .paging_num strong {
+    color: #101010;
+    font-size: 18px;
 }
 .Attrac .Attrac_btn {
     display: flex;
@@ -288,7 +332,7 @@
 
 @media screen and (max-width:1024px)  {
     .Attrac .Attrac_tit {
-        padding: 80px 0 90px 0;
+        padding: 80px 0 50px 0;
         text-align: center;
     }
     .Attrac .Attrac_tit span {
@@ -316,6 +360,33 @@
     .Attrac .swiper ul li.swiper-slide-active .photo {
         width: 417px;
         height: 288px;
+    }
+    .Attrac .more {
+        margin: 40px 0 0 0;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .Attrac .more a {
+        display: inline-block;
+        width: 134px;
+        border-radius: 30px;
+        border: 1px solid rgba(237,237,237,1);
+        box-shadow: 2px 2px 8px rgba(237,237,237,1);
+        padding: 15px 45px 13px 25px;
+        position: relative;
+    }
+    .Attrac .more a::after {
+        position: absolute;
+        right: 30px;
+        top: 16px;
+        width: 13px;
+        height: 12px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.77102 4.91282H0.572078C0.453709 4.91282 0.352536 4.87172 0.26856 4.78952C0.184572 4.70733 0.142578 4.60752 0.142578 4.49009C0.142578 4.37265 0.184566 4.27101 0.268542 4.18516C0.352531 4.09932 0.453709 4.05639 0.572078 4.05639H7.77102L4.47533 0.760698C4.38948 0.674852 4.34335 0.573894 4.33694 0.457823C4.33053 0.341751 4.3738 0.234401 4.46674 0.13577C4.55739 0.0402696 4.66018 -0.00484973 4.77511 0.000412172C4.89004 0.00568598 4.99284 0.0525908 5.08351 0.141127L9.04329 4.10625C9.09709 4.16243 9.13921 4.22203 9.16967 4.28504C9.20012 4.34806 9.21535 4.41611 9.21535 4.48918C9.21535 4.56224 9.20012 4.63028 9.16967 4.69331C9.13921 4.75632 9.09949 4.81232 9.05051 4.86132L5.08692 8.82491C4.98802 8.92381 4.88558 8.97142 4.77958 8.96777C4.67358 8.9641 4.57525 8.91338 4.4846 8.81559C4.39165 8.71925 4.34519 8.61525 4.34519 8.50361C4.34519 8.39197 4.39165 8.29166 4.4846 8.20268L7.77102 4.91282Z' fill='%23101010'/%3E%3C/svg%3E%0A");
+        content: "";
     }
     .Attrac .paging {
         display: none;
@@ -362,14 +433,42 @@
     color: #666;
     font-size: 16px;
 }
+.theme ul li {
+    padding: 50px 0 0 0;
+}
+.theme ul li:nth-child(odd) {
+    margin-top: -50px;
+}
+.theme ul li a {
+    display: block;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    margin: 0 5px 20px 0;
+}
+.theme ul li a .photo {
+    display: block;
+    overflow: hidden;
+}
+.theme ul li a .photo img {
+    width: 100%;
+    clip-path: circle(87.6% at 50% 10%);
+    border-radius: 20px;
+}
+.theme ul li h3 {
+    font-weight: 500;
+    padding: 10px 0 23px 0;
+}
 .theme .tag button {
-    width: 150px;
+    width: 140px;
     height: 50px;
     border-radius: 30px;
     border: 1px solid rgba(237,237,237,1);
     box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
     background-color: #fff;
     margin: 0 15px;
+    padding: 5px 5px 0 0;
 }
 .theme .tag button.family {
     border: 0;
@@ -378,6 +477,7 @@
     color: #fff;
     font-size: 18px;
 }
+
 
 .news {
     background: url(../imges/main/news_bg.png) no-repeat center center / cover;
