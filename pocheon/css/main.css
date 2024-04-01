@@ -192,14 +192,14 @@
 }
 
 .Attrac {
-    padding: 20px 0 160px 0;
+    padding: 20px 0 140px 0;
     background-color: #F8FCFF;
 }
 .Attrac .wrapper {
     position: relative;
 }
 .Attrac .Attrac_tit {
-    padding: 120px 0 80px 0;
+    padding: 100px 0 80px 0;
     text-align: center;
 }
 .Attrac .Attrac_tit span {
@@ -421,7 +421,7 @@
 }
 
 .theme {
-    padding: 140px 0 160px 0;
+    padding: 120px 0 140px 0;
     text-align: center;
 }
 .theme .wrapper {
@@ -525,6 +525,10 @@
     display: none;
 }
 @media screen and (max-width:1024px) {
+    .theme {
+        padding: 120px 0 140px 0;
+        text-align: center;
+    }
     .theme .theme_btn {
         display: none;
     }
@@ -579,7 +583,7 @@
         content: "";
     }
 }
-@media screen and (max-width:1024px) {
+@media screen and (max-width:768px) {
     .theme {
         padding: 100px 0 120px 0;
     }
