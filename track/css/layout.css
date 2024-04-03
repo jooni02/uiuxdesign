@@ -1,0 +1,32 @@
+/* 모든페이지의 레이아웃 요소(header/footer/서브레이아웃)
+메뉴명, sub_wisual 이미지스타일, 탭메뉴 */
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+header .logo {
+    margin: 20px 0 0 0;
+}
+header .logo a {
+    display: block;
+    width: 236px;
+    height: 31px;
+    font-size: 0;
+    line-height: 0;
+    background: url(../imges/main/logo_c.svg) no-repeat center center / contain;
+}
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none; /* 모바일 */
+}
+header .gnb ul {
+    display: flex;
+    text-align: center;
+}

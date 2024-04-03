@@ -98,6 +98,10 @@ $(document).ready(function(){
 
 	Attrac_swiper.on('slideChangeTransitionEnd', function(){
 		Attrac_swiper.slideReset();
+		Attrac_swiper.update();
+	})
+	Attrac_swiper.on('slideChange', function(){
+		Attrac_swiper.update();
 	})
 
 	/* theme */

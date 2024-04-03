@@ -1,0 +1,10 @@
+@import url(default.css);
+@import url(common.css);
+@import url(layout.css);
+
+/* (header, footer 빼고 전부 다) */
+
+@media screen and (max-width:1600px){
+}
+@media screen and (max-width:1024px){
+}
