@@ -8,3 +8,217 @@
 }
 @media screen and (max-width:1024px){
 }
+
+.container h2 {
+    font-family: 'KorailRoundGothicBold';
+}
+.container .intro {
+    padding: 600px 0 200px 0;
+    position: relative;
+}
+.container .bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 800px;
+    content: "";
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0.9),rgba(255,255,255,1),rgba(255,255,255,1));
+}
+.intro .intro_tit {
+    position: absolute;
+    left: 50%;
+    top: 500px;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+.intro h2 {
+    font-size: 65px;
+    font-weight: 800;
+    text-align: center;
+}
+.intro .photo {
+    position: relative;
+}
+.intro .photo ul {
+    display: flex;
+    justify-content: center
+}
+.intro .photo ul li {
+    margin: 0 20px;
+}
+.intro .photo ul li:nth-child(2),
+.intro .photo ul li:nth-child(4) {
+    margin-top: 150px;
+}
+.intro .photo ul li:nth-child(3) {
+    margin-top: 50px;
+}
+.intro .photo ul li .intro_p02,
+.intro .photo ul li .intro_p05 {
+    margin-bottom: 40px;
+}
+.intro .photo ul li img {
+    border-radius: 20px;
+}
+
+.year {
+    text-align: right;
+    margin-bottom: 160px;
+}
+.year .year_left {
+    float: left;
+    white-space: nowrap;
+    font-size: 160px;
+    width: 4em;
+    line-height: 1.0;
+}
+.year .year_left h2 {
+    font-size: 45px;
+}
+    
+.year .year_left .counter {
+    font-weight: 700;
+}
+.year .year_left p {
+    font-size: 40px;
+    font-weight: 700;
+    color: rgba(153, 153, 153, 0.3);
+}
+.year .year_right {
+    margin: 0 0 0 814px;
+}
+.year .year_right .photo ul li {
+    margin-bottom: 28px;
+}
+.year .year_right .photo ul li img {
+    border-radius: 20px;
+}
+
+.visual {
+    height: 1000px;
+}
+.visual{ 
+    background: url(../imges/main/visual_bg.png)no-repeat center center / cover;
+}
+.visual h2 {
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    padding: 375px 0 0 0;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
+}
+.visual h2 strong {
+    font-size: 60px;
+}
+
+.time {
+    background-color: #f4f4f4;
+    height: 100px; 
+}
+.time .time_txt {
+    float: left;
+}
+.time .time_txt ul {
+    padding: 20px 0;
+}
+.time .time_txt ul li {
+    margin: 0 0 6px 0;
+    position: relative;
+}
+.time .time_txt ul li::after {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+.time .time_txt ul li.watch::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.0909 11.0695V5.47059C13.0909 5.1754 12.9862 4.92246 12.7768 4.71176C12.5674 4.50107 12.3161 4.39572 12.0228 4.39572C11.7295 4.39572 11.4759 4.50107 11.262 4.71176C11.0481 4.92246 10.9412 5.1754 10.9412 5.47059V11.5348C10.9412 11.6911 10.9706 11.8319 11.0294 11.9571C11.0882 12.0823 11.1658 12.1929 11.262 12.2888L15.5121 16.5685C15.7482 16.8063 16.0053 16.9198 16.2834 16.9091C16.5615 16.8984 16.8182 16.7754 17.0535 16.5401C17.2888 16.3048 17.4064 16.0481 17.4064 15.7701C17.4064 15.492 17.2856 15.233 17.044 14.9933L13.0909 11.0695ZM12 24C10.3469 24 8.7934 23.687 7.33948 23.0611C5.88555 22.4351 4.61166 21.5742 3.5178 20.4782C2.42394 19.3822 1.56417 18.1065 0.938503 16.6509C0.312834 15.1954 0 13.6402 0 11.9853C0 10.3286 0.312973 8.77135 0.93892 7.31342C1.56487 5.85548 2.42583 4.58492 3.52181 3.50175C4.61779 2.41859 5.89354 1.56417 7.34907 0.938503C8.80458 0.312834 10.3598 0 12.0147 0C13.6714 0 15.2287 0.31554 16.6868 0.94662C18.1449 1.5777 19.4132 2.43417 20.4918 3.51603C21.5704 4.59789 22.4247 5.86788 23.0548 7.326C23.6849 8.78414 24 10.3421 24 12C24 13.6531 23.687 15.2066 23.0611 16.6605C22.4351 18.1144 21.5795 19.3883 20.4942 20.4822C19.409 21.5761 18.1367 22.4358 16.6775 23.0615C15.2183 23.6872 13.6591 24 12 24ZM12.0153 21.8503C14.7314 21.8503 17.0496 20.885 18.9698 18.9545C20.8901 17.0241 21.8503 14.7008 21.8503 11.9847C21.8503 9.26861 20.8901 6.95043 18.9698 5.03015C17.0496 3.10987 14.7314 2.14973 12.0153 2.14973C9.29922 2.14973 6.97594 3.10987 5.04545 5.03015C3.11497 6.95043 2.14973 9.26861 2.14973 11.9847C2.14973 14.7008 3.11497 17.0241 5.04545 18.9545C6.97594 20.885 9.29922 21.8503 12.0153 21.8503Z' fill='black'/%3E%3C/svg%3E%0A");
+}
+.time .time_txt ul li.Rest::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 2.4H22.8C23.4628 2.4 24 2.93726 24 3.6V22.8C24 23.4628 23.4628 24 22.8 24H1.2C0.537264 24 0 23.4628 0 22.8V3.6C0 2.93726 0.537264 2.4 1.2 2.4H6V0H8.4V2.4H15.6V0H18V2.4ZM2.4 9.6V21.6H21.6V9.6H2.4ZM4.8 12H7.2V14.4H4.8V12ZM10.8 12H13.2V14.4H10.8V12ZM16.8 12H19.2V14.4H16.8V12Z' fill='black'/%3E%3C/svg%3E%0A");
+}
+.time .time_txt ul li strong {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 20px 0 30px;
+}
+.time .time_txt ul li em {
+    font-size: 16px;
+    color: #666;
+}
+.time .time_btn {
+    margin: 0 0 0 935px;
+    padding: 20px 0;
+}
+.time .time_btn .money {
+    width: 160px;
+    height: 55px;
+    font-weight: 700;
+    background-color: #101010;
+    color: #fff;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.time .time_btn .check {
+    width: 160px;
+    height: 55px;
+    font-weight: 700;
+    border: 1px solid #101010;
+    background-color: #fff;
+    border-radius: 10px;
+}
+/* 마우스 오버 */
+.time .time_btn .money:hover,
+.time .time_btn .check:hover {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.guide1 {
+    padding: 165px 140px;
+}
+.guide1 h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+}
+.guide1 .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.guide1 .list ul li {
+    width: 35%;
+    height: 580px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+.guide1 .list ul li.guide01 {
+    background-image: url(../imges/main/guide1_01.png);
+}
+.guide1 .list ul li.guide02 {
+    background-image: url(../imges/main/guide1_02.png);
+    margin: 0 28px;
+}
+.guide1 .list ul li.guide03 {
+    background-image: url(../imges/main/guide1_03.png);
+}
+.guide1 .list ul li a {
+    display: flex;
+}
+.guide1 .list ul li a strong {
+    font-size: 38px;
+    font-weight: 700;
+    color: #fff;
+}
+.guide1 .list ul li a .more {
+    font-size: 0;
+    line-height: 0;
+}
+
