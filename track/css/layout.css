@@ -9,6 +9,22 @@ header {
     width: 100%;
     height: 100px;
 }
+header.fixed {
+    position: fixed;
+}
+header.fixed .logo a {
+    background: url(../imges/common/logo_w.svg) no-repeat center center / contain;
+}
+header.fixed .header_right .gnb ul {
+    color: #fff;
+}
+header.fixed .header_right .tnb .lang {
+    background: url(../imges/common/lang_w.svg) no-repeat center center / contain;
+}
+header.fixed .header_right .tnb .menu {
+    background: url(../imges/common/menu_w.svg) no-repeat center center / contain;;
+}
+
 header .header_right {
     float: right;
     display: flex;
@@ -56,4 +72,9 @@ header .header_right .tnb .menu {
     width: 20px;
     height: 20px;
     background: url(../imges/main/menu_b.svg) no-repeat center center / contain;
+}
+
+footer {
+    background-color: #101010;
+    height: 334px;
 }
