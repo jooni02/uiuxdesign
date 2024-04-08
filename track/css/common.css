@@ -43,7 +43,7 @@ html, body {
 @media screen and (max-width:1320px) {
     .wrapper { 
         width: auto; 
-        margin: 0 20px;
+        margin: 0 40px;
     }
     html, body {
         width: auto; 
@@ -51,6 +51,10 @@ html, body {
     }
 }
 @media screen and (max-width:1024px){
+    .wrapper { 
+        width: auto; 
+        margin: 0 20px;
+    }
     html, body {
         font-size: 16px;
     }

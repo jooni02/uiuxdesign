@@ -7,6 +7,7 @@
     <script src="js/jquery-3.7.1.min.js"></script>  <!--jquery를 작동시키는 파일-->
     <script src="js/sticky.min.js"></script>
     <script src="js/counting.js"></script><!-- 숫자가 넘치는 효과 -->
+    <script src="js/common.js"></script>
     <script src="js/main.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- AOS를 작동시키기 위한 css와 js파일 -->
@@ -115,23 +116,30 @@
             </section>
             <section class="time">
                 <div class="wrapper">
-                    <div class="time_txt">
-                        <ul>
-                            <li class="watch">
-                                <strong>관람시간</strong>
-                                <span>화~ 일 9:00 ~ 18:00</span>
-                                <em>(입장마감 30분 전)</em>
-                            </li>
-                            <li class="Rest">
-                                <strong>휴  관  일</strong>
-                                <span>매주 월요일 정기휴관</span>
-                                <em>(월요일 공휴일시 개관)</em>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="time_btn">
-                        <button class="money">관람료 안내</button>
-                        <button class="check">예약확인하기</button>
+                    <div class="inner">
+                        <div class="time_txt">
+                            <ul>
+                                <li class="watch">
+                                    <strong>관람시간</strong>
+                                    <div class="watch_txt">
+                                        <span>화~ 일 9:00 ~ 18:00</span>
+                                        <em>(입장마감 30분 전)</em>
+                                    </div>
+                                </li>
+                                <li class="rest">
+                                    <strong>휴  관  일</strong>
+                                    <div class="rest_txt">
+                                        <span>매주 (월) 정기휴관</span>
+                                        <em>(월요일 공휴일시 개관)</em>
+                                        <span>공휴일 다음날/ 명절연휴기간</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="time_btn">
+                            <button class="money">관람료 안내</button>
+                            <button class="check">예약확인하기</button>
+                        </div>
                     </div>
                 </div><!--wrapper-->
             </section>
@@ -246,21 +254,21 @@
                             <div class="icon04"><a href="#n"><span>식당안내</span></a></div>
                         </div>
                     </div>
-                </div>
+                </div> 
             </section><!--info-->
             <div class="media">
                 <div class="wrapper">
                     <h3>코레일 미디어소식</h3>
                     <div class="inner">
-                        <div class="more"><a href="#n">더보기</a></div>
+                        <div class="more"><a href="#n">전체보기</a></div>
                         <ul>
                             <li>
                                 <a href="#n">
                                     <span class="photo"><img src="imges/main/youtube01.png" alt="유튜브섬네일 사진"></span>
-                                    <strong>KTX 개통 20주년을 축하합니다</strong>
+                                    <strong>20년, 7300일, 8760시간의 여정! KTX 개통 20주년 기념 영상│경산역 Gyeongsan Station</strong>
                                     <spap class="group">
-                                        <span class="count">1,556회</span>
-                                        <span class="date">2024. 4. 2.</span>
+                                        <span class="count">4,039회</span>
+                                        <span class="date">2024. 3. 26.</span>
                                     </spap>
                                 </a>  
                             </li>
@@ -289,7 +297,32 @@
                 </div><!--wrapper-->
             </div>
         </div><!--container-->
-        <footer></footer>
+        <footer>
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="f_logo">
+                        <img src="imges/common/logo_w.svg" alt="철도박물관 로고">
+                    </div>
+                    <div class="f_nav">
+                        <ul>
+                            <li><a href="#n"><span>개인정보처리방침</span></a></li>
+                            <li><a href="#n">한국철도공사 사업자등록번호 : 314-82-10024</a></li>
+                            <li><a href="#n">철도박물관 : 경기도 의왕시 철도박물관로 142 본사 : 대전광역시 동구 중앙로 240</a></li>
+                        </ul>
+                        <div class="copyright">Copyright © KOREA RAILROAD. All Rights Reserved</div>
+                    </div><!--f_nav-->
+                    <div class="f_site ">
+                        <button class="open" title="열기">관련사이트</button>
+                        <ul>
+                            <li><a href="https://info.korail.com/info/index.do" target="_blank" title="새창">코레일 홈페이지</a></li>
+                            <li><a href="https://www.letskorail.com/" target="_blank" title="새창">승차권예매</a></li>
+                            <li><a href="https://logis.korail.go.kr/index.do" target="_blank" title="새창">물류정보</a></li>
+                        </ul>
+                        <button class="close" title="닫기">관련사이트</button>
+                    </div>
+                </div>
+            </div><!--wrapper-->
+        </footer>
     </div><!--wrap-->
 </body>
 </html>

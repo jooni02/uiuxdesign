@@ -48,6 +48,7 @@ $(document).ready(function(){
     })
   
     /* guide1 */
+    
 	$('.guide1 .list ul li').on('mouseenter', function(){
         $('.guide1 .list ul li').removeClass('on')
         $(this).addClass('on')
