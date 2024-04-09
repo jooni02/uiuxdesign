@@ -11,7 +11,7 @@ $(document).ready(function(){
         opacity_change('.intro .bg', 450, 0.002, 'show')
         move_change('.intro .photo ul li.move', 0.05)
 
-        if((scrolling >= $('.visual').offset().top) && (scrolling <= $('.visual').offset().top + $('.visual').height())){
+        if((scrolling >= $('.visual').offset().top) && (scrolling <= $('footer').offset().top + $('footer').height())){
             $('header').addClass('fixed')
         }else{
             $('header').removeClass('fixed')

@@ -49,15 +49,16 @@
 }
 .intro .photo {
     position: relative;
-    margin-left: -5%;
     width: 110%;
+    transform: translate(-50%, 0);
+    left: 50%;
 }
 .intro .photo ul {
     display: flex;
     justify-content: space-between;
 }
 .intro .photo ul li {
-    width: 16%;
+    width: 15%;
 }
 .intro .photo ul li.intro04 {
     width: 32%;
@@ -71,7 +72,7 @@
 }
 .intro .photo ul li .intro_p02,
 .intro .photo ul li .intro_p05 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 .intro .photo ul li.move {
     transition: 0.5s;
@@ -80,15 +81,25 @@
     border-radius: 10px;
     width: 100%;
 }
+
+
 @media screen and (max-width:1024px) {
-    .container .intro {
-        padding: 600px 0 150px 0;
-        position: relative;
-    }
     .intro .photo ul li .intro_p02,
     .intro .photo ul li .intro_p05 {
-    margin-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
 }
+@media screen and (max-width:768px) {
+    .intro .photo {
+        width: 844px;
+    }
+    .intro .photo ul li {
+        width: 16%;
+    }
+    .intro .photo ul li img {
+        width: 96%;
+    } 
 }
 
 .year {
@@ -448,9 +459,6 @@
     .guide1 {
         padding: 160px 0 110px 0;
     }
-    .container h2 {
-        margin: 0 0 20px 0;
-    }
     .guide1 .list ul {
         display: block;
     }
@@ -490,22 +498,37 @@
     display: block;
     height: 350px;
     width: 100%;
-    background: url(../imges/main/guide2_01.png) no-repeat center center / cover;
+    background: url(../imges/main/guide2_01.png) no-repeat center center;
     border-radius: 10px 0 0 10px;
+    background-size: 100%;
+    transition: background-size .3s ease;
+}
+.guide2 .list .list_left a:hover {
+    background-size: 110%;
 }
 .guide2 .list .list_right .top a {
     display: block;
     width: 314px;
     height: 175px;
-    background: url(../imges/main/guide2_02.png) no-repeat center center / cover;
+    background: url(../imges/main/guide2_02.png) no-repeat center center;
     border-radius: 0 10px 0 0;
+    background-size: 100%;
+    transition: background-size .3s ease;
+}
+.guide2 .list .list_right .top a:hover {
+    background-size: 120%;
 }
 .guide2 .list .list_right .botton a {
     display: block;
     width: 314px;
     height: 175px;
-    background: url(../imges/main/guide2_03.png) no-repeat center center / cover;
+    background: url(../imges/main/guide2_03.png) no-repeat center center;
     border-radius: 0 0 10px 0 ;
+    background-size: 100%;
+    transition: background-size .3s ease;
+}
+.guide2 .list .list_right .botton a:hover {
+    background-size: 120%;
 }
 .guide2 .list .list_right h3 {
     font-size: 30px;
