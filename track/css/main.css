@@ -83,10 +83,6 @@
 }
 
 @media screen and (max-width:1024px) {
-    .container .intro {
-        padding: 620px 0 200px 0;
-        position: relative;
-    }
     .intro .photo ul li .intro_p02,
     .intro .photo ul li .intro_p05 {
         margin-bottom: 20px;
@@ -94,8 +90,7 @@
 }
 @media screen and (max-width:768px) {
     .container .intro {
-        padding: 590px 0 200px 0;
-        position: relative;
+        padding: 550px 0 200px 0;
     }
     .intro h2 {
         font-size: 55px;
