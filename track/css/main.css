@@ -269,6 +269,9 @@
     background-color: #f4f4f4;
     height: 100px; 
 }
+.time h2 {
+    display: none;
+}
 .time .inner {
     display: flex;
     justify-content: space-between;
