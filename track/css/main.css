@@ -526,7 +526,7 @@
     transition: background-size .3s ease;
 }
 .guide2 .list .list_left a:hover {
-    background-size: 110%;
+    background-size: 105%;
 }
 .guide2 .list .list_right .top a {
     display: block;
@@ -538,7 +538,7 @@
     transition: background-size .3s ease;
 }
 .guide2 .list .list_right .top a:hover {
-    background-size: 120%;
+    background-size: 110%;
 }
 .guide2 .list .list_right .botton a {
     display: block;
@@ -550,7 +550,7 @@
     transition: background-size .3s ease;
 }
 .guide2 .list .list_right .botton a:hover {
-    background-size: 120%;
+    background-size: 110%;
 }
 .guide2 .list .list_right h3 {
     font-size: 30px;
@@ -804,7 +804,7 @@
     transition: 0.5s;
 }
 .media ul li a:hover .photo img{
-    transform: scale(1.2);
+    transform: scale(1.1);
     overflow: hidden;
 }
 .media ul li a strong {
