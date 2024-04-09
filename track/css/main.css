@@ -104,8 +104,10 @@
 
 .year {
     text-align: right;
-    margin-bottom: 160px;
+    margin-bottom: 250px;
+    position: relative;
 }
+
 .year .wrapper {
     display: flex;
     justify-content: space-between;
@@ -115,9 +117,16 @@
     white-space: nowrap;
     font-size: 160px;
     width: 37.5%;
-    line-height: 1.0;
+    line-height: 0.9;
     position: relative;
     z-index: 10;
+}
+.year .year_left > div {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
 }
 .year .year_left h2 {
     font-size: 45px;
@@ -130,10 +139,14 @@
     font-size: 40px;
     font-weight: 700;
     color: rgba(153, 153, 153, 0.3);
+    padding-bottom: 100px;
 }
 .year .year_right {
     width: 40%;
 }
+/* .year .year_right .photo  {
+    margin: 50px 0 0 0;
+} */
 .year .year_right .photo ul li {
     margin-bottom: 28px;
 }
@@ -153,13 +166,8 @@
     .year .year_right {
         width: auto;
     }
-    .year .year_right .photo ul li {
-        margin-bottom: 10px;
-    }
     .year .year_right .photo ul li img {
-        border-radius: 0;
-        width: 100%;
-        filter: brightness(40%);
+        filter: brightness(60%);
     }
     .year .year_left {
         float: none;
@@ -176,10 +184,24 @@
 }
 @media screen and (max-width:768px) {
     .year .year_left h2 {
-        font-size: 35px;
+        font-size: 40px;
     }
     .year .year_left {
-        font-size: 110px;
+        font-size: 140px;
+    }
+    .year .year_left p {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:500px) {
+    .year .year_left h2 {
+        font-size: 30px;
+    }
+    .year .year_left {
+        font-size: 90px;
+    }
+    .year .year_left p {
+        font-size: 25px;
     }
 }
 
@@ -775,10 +797,15 @@
 .media ul li a .photo {
     display: block;
     overflow: hidden;
+    border-radius: 20px;
 }
 .media ul li a .photo img {
     width: 100%;
-    border-radius: 20px;
+    transition: 0.5s;
+}
+.media ul li a:hover .photo img{
+    transform: scale(1.2);
+    overflow: hidden;
 }
 .media ul li a strong {
     display: block;
