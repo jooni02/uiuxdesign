@@ -353,10 +353,6 @@
         justify-content: center;
         font-size: 16px;
     }
-    .time .time_btn .money:hover,
-    .time .time_btn .check:hover {
-        box-shadow: 0;
-    }   
 }
 @media screen and (max-width:500px) {
     .time {
