@@ -36,12 +36,12 @@ header .header_right .tnb {
     justify-content: space-between;
     margin: 37px 0 0 0;
 }
-header .header_right .gnb ul {
+header .header_right .gnb ul.depth1 {
     margin-right: 30px;
 }
-header .header_right .gnb ul li {
+header .header_right .gnb ul.depth1 > li {
     margin: 0 40px 0 0;
-}header .header_right .gnb ul li a:hover {
+}header .header_right .gnb ul.depth1 > li a:hover {
     font-weight: 700;
 }
 header .header_right .tnb {
