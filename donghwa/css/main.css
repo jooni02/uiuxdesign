@@ -52,16 +52,16 @@
     justify-content: space-between;
 }
 .info .inner .info_left .txt h2 {
-    font-size: 60px;
+    font-size: 45px;
     font-weight: 800;
     margin: 57px 0 48px 0;
 }
 .info .inner .info_left .txt p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.4;
 }
 .info .inner .info_right {
-    margin: 100px 200px 0 0;
+    margin: 100px 150px 0 0;
 }
 .info .inner .info_right strong {
     display: block;

@@ -30,19 +30,28 @@ header .header_right .gnb .gnb_open,
 header .header_right .gnb .gnb_close {
     display: none; /* 모바일 */
 }
-header .header_right .gnb ul,
+header .header_right .gnb ul.depth1,
 header .header_right .tnb {
     display: flex;
     justify-content: space-between;
     margin: 37px 0 0 0;
+    text-align: center;
 }
 header .header_right .gnb ul.depth1 {
     margin-right: 30px;
 }
 header .header_right .gnb ul.depth1 > li {
     margin: 0 40px 0 0;
-}header .header_right .gnb ul.depth1 > li a:hover {
+}
+header .header_right .gnb ul.depth1 > li a:hover {
     font-weight: 700;
+}
+header .header_right .gnb ul.depth2>li>a {
+    font-size: 16px;
+    line-height: 50px;
+}
+header .header_right .gnb ul.depth2 {
+    display: none;/* 마우스 오버*/
 }
 header .header_right .tnb {
     font-size: 0;
@@ -59,6 +68,7 @@ header .header_right .tnb .menu {
     height: 20px;
     background: url(../imges/main/menu_b.svg) no-repeat center center / contain;
 }
+
 @media screen and (max-width:1024px) {
     header .header_right .gnb,
     header.fixed .header_right .gnb {

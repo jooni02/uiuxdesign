@@ -46,7 +46,7 @@ $(document).ready(function(){
     $(window).scroll(function(){
         scroll_chk()
     })
-  
+
     /* guide1 */
     
 	$('.guide1 .list ul li').on('mouseenter', function(){
