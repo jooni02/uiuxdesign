@@ -1,0 +1,65 @@
+@charset "utf-8"; /* 이css문서는 UTF-8방식으로 인코딩 되어 있습니다. */
+/* 구글폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+/* 한글웹폰트 */
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-display: swap;
+    src: local('Pretendard Regular'), url(../fonts/Pretendard-Regular.woff2) format('woff2'), url(../fonts/Pretendard-Regular.woff) format('woff');
+}
+*::selection {
+    background-color: #002606;
+    color: #fff;
+}
+*::-moz-selection { /* 호환성을 위한 코드 */
+    background-color: #002606;
+    color: #fff;
+}
+html, body {
+    font-family: 'Geologica', 'Pretendard', 'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', 'Apple SD Gothic Neo', '애플 SD 산돌고딕 Neo', sans-serif; /* 서체 serif 명조 sans-serif 고딕 */
+    font-size: 18px; /* 크기 */
+    color: #101010; /* 글자색상 */
+    font-weight: 300; /* 글자의 두께 */
+    line-height: 1.2; /* auto */
+    letter-spacing : -0.01em; /* 글자자간*/
+    word-break: keep-all; /* 단어를 묶어서 줄바꿈 */
+    word-wrap: break-word; /* 단어가 너무 길면 분리해서 줄바꿈 */
+}
+
+.wrapper { /* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+    width: 1600px; /* 홈페이지 넓이 */
+    margin: 0 auto;  /* 가운데 정렬 */
+}
+#wrap { /* id="wrap"에 적용되는 스타일 */
+    width: 100%;
+    overflow: hidden;
+}
+
+.skipnav {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    z-index: 1000000000000;
+    width: 100%;
+}
+.skipnav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    background-color: #FF1414;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+}
+/* 속성선택자
+a태그중에서 href="#gnb"인 a태그의 스타일 */
+.skipnav a[href="#gnb"] {
+    background-color: #010101;
+}
+.skipnav a:focus {
+    top: 100px;
+}
